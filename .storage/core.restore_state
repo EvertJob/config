@@ -6,87 +6,87 @@
     {
       "state": {"entity_id":"person.evert_job_ten_doeschate","state":"home","attributes":{"editable":true,"id":"evert_job_ten_doeschate","device_trackers":["device_tracker.iphone_14_pro_max_evert_job"],"latitude":53.16577119130984,"longitude":6.798530063080849,"gps_accuracy":2,"source":"device_tracker.iphone_14_pro_max_evert_job","user_id":"42ab076738a245a1a870774d2c436c58","friendly_name":"Evert-Job ten Doeschate"},"last_changed":"2025-02-11T14:01:30.849009+00:00","last_reported":"2025-02-11T14:01:38.902178+00:00","last_updated":"2025-02-11T14:01:38.902178+00:00","context":{"id":"01JKTN1HAPNAZWK6WHEPEJRSXM","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.home_assistant_supervisor_update","state":"off","attributes":{"auto_update":true,"display_precision":0,"installed_version":"2025.02.0","in_progress":false,"latest_version":"2025.02.0","release_summary":null,"release_url":"https://github.com/home-assistant/supervisor/releases/tag/2025.02.0","skipped_version":null,"title":"Home Assistant Supervisor","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/hassio/icon.png","friendly_name":"Home Assistant Supervisor Update","supported_features":1},"last_changed":"2025-02-11T14:01:30.996205+00:00","last_reported":"2025-02-11T14:01:30.996205+00:00","last_updated":"2025-02-11T14:01:30.996205+00:00","context":{"id":"01JKTN19KM8X28SJX2NDFFM9SF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.home_assistant_core_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.2.2","in_progress":false,"latest_version":"2025.2.2","release_summary":null,"release_url":"https://www.home-assistant.io/latest-release-notes/","skipped_version":null,"title":"Home Assistant Core","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Core Update","supported_features":11},"last_changed":"2025-02-11T14:01:30.996512+00:00","last_reported":"2025-02-11T14:01:30.996512+00:00","last_updated":"2025-02-11T14:01:30.996512+00:00","context":{"id":"01JKTN19KM8YXQQM1D5WNQYQAB","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.advanced_ssh_web_terminal_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"20.0.0","in_progress":false,"latest_version":"20.0.0","release_summary":"## What’s changed\n\n## 🐛 Bug fixes\n\n- Update profile filename for zsh @jon-hedgerows ([#821](https://github.com/hassio-addons/addon-ssh/pull/821))\n\n## 🧰 Maintenance\n\n- 🎆 Updates maintenance/license year to 2025 @frenck ([#822](https://github.com/hassio-add","release_url":null,"skipped_version":null,"title":"Advanced SSH & Web Terminal","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_ssh/icon","friendly_name":"Advanced SSH & Web Terminal Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.997295+00:00","last_reported":"2025-02-11T14:01:30.997295+00:00","last_updated":"2025-02-11T14:01:30.997295+00:00","context":{"id":"01JKTN19KN9KQTD0BZ8HMQC01S","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.studio_code_server_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"5.18.1","in_progress":false,"latest_version":"5.18.1","release_summary":"## What’s changed\n\n## ⬆️ Dependency updates\n\n- ⬆️ Update emilast/vscode-logfile-highlighter to v3.4.0 @[renovate[bot]](https://github.com/apps/renovate) ([#912](https://github.com/hassio-addons/addon-vscode/pull/912))\n- ⬆️ Update ghcr.io/hassio-addons/deb","release_url":null,"skipped_version":null,"title":"Studio Code Server","update_percentage":null,"entity_picture":"/api/hassio/addons/a0d7b954_vscode/icon","friendly_name":"Studio Code Server Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.997505+00:00","last_reported":"2025-02-11T14:01:30.997505+00:00","last_updated":"2025-02-11T14:01:30.997505+00:00","context":{"id":"01JKTN19KNVGK7F399HXTEYWMZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.esphome_device_builder_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2024.12.4","in_progress":false,"latest_version":"2024.12.4","release_summary":"## 2024.12.4\n\n- Bump python3-setuptools to 66.1.1-1+deb12u1 [esphome#8074](https://github.com/esphome/esphome/pull/8074) by [@jesserockz](https://github.com/jesserockz)\n\n","release_url":null,"skipped_version":null,"title":"ESPHome Device Builder","update_percentage":null,"entity_picture":"/api/hassio/addons/5c53de3b_esphome/icon","friendly_name":"ESPHome Device Builder Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.997673+00:00","last_reported":"2025-02-11T14:01:30.997673+00:00","last_updated":"2025-02-11T14:01:30.997673+00:00","context":{"id":"01JKTN19KNRBWHXCVTEHD8RP3D","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.mosquitto_broker_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"6.5.0","in_progress":false,"latest_version":"6.5.0","release_summary":"# Changelog\n\n## 6.5.0\n\n- Update base image to Debian 12 (bookworm)\n- Update mosquitto to version 2.0.20\n- Update mosquitto-go-auth to version 2.1.0\n- Update libwebsockets to version 4.3.3\n\n## 6.4.1\n\n- Increase default max_queued_messages to 8192 to fix dr","release_url":null,"skipped_version":null,"title":"Mosquitto broker","update_percentage":null,"entity_picture":"/api/hassio/addons/core_mosquitto/icon","friendly_name":"Mosquitto broker Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.997826+00:00","last_reported":"2025-02-11T14:01:30.997826+00:00","last_updated":"2025-02-11T14:01:30.997826+00:00","context":{"id":"01JKTN19KNKWH7P31PEBV8VX5G","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.get_hacs_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.3.1","in_progress":false,"latest_version":"1.3.1","release_summary":"# 1.3.1\n\n- Fix problems with getting the current version for development builds\n\n# 1.3.0\n\n- Dynamically get the version again\n\n# 1.2.1\n\n- Create custom_components directory if it does not exist\n\n# 1.2.0\n\n- Set dev version to 2.0.0\n\n# 1.1.1\n\n- Fix version ","release_url":null,"skipped_version":null,"title":"Get HACS","update_percentage":null,"entity_picture":"/api/hassio/addons/cb646a50_get/icon","friendly_name":"Get HACS Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.997977+00:00","last_reported":"2025-02-11T14:01:30.997977+00:00","last_updated":"2025-02-11T14:01:30.997977+00:00","context":{"id":"01JKTN19KNWG5TK07MSPCGV8CH","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.scrypted_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v0.130.1-noble-full","in_progress":false,"latest_version":"v0.130.1-noble-full","release_summary":"No changelog found for add-on 09e60fb6_scrypted!","release_url":null,"skipped_version":null,"title":"Scrypted","update_percentage":null,"entity_picture":"/api/hassio/addons/09e60fb6_scrypted/icon","friendly_name":"Scrypted Update","supported_features":25},"last_changed":"2025-02-11T14:01:30.998111+00:00","last_reported":"2025-02-11T14:01:30.998111+00:00","last_updated":"2025-02-11T14:01:30.998111+00:00","context":{"id":"01JKTN19KPR55HSKVX8J9PHSS5","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.home_assistant_operating_system_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"14.2","in_progress":false,"latest_version":"14.2","release_summary":null,"release_url":"https://github.com/home-assistant/operating-system/releases/tag/14.2","skipped_version":null,"title":"Home Assistant Operating System","update_percentage":null,"entity_picture":"https://brands.home-assistant.io/homeassistant/icon.png","friendly_name":"Home Assistant Operating System Update","supported_features":3},"last_changed":"2025-02-11T14:01:30.998331+00:00","last_reported":"2025-02-11T14:01:30.998331+00:00","last_updated":"2025-02-11T14:01:30.998331+00:00","context":{"id":"01JKTN19KP8A1TV9G3VQSZ781W","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.p2000","state":"Graag telefonisch contact MKB","attributes":{"longitude":0.0,"latitude":0.0,"distance":0,"capcode":"2029570","regio":"","regio name":"Gereserveerd","discipline":"Gereserveerd","time":"2025-02-11T01:53:49","attribution":"P2000 Livemonitor 2021 HomeAssistant","icon":"mdi:fire-truck","friendly_name":"P2000"},"last_changed":"2025-02-11T14:01:31.059104+00:00","last_reported":"2025-02-11T14:01:31.059104+00:00","last_updated":"2025-02-11T14:01:31.059104+00:00","context":{"id":"01JKTN19NK3F420W00P2KMH99R","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.p2000_groningen","state":"GRAAG CONTACT MKA","attributes":{"longitude":0.0,"latitude":0.0,"distance":0,"capcode":"0420552","regio":"1","regio name":"Groningen","discipline":"Ambulancediensten","time":"2025-02-10T23:15:25","attribution":"P2000 Livemonitor 2021 HomeAssistant","icon":"mdi:ambulance","friendly_name":"P2000 Groningen"},"last_changed":"2025-02-11T14:01:31.059215+00:00","last_reported":"2025-02-11T14:01:31.059215+00:00","last_updated":"2025-02-11T14:01:31.059215+00:00","context":{"id":"01JKTN19NK84EZXGC7851G87KV","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.post_hoogezand","state":"(Intrekken Alarm Brw) OMS handmelder Huize St. Jozef Noorderstraat Sappemeer 01-21-016","attributes":{"longitude":5.97245,"latitude":51.529909,"distance":190533,"capcode":"0400529","regio":"1","regio name":"Groningen","discipline":"Brandweerdiensten","time":"2025-02-10T16:38:12","attribution":"P2000 Livemonitor 2021 HomeAssistant","icon":"mdi:fire-truck","friendly_name":"Post Hoogezand"},"last_changed":"2025-02-11T14:01:31.122151+00:00","last_reported":"2025-02-11T14:01:31.122151+00:00","last_updated":"2025-02-11T14:01:31.122151+00:00","context":{"id":"01JKTN19QJ6MFSD2FS87T52G3F","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"conversation.home_assistant","state":"unknown","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-02-11T14:01:32.424340+00:00","last_reported":"2025-02-11T14:01:32.424340+00:00","last_updated":"2025-02-11T14:01:32.424340+00:00","context":{"id":"01JKTN1B08DGDDCPZB3D3YEENF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"input_select.region","state":"Noord","attributes":{"options":["Noord","Midden","Zuid"],"editable":false,"icon":"mdi:map-marker","friendly_name":"Regio Schoolvakanties"},"last_changed":"2025-02-11T14:01:32.591448+00:00","last_reported":"2025-02-11T14:01:32.591448+00:00","last_updated":"2025-02-11T14:01:32.591448+00:00","context":{"id":"01JKTN1B5F11Q7CJA3GCWQYEVG","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"binary_sensor.iphone_14_pro_max_evert_job_focus","state":"on","attributes":{"icon":"mdi:moon-waning-crescent","friendly_name":"iPhone 14 Pro Max Evert-Job Focus"},"last_changed":"2025-02-11T14:01:33.574623+00:00","last_reported":"2025-02-11T14:01:33.574623+00:00","last_updated":"2025-02-11T14:01:33.574623+00:00","context":{"id":"01JKTN1C464C2G829X00M6XV4C","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"device_tracker.iphone_14_pro_max_evert_job","state":"home","attributes":{"source_type":"gps","battery_level":30,"latitude":53.16577119130984,"longitude":6.798530063080849,"gps_accuracy":2,"altitude":4.628733478704859,"vertical_accuracy":5,"friendly_name":"iPhone 14 Pro Max Evert-Job"},"last_changed":"2025-02-11T14:01:33.575009+00:00","last_reported":"2025-02-11T14:01:33.575009+00:00","last_updated":"2025-02-11T14:01:33.575009+00:00","context":{"id":"01JKTN1C47N07XMS7BF8MZST1D","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_average_active_pace","state":"1","attributes":{"unit_of_measurement":"m/s","icon":"mdi:speedometer","friendly_name":"iPhone 14 Pro Max Evert-Job Average Active Pace"},"last_changed":"2025-02-11T14:01:33.575549+00:00","last_reported":"2025-02-11T14:01:33.575549+00:00","last_updated":"2025-02-11T14:01:33.575549+00:00","context":{"id":"01JKTN1C47M8Z2QN9Y09MFAXF6","parent_id":null,"user_id":null}},
@@ -94,7 +94,7 @@
         "native_value": 1,
         "native_unit_of_measurement": "m/s"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_distance","state":"0","attributes":{"unit_of_measurement":"m","icon":"mdi:hiking","friendly_name":"iPhone 14 Pro Max Evert-Job Distance"},"last_changed":"2025-02-11T14:01:33.575718+00:00","last_reported":"2025-02-11T14:01:33.575718+00:00","last_updated":"2025-02-11T14:01:33.575718+00:00","context":{"id":"01JKTN1C47C9DD7PYHPBPJZ43S","parent_id":null,"user_id":null}},
@@ -102,7 +102,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "m"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_battery_level","state":"80","attributes":{"unit_of_measurement":"%","device_class":"battery","icon":"mdi:battery-charging-80","friendly_name":"iPhone 14 Pro Max Evert-Job Battery Level"},"last_changed":"2025-02-11T14:01:33.575882+00:00","last_reported":"2025-02-11T14:01:33.575882+00:00","last_updated":"2025-02-11T14:01:33.575882+00:00","context":{"id":"01JKTN1C479TR72MGYSTRKXH8M","parent_id":null,"user_id":null}},
@@ -110,7 +110,7 @@
         "native_value": 80,
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_floors_ascended","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-up","friendly_name":"iPhone 14 Pro Max Evert-Job Floors Ascended"},"last_changed":"2025-02-11T14:01:33.576038+00:00","last_reported":"2025-02-11T14:01:33.576038+00:00","last_updated":"2025-02-11T14:01:33.576038+00:00","context":{"id":"01JKTN1C4835RJHF1FHC2JYCFA","parent_id":null,"user_id":null}},
@@ -118,7 +118,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_battery_state","state":"Charging","attributes":{"Low Power Mode":false,"icon":"mdi:battery-charging-80","friendly_name":"iPhone 14 Pro Max Evert-Job Battery State"},"last_changed":"2025-02-11T14:01:33.576177+00:00","last_reported":"2025-02-11T14:01:33.576177+00:00","last_updated":"2025-02-11T14:01:33.576177+00:00","context":{"id":"01JKTN1C481QVQHASWPC32PDPK","parent_id":null,"user_id":null}},
@@ -126,7 +126,7 @@
         "native_value": "Charging",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_floors_descended","state":"0","attributes":{"unit_of_measurement":"floors","icon":"mdi:stairs-down","friendly_name":"iPhone 14 Pro Max Evert-Job Floors Descended"},"last_changed":"2025-02-11T14:01:33.576336+00:00","last_reported":"2025-02-11T14:01:33.576336+00:00","last_updated":"2025-02-11T14:01:33.576336+00:00","context":{"id":"01JKTN1C48K9GFRT6DHMPKTKGH","parent_id":null,"user_id":null}},
@@ -134,7 +134,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "floors"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_activity","state":"Stationary","attributes":{"Confidence":"High","Types":["Stationary"],"icon":"mdi:human-male","friendly_name":"iPhone 14 Pro Max Evert-Job Activity"},"last_changed":"2025-02-11T14:01:33.576474+00:00","last_reported":"2025-02-11T14:01:33.576474+00:00","last_updated":"2025-02-11T14:01:33.576474+00:00","context":{"id":"01JKTN1C48RSBT79PSPYN88A2C","parent_id":null,"user_id":null}},
@@ -142,7 +142,7 @@
         "native_value": "Stationary",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_storage","state":"36.03","attributes":{"Available":"13,11 GB","Available (Important)":"152,75 GB","Available (Opportunistic)":"92,04 GB","Total":"255,42 GB","unit_of_measurement":"% available","icon":"mdi:database","friendly_name":"iPhone 14 Pro Max Evert-Job Storage"},"last_changed":"2025-02-11T14:01:33.576614+00:00","last_reported":"2025-02-11T14:01:33.576614+00:00","last_updated":"2025-02-11T14:01:33.576614+00:00","context":{"id":"01JKTN1C48501GT6AT54NW3M2H","parent_id":null,"user_id":null}},
@@ -150,7 +150,7 @@
         "native_value": "36.03",
         "native_unit_of_measurement": "% available"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_steps","state":"0","attributes":{"unit_of_measurement":"steps","icon":"mdi:walk","friendly_name":"iPhone 14 Pro Max Evert-Job Steps"},"last_changed":"2025-02-11T14:01:33.576759+00:00","last_reported":"2025-02-11T14:01:33.576759+00:00","last_updated":"2025-02-11T14:01:33.576759+00:00","context":{"id":"01JKTN1C4884PZH7YC5M56RE45","parent_id":null,"user_id":null}},
@@ -158,7 +158,7 @@
         "native_value": 0,
         "native_unit_of_measurement": "steps"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_ssid","state":"Joep","attributes":{"icon":"mdi:wifi","friendly_name":"iPhone 14 Pro Max Evert-Job SSID"},"last_changed":"2025-02-11T14:01:33.576890+00:00","last_reported":"2025-02-11T14:01:33.576890+00:00","last_updated":"2025-02-11T14:01:33.576890+00:00","context":{"id":"01JKTN1C48KZEKRWBH00EMYR2F","parent_id":null,"user_id":null}},
@@ -166,7 +166,7 @@
         "native_value": "Joep",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_bssid","state":"d0:21:f9:4f:7d:6a","attributes":{"icon":"mdi:wifi-star","friendly_name":"iPhone 14 Pro Max Evert-Job BSSID"},"last_changed":"2025-02-11T14:01:33.577024+00:00","last_reported":"2025-02-11T14:01:33.577024+00:00","last_updated":"2025-02-11T14:01:33.577024+00:00","context":{"id":"01JKTN1C49FQ7M888Q4C9YAR31","parent_id":null,"user_id":null}},
@@ -174,7 +174,7 @@
         "native_value": "d0:21:f9:4f:7d:6a",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_connection_type","state":"Wi-Fi","attributes":{"icon":"mdi:wifi","friendly_name":"iPhone 14 Pro Max Evert-Job Connection Type"},"last_changed":"2025-02-11T14:01:33.577168+00:00","last_reported":"2025-02-11T14:01:33.577168+00:00","last_updated":"2025-02-11T14:01:33.577168+00:00","context":{"id":"01JKTN1C49F959RQ7TNECYZ705","parent_id":null,"user_id":null}},
@@ -182,7 +182,7 @@
         "native_value": "Wi-Fi",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_sim_1","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000001","Carrier Name":"--","Current Radio Technology":"5G Non-Standalone","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"iPhone 14 Pro Max Evert-Job SIM 1"},"last_changed":"2025-02-11T14:01:33.577292+00:00","last_reported":"2025-02-11T14:01:33.577292+00:00","last_updated":"2025-02-11T14:01:33.577292+00:00","context":{"id":"01JKTN1C49P6VCMHFQ3A1EHDSF","parent_id":null,"user_id":null}},
@@ -190,7 +190,7 @@
         "native_value": "--",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_sim_2","state":"--","attributes":{"Allows VoIP":true,"Carrier ID":"0000000100000002","Carrier Name":"--","Current Radio Technology":"Long-Term Evolution (LTE)","ISO Country Code":"--","Mobile Country Code":"65535","Mobile Network Code":"65535","icon":"mdi:sim","friendly_name":"iPhone 14 Pro Max Evert-Job SIM 2"},"last_changed":"2025-02-11T14:01:33.577417+00:00","last_reported":"2025-02-11T14:01:33.577417+00:00","last_updated":"2025-02-11T14:01:33.577417+00:00","context":{"id":"01JKTN1C49WCA6DPV7QN6B11R8","parent_id":null,"user_id":null}},
@@ -198,7 +198,7 @@
         "native_value": "--",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_geocoded_location","state":"Doorloper 42\n9611 AX Sappemeer\nNetherlands","attributes":{"Administrative Area":"Groningen","Areas Of Interest":"N/A","Country":"Netherlands","Inland Water":"N/A","ISO Country Code":"NL","Locality":"Sappemeer","Location":[53.16577119130984,6.798530063080849],"Name":"Doorloper 42","Ocean":"N/A","Postal Code":"9611 AX","Sub Administrative Area":"Groningen","Sub Locality":"N/A","Sub Thoroughfare":"42","Thoroughfare":"Doorloper","Time Zone":"Europe/Amsterdam","Zones":["tenDoeschate","tenDoeschate"],"icon":"mdi:map","friendly_name":"iPhone 14 Pro Max Evert-Job Geocoded Location"},"last_changed":"2025-02-11T14:01:33.577548+00:00","last_reported":"2025-02-11T14:01:33.577548+00:00","last_updated":"2025-02-11T14:01:33.577548+00:00","context":{"id":"01JKTN1C49ZJRVTTCKH0F07K18","parent_id":null,"user_id":null}},
@@ -206,7 +206,7 @@
         "native_value": "Doorloper 42\n9611 AX Sappemeer\nNetherlands",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_last_update_trigger","state":"Periodic","attributes":{"icon":"mdi:cellphone-wireless","friendly_name":"iPhone 14 Pro Max Evert-Job Last Update Trigger"},"last_changed":"2025-02-11T14:01:33.577680+00:00","last_reported":"2025-02-11T14:01:33.577680+00:00","last_updated":"2025-02-11T14:01:33.577680+00:00","context":{"id":"01JKTN1C49JKG1JDR5PN18C143","parent_id":null,"user_id":null}},
@@ -214,7 +214,7 @@
         "native_value": "Periodic",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_app_version","state":"2025.2","attributes":{"icon":"mdi:cellphone","friendly_name":"iPhone 14 Pro Max Evert-Job App Version"},"last_changed":"2025-02-11T14:01:33.577806+00:00","last_reported":"2025-02-11T14:01:33.577806+00:00","last_updated":"2025-02-11T14:01:33.577806+00:00","context":{"id":"01JKTN1C497EQQY2H5BN27Y4SH","parent_id":null,"user_id":null}},
@@ -222,7 +222,7 @@
         "native_value": "2025.2",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_location_permission","state":"Authorized Always","attributes":{"icon":"mdi:map","friendly_name":"iPhone 14 Pro Max Evert-Job Location permission"},"last_changed":"2025-02-11T14:01:33.577929+00:00","last_reported":"2025-02-11T14:01:33.577929+00:00","last_updated":"2025-02-11T14:01:33.577929+00:00","context":{"id":"01JKTN1C49EZQMGKTKDVG12NFE","parent_id":null,"user_id":null}},
@@ -230,7 +230,7 @@
         "native_value": "Authorized Always",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.iphone_14_pro_max_evert_job_audio_output","state":"Built-in Speaker","attributes":{"icon":"mdi:volume-high","friendly_name":"iPhone 14 Pro Max Evert-Job Audio Output"},"last_changed":"2025-02-11T14:01:33.578045+00:00","last_reported":"2025-02-11T14:01:33.578045+00:00","last_updated":"2025-02-11T14:01:33.578045+00:00","context":{"id":"01JKTN1C4A1WZZQXN1629MZS8S","parent_id":null,"user_id":null}},
@@ -238,282 +238,282 @@
         "native_value": "Built-in Speaker",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.slide_calibrate_2","state":"unknown","attributes":{"friendly_name":"Slide Calibrate"},"last_changed":"2025-02-11T14:01:33.899962+00:00","last_reported":"2025-02-11T14:01:33.899962+00:00","last_updated":"2025-02-11T14:01:33.899962+00:00","context":{"id":"01JKTN1CEBEYQEQM3K5718QP4N","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.slide_calibrate","state":"unknown","attributes":{"friendly_name":"Slide Calibrate"},"last_changed":"2025-02-11T14:01:33.906405+00:00","last_reported":"2025-02-11T14:01:33.906405+00:00","last_updated":"2025-02-11T14:01:33.906405+00:00","context":{"id":"01JKTN1CEJBMHBNQ7GYF5Z6TGC","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.watermeter_identify","state":"unknown","attributes":{"device_class":"identify","friendly_name":"Watermeter Identificeren"},"last_changed":"2025-02-11T14:01:33.914305+00:00","last_reported":"2025-02-11T14:01:38.889778+00:00","last_updated":"2025-02-11T14:01:33.914305+00:00","context":{"id":"01JKTN1CETENG03CA3W1D58P6Y","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.shellypmmini_6055f999dbcc_reboot","state":"unknown","attributes":{"device_class":"restart","friendly_name":"shellypmmini-6055f999dbcc Reboot"},"last_changed":"2025-02-11T14:01:33.960142+00:00","last_reported":"2025-02-11T14:01:33.960142+00:00","last_updated":"2025-02-11T14:01:33.960142+00:00","context":{"id":"01JKTN1CG821EAJN6CBNR4XVQS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.shellypmmini_6055f999dbcc_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.4.4","in_progress":false,"latest_version":"1.4.4","release_summary":null,"release_url":"https://shelly-api-docs.shelly.cloud/gen2/changelog/","skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/shelly/icon.png","friendly_name":"shellypmmini-6055f999dbcc firmware","supported_features":5},"last_changed":"2025-02-11T14:01:33.962049+00:00","last_reported":"2025-02-11T14:01:33.962049+00:00","last_updated":"2025-02-11T14:01:33.962049+00:00","context":{"id":"01JKTN1CGA57GJ29DPGMZ5X7KE","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.shelly1pmminig3_84fce639ee60_reboot","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Spiegel Reboot"},"last_changed":"2025-02-11T14:01:33.963342+00:00","last_reported":"2025-02-11T14:01:33.963342+00:00","last_updated":"2025-02-11T14:01:33.963342+00:00","context":{"id":"01JKTN1CGBQPXXYZZ4V659B6RS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.shelly1pmminig3_84fce639ee60_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.4.4","in_progress":false,"latest_version":"1.4.4","release_summary":null,"release_url":"https://shelly-api-docs.shelly.cloud/gen2/changelog/","skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/shelly/icon.png","friendly_name":"Spiegel firmware","supported_features":5},"last_changed":"2025-02-11T14:01:33.967007+00:00","last_reported":"2025-02-11T14:01:33.967007+00:00","last_updated":"2025-02-11T14:01:33.967007+00:00","context":{"id":"01JKTN1CGFEZT9Z6B3N8YDZ20V","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.shellypmmini_6055f99feee8_reboot","state":"unknown","attributes":{"device_class":"restart","friendly_name":"shellypmmini-6055f99feee8 Reboot"},"last_changed":"2025-02-11T14:01:33.967721+00:00","last_reported":"2025-02-11T14:01:33.967721+00:00","last_updated":"2025-02-11T14:01:33.967721+00:00","context":{"id":"01JKTN1CGF19XJPYH62YQ0C1VY","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.shellypmmini_6055f99feee8_firmware","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.4.4","in_progress":false,"latest_version":"1.4.4","release_summary":null,"release_url":"https://shelly-api-docs.shelly.cloud/gen2/changelog/","skipped_version":null,"title":null,"update_percentage":null,"device_class":"firmware","entity_picture":"https://brands.home-assistant.io/_/shelly/icon.png","friendly_name":"shellypmmini-6055f99feee8 firmware","supported_features":5},"last_changed":"2025-02-11T14:01:33.969423+00:00","last_reported":"2025-02-11T14:01:33.969423+00:00","last_updated":"2025-02-11T14:01:33.969423+00:00","context":{"id":"01JKTN1CGH7J6PW7C6FVS4TNJS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.afvalinfo_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2.1.9","in_progress":false,"latest_version":"v2.1.9","release_summary":null,"release_url":"https://github.com/heyajohnny/afvalinfo/releases/v2.1.9","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/afvalinfo/icon.png","friendly_name":"Afvalinfo update","supported_features":23},"last_changed":"2025-02-11T14:01:33.995619+00:00","last_reported":"2025-02-11T14:01:33.995619+00:00","last_updated":"2025-02-11T14:01:33.995619+00:00","context":{"id":"01JKTN1CHBEN2GDPVHV55R0X4P","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.p2000_sensor_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"1.0.23","in_progress":false,"latest_version":"1.0.23","release_summary":null,"release_url":"https://github.com/cyberjunky/home-assistant-p2000/releases/1.0.23","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/p2000/icon.png","friendly_name":"P2000 Sensor update","supported_features":23},"last_changed":"2025-02-11T14:01:33.995799+00:00","last_reported":"2025-02-11T14:01:33.995799+00:00","last_updated":"2025-02-11T14:01:33.995799+00:00","context":{"id":"01JKTN1CHBSJJP7KQ4VGKZDSVG","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.powercalc_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.17.6","in_progress":false,"latest_version":"v1.17.6","release_summary":null,"release_url":"https://github.com/bramstroker/homeassistant-powercalc/releases/v1.17.6","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/powercalc/icon.png","friendly_name":"Powercalc update","supported_features":23},"last_changed":"2025-02-11T14:01:33.995932+00:00","last_reported":"2025-02-11T14:01:33.995932+00:00","last_updated":"2025-02-11T14:01:33.995932+00:00","context":{"id":"01JKTN1CHB0Z0FDT4X53J5K76N","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.smart_irrigation_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v2024.10.3","in_progress":false,"latest_version":"v2024.10.3","release_summary":null,"release_url":"https://github.com/jeroenterheerdt/HAsmartirrigation/releases/v2024.10.3","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/smart_irrigation/icon.png","friendly_name":"Smart Irrigation update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996053+00:00","last_reported":"2025-02-11T14:01:33.996053+00:00","last_updated":"2025-02-11T14:01:33.996053+00:00","context":{"id":"01JKTN1CHC1VYW5CYKGYV6MGZF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.custom_brand_icons_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2025.2.0","in_progress":false,"latest_version":"2025.2.0","release_summary":null,"release_url":"https://github.com/elax46/custom-brand-icons/releases/2025.2.0","skipped_version":null,"title":null,"update_percentage":null,"friendly_name":"Custom brand icons update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996176+00:00","last_reported":"2025-02-11T14:01:33.996176+00:00","last_updated":"2025-02-11T14:01:33.996176+00:00","context":{"id":"01JKTN1CHC2AYM6DGB7ZYM7JBZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.dreame_vacuum_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.0.4","in_progress":false,"latest_version":"v1.0.4","release_summary":null,"release_url":"https://github.com/Tasshack/dreame-vacuum/releases/v1.0.4","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/dreame_vacuum/icon.png","friendly_name":"Dreame Vacuum update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996300+00:00","last_reported":"2025-02-11T14:01:33.996300+00:00","last_updated":"2025-02-11T14:01:33.996300+00:00","context":{"id":"01JKTN1CHCCSVNX7SCXZ7D5CDP","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.alarmo_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.10.7","in_progress":false,"latest_version":"v1.10.7","release_summary":null,"release_url":"https://github.com/nielsfaber/alarmo/releases/v1.10.7","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/alarmo/icon.png","friendly_name":"Alarmo update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996418+00:00","last_reported":"2025-02-11T14:01:33.996418+00:00","last_updated":"2025-02-11T14:01:33.996418+00:00","context":{"id":"01JKTN1CHCE12ATDNDRCBB244B","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.hacs_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.0.5","in_progress":false,"latest_version":"2.0.5","release_summary":null,"release_url":"https://github.com/hacs/integration/releases/2.0.5","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hacs/icon.png","friendly_name":"HACS update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996534+00:00","last_reported":"2025-02-11T14:01:33.996534+00:00","last_updated":"2025-02-11T14:01:33.996534+00:00","context":{"id":"01JKTN1CHCE7SB5B31KW60X164","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.daikin_onecta_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v4.2.2","in_progress":false,"latest_version":"v4.2.2","release_summary":null,"release_url":"https://github.com/jwillemsen/daikin_onecta/releases/v4.2.2","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/daikin_onecta/icon.png","friendly_name":"Daikin Onecta update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996656+00:00","last_reported":"2025-02-11T14:01:33.996656+00:00","last_updated":"2025-02-11T14:01:33.996656+00:00","context":{"id":"01JKTN1CHC2JAA6KFDR4FQTQZ6","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"update.spook_your_homie_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v3.1.0","in_progress":false,"latest_version":"v3.1.0","release_summary":null,"release_url":"https://github.com/frenck/spook/releases/v3.1.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/spook/icon.png","friendly_name":"Spook 👻 Your homie update","supported_features":23},"last_changed":"2025-02-11T14:01:33.996772+00:00","last_reported":"2025-02-11T14:01:33.996772+00:00","last_updated":"2025-02-11T14:01:33.996772+00:00","context":{"id":"01JKTN1CHCXD6K2736ZMZN5GQ2","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.smart_irrigation_voortuin","state":"0","attributes":{"id":0,"size":15.0,"throughput":5.0,"drainage_rate":50.8,"state":"automatic","bucket":0,"last_updated":null,"last_calculated":null,"number_of_data_points":0,"et_value":0,"unit_of_measurement":"s","device_class":"duration","icon":"mdi:sprinkler","friendly_name":"Voortuin"},"last_changed":"2025-02-11T14:01:33.999708+00:00","last_reported":"2025-02-11T14:01:33.999708+00:00","last_updated":"2025-02-11T14:01:33.999708+00:00","context":{"id":"01JKTN1CHFKKAWZMAG6NAGWD1G","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_smart_plug_v3_50e238_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Overkapping Restart"},"last_changed":"2025-02-11T14:01:35.770895+00:00","last_reported":"2025-02-11T14:01:35.770895+00:00","last_updated":"2025-02-11T14:01:35.770895+00:00","context":{"id":"01JKTN1E8TZBF6PA1FBCSTBNTB","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_smart_plug_v3_50e238_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Overkapping Factory Reset"},"last_changed":"2025-02-11T14:01:35.770743+00:00","last_reported":"2025-02-11T14:01:35.770743+00:00","last_updated":"2025-02-11T14:01:35.770743+00:00","context":{"id":"01JKTN1E8TY6DDGZXNK79RSNGX","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_smart_plug_v3_50e238_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Overkapping Safe Mode"},"last_changed":"2025-02-11T14:01:35.771261+00:00","last_reported":"2025-02-11T14:01:35.771261+00:00","last_updated":"2025-02-11T14:01:35.771261+00:00","context":{"id":"01JKTN1E8V84K24VJSR5ZT6DR4","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.air_conditioner_493535_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Air Conditioner 493535 Factory reset"},"last_changed":"2025-02-11T14:01:34.413653+00:00","last_reported":"2025-02-11T14:01:34.413653+00:00","last_updated":"2025-02-11T14:01:34.413653+00:00","context":{"id":"01JKTN1CYD6EQBB3VTNZTQCKWJ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.air_conditioner_493535_air_conditioner_display_toggle","state":"unknown","attributes":{"icon":"mdi:theme-light-dark","friendly_name":"Air Conditioner 493535 Air Conditioner Display Toggle"},"last_changed":"2025-02-11T14:01:34.413575+00:00","last_reported":"2025-02-11T14:01:34.413575+00:00","last_updated":"2025-02-11T14:01:34.413575+00:00","context":{"id":"01JKTN1CYD2PXQ0A9NYCWY58TS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.air_conditioner_493535_air_conditioner_swing_step","state":"unknown","attributes":{"icon":"mdi:tailwind","friendly_name":"Air Conditioner 493535 Air Conditioner Swing Step"},"last_changed":"2025-02-11T14:01:34.413490+00:00","last_reported":"2025-02-11T14:01:34.413490+00:00","last_updated":"2025-02-11T14:01:34.413490+00:00","context":{"id":"01JKTN1CYD9PGDQ1BXH0J3N8SG","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasmachine_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Wasmachine Restart"},"last_changed":"2025-02-11T14:01:37.133098+00:00","last_reported":"2025-02-11T14:01:37.133098+00:00","last_updated":"2025-02-11T14:01:37.133098+00:00","context":{"id":"01JKTN1FKD7T3QKPB1RFH9EJE9","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasmachine_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Wasmachine Factory Reset"},"last_changed":"2025-02-11T14:01:37.133150+00:00","last_reported":"2025-02-11T14:01:37.133150+00:00","last_updated":"2025-02-11T14:01:37.133150+00:00","context":{"id":"01JKTN1FKD1S3FFFMZ71QYA6BC","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasmachine_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Wasmachine Safe Mode"},"last_changed":"2025-02-11T14:01:37.133023+00:00","last_reported":"2025-02-11T14:01:37.133023+00:00","last_updated":"2025-02-11T14:01:37.133023+00:00","context":{"id":"01JKTN1FKD8YYHQ04482MJ70TE","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.vaatwasser_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Vaatwasser Restart"},"last_changed":"2025-02-11T14:01:37.209606+00:00","last_reported":"2025-02-11T14:01:37.209606+00:00","last_updated":"2025-02-11T14:01:37.209606+00:00","context":{"id":"01JKTN1FNSVPR38T45GFS4Q5GN","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.vaatwasser_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Vaatwasser Factory Reset"},"last_changed":"2025-02-11T14:01:37.210178+00:00","last_reported":"2025-02-11T14:01:37.210178+00:00","last_updated":"2025-02-11T14:01:37.210178+00:00","context":{"id":"01JKTN1FNTXZ87R6XQ0XJDAQ3W","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.vaatwasser_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Vaatwasser Safe Mode"},"last_changed":"2025-02-11T14:01:37.209422+00:00","last_reported":"2025-02-11T14:01:37.209422+00:00","last_updated":"2025-02-11T14:01:37.209422+00:00","context":{"id":"01JKTN1FNSB9KJDAMXY245GWRN","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasdroger_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Wasdroger Restart"},"last_changed":"2025-02-11T14:01:37.135917+00:00","last_reported":"2025-02-11T14:01:37.135917+00:00","last_updated":"2025-02-11T14:01:37.135917+00:00","context":{"id":"01JKTN1FKFKEQ1XW0264PFABFW","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasdroger_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Wasdroger Factory Reset"},"last_changed":"2025-02-11T14:01:37.136085+00:00","last_reported":"2025-02-11T14:01:37.136085+00:00","last_updated":"2025-02-11T14:01:37.136085+00:00","context":{"id":"01JKTN1FKGVE58A68YKC4GD6ET","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.wasdroger_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Wasdroger Safe Mode"},"last_changed":"2025-02-11T14:01:37.135853+00:00","last_reported":"2025-02-11T14:01:37.135853+00:00","last_updated":"2025-02-11T14:01:37.135853+00:00","context":{"id":"01JKTN1FKFCQFE50B72DWABGRF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.3d_printer_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"3D printer Restart"},"last_changed":"2025-02-11T14:01:34.727446+00:00","last_reported":"2025-02-11T14:01:34.727446+00:00","last_updated":"2025-02-11T14:01:34.727446+00:00","context":{"id":"01JKTN1D87ZTQJR54JAY24V72E","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.3d_printer_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"3D printer Factory Reset"},"last_changed":"2025-02-11T14:01:34.727488+00:00","last_reported":"2025-02-11T14:01:34.727488+00:00","last_updated":"2025-02-11T14:01:34.727488+00:00","context":{"id":"01JKTN1D8777PDJ3MT5CZBFCZS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.3d_printer_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"3D printer Safe Mode"},"last_changed":"2025-02-11T14:01:34.727360+00:00","last_reported":"2025-02-11T14:01:34.727360+00:00","last_updated":"2025-02-11T14:01:34.727360+00:00","context":{"id":"01JKTN1D87ZJW6MP067C460BBN","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.mv_wtw_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Warmtewisselaar Restart"},"last_changed":"2025-02-11T14:01:34.796980+00:00","last_reported":"2025-02-11T14:01:34.796980+00:00","last_updated":"2025-02-11T14:01:34.796980+00:00","context":{"id":"01JKTN1DAC2TDWVSCVWZR8C95Z","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.mv_wtw_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Warmtewisselaar Factory Reset"},"last_changed":"2025-02-11T14:01:34.796955+00:00","last_reported":"2025-02-11T14:01:34.796955+00:00","last_updated":"2025-02-11T14:01:34.796955+00:00","context":{"id":"01JKTN1DACN8BPRNXXNAZ2FCD1","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.mv_wtw_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Warmtewisselaar Safe Mode"},"last_changed":"2025-02-11T14:01:34.796916+00:00","last_reported":"2025-02-11T14:01:34.796916+00:00","last_updated":"2025-02-11T14:01:34.796916+00:00","context":{"id":"01JKTN1DACZAVDHKMVVGYX22SP","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.quooker_restart","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Quooker Restart"},"last_changed":"2025-02-11T14:01:34.788299+00:00","last_reported":"2025-02-11T14:01:34.788299+00:00","last_updated":"2025-02-11T14:01:34.788299+00:00","context":{"id":"01JKTN1DA4Q5Z9Q2Q2DXVQ2TT9","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.quooker_factory_reset","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Quooker Factory Reset"},"last_changed":"2025-02-11T14:01:34.788362+00:00","last_reported":"2025-02-11T14:01:34.788362+00:00","last_updated":"2025-02-11T14:01:34.788362+00:00","context":{"id":"01JKTN1DA4DH5EY549KQ5SDST8","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.quooker_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Quooker Safe Mode"},"last_changed":"2025-02-11T14:01:34.787964+00:00","last_reported":"2025-02-11T14:01:34.787964+00:00","last_updated":"2025-02-11T14:01:34.787964+00:00","context":{"id":"01JKTN1DA3YXSWM3BT99THE5AK","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.herstart_sensor","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Herstart sensor"},"last_changed":"2025-02-11T14:01:34.662274+00:00","last_reported":"2025-02-11T14:01:34.662274+00:00","last_updated":"2025-02-11T14:01:34.662274+00:00","context":{"id":"01JKTN1D66ZRVBDH94196K0M1E","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.herstart_lichtsensor_buiten","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Herstart lichtsensor-buiten"},"last_changed":"2025-02-11T14:01:34.654550+00:00","last_reported":"2025-02-11T14:01:34.654550+00:00","last_updated":"2025-02-11T14:01:34.654550+00:00","context":{"id":"01JKTN1D5Y9N7Y0RPFPYWWANZF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.herstart_aed","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart","friendly_name":"Herstart aed"},"last_changed":"2025-02-11T14:01:34.643432+00:00","last_reported":"2025-02-11T14:01:34.643432+00:00","last_updated":"2025-02-11T14:01:34.643432+00:00","context":{"id":"01JKTN1D5KMAEBSJSFZ6ZBY7YC","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_presence_sensor_v3_ae0cb4_reset_device","state":"unknown","attributes":{"friendly_name":"Aanwezigheidsmelder badkamer Reset device"},"last_changed":"2025-02-11T14:01:35.242017+00:00","last_reported":"2025-02-11T14:01:35.242017+00:00","last_updated":"2025-02-11T14:01:35.242017+00:00","context":{"id":"01JKTN1DRA1GH2M8A8HFXJBXBY","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_presence_sensor_v3_ae0cb4_safe_mode","state":"unknown","attributes":{"device_class":"restart","icon":"mdi:restart-alert","friendly_name":"Aanwezigheidsmelder badkamer Safe Mode"},"last_changed":"2025-02-11T14:01:35.241885+00:00","last_reported":"2025-02-11T14:01:35.241885+00:00","last_updated":"2025-02-11T14:01:35.241885+00:00","context":{"id":"01JKTN1DR99S0JZ59ZF0NYXXE7","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.athom_presence_sensor_v3_ae0cb4_restart_device","state":"unknown","attributes":{"friendly_name":"Aanwezigheidsmelder badkamer Restart device"},"last_changed":"2025-02-11T14:01:35.241322+00:00","last_reported":"2025-02-11T14:01:35.241322+00:00","last_updated":"2025-02-11T14:01:35.241322+00:00","context":{"id":"01JKTN1DR90CMN1VN044D3T1A2","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"alarm_control_panel.alarmo","state":"disarmed","attributes":{"code_format":null,"changed_by":null,"code_arm_required":false,"arm_mode":null,"next_state":"disarmed","open_sensors":null,"bypassed_sensors":null,"delay":null,"friendly_name":"Alarmo","supported_features":11},"last_changed":"2025-02-11T14:01:34.570474+00:00","last_reported":"2025-02-11T14:01:34.570888+00:00","last_updated":"2025-02-11T14:01:34.570474+00:00","context":{"id":"01JKTN1D3AZ7YKKBQRKNFZ4FH1","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.homeassistant_restart","state":"unknown","attributes":{"device_class":"restart","friendly_name":"Home Assistant Herstarten"},"last_changed":"2025-02-11T14:01:34.591219+00:00","last_reported":"2025-02-11T14:01:34.591219+00:00","last_updated":"2025-02-11T14:01:34.591219+00:00","context":{"id":"01JKTN1D3ZHCEGT5PG92BJ6FGZ","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.homeassistant_reload","state":"unknown","attributes":{"icon":"mdi:auto-fix","friendly_name":"Home Assistant Herladen"},"last_changed":"2025-02-11T14:01:34.591409+00:00","last_reported":"2025-02-11T14:01:34.591409+00:00","last_updated":"2025-02-11T14:01:34.591409+00:00","context":{"id":"01JKTN1D3Z21CH0GAHDEEFC17Y","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.ignore_all_issues","state":"unknown","attributes":{"icon":"mdi:checkbox-outline","friendly_name":"Repairs Negeer alles"},"last_changed":"2025-02-11T14:01:34.591659+00:00","last_reported":"2025-02-11T14:01:34.591659+00:00","last_updated":"2025-02-11T14:01:34.591659+00:00","context":{"id":"01JKTN1D3ZQGY2XCTST68AKTDS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.unignore_all_issues","state":"unknown","attributes":{"icon":"mdi:checkbox-blank-outline","friendly_name":"Repairs Alles herstellen"},"last_changed":"2025-02-11T14:01:34.591792+00:00","last_reported":"2025-02-11T14:01:34.591792+00:00","last_updated":"2025-02-11T14:01:34.591792+00:00","context":{"id":"01JKTN1D3ZMRD1D64AT2HKV74Z","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"event.repair","state":"2025-02-11T13:10:37.934+00:00","attributes":{"event_types":["create","remove","update"],"event_type":"update","domain":"homeassistant","issue_id":"config_entry_only_home_connect","friendly_name":"Repairs"},"last_changed":"2025-02-11T14:01:34.596238+00:00","last_reported":"2025-02-11T14:01:34.596238+00:00","last_updated":"2025-02-11T14:01:34.596238+00:00","context":{"id":"01JKTN1D44EQWQ964R2Q58KEZK","parent_id":null,"user_id":null}},
@@ -524,80 +524,80 @@
           "issue_id": "config_entry_only_home_connect"
         }
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.qcom_btd_herstart_browser","state":"unknown","attributes":{"device_class":"restart","friendly_name":"QCOM-BTD Herstart browser"},"last_changed":"2025-02-11T14:01:34.790546+00:00","last_reported":"2025-02-11T14:01:34.796049+00:00","last_updated":"2025-02-11T14:01:34.790546+00:00","context":{"id":"01JKTN1DA6G9274BV2P9CFHJTM","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.qcom_btd_herstart_apparaat","state":"unknown","attributes":{"device_class":"restart","friendly_name":"QCOM-BTD Herstart apparaat"},"last_changed":"2025-02-11T14:01:34.790699+00:00","last_reported":"2025-02-11T14:01:34.796058+00:00","last_updated":"2025-02-11T14:01:34.790699+00:00","context":{"id":"01JKTN1DA6C36Z19458YZ8CZM2","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.qcom_btd_naar_de_voorgrond_halen","state":"unknown","attributes":{"friendly_name":"QCOM-BTD Naar de voorgrond halen"},"last_changed":"2025-02-11T14:01:34.790822+00:00","last_reported":"2025-02-11T14:01:34.796066+00:00","last_updated":"2025-02-11T14:01:34.790822+00:00","context":{"id":"01JKTN1DA6AHTY596BD8E6H351","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.qcom_btd_naar_achtergrond_sturen","state":"unknown","attributes":{"friendly_name":"QCOM-BTD Naar achtergrond sturen"},"last_changed":"2025-02-11T14:01:34.790940+00:00","last_reported":"2025-02-11T14:01:34.796074+00:00","last_updated":"2025-02-11T14:01:34.790940+00:00","context":{"id":"01JKTN1DA6F92YRBG9GXFZQA2N","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.qcom_btd_start_url_laden","state":"unknown","attributes":{"friendly_name":"QCOM-BTD Start URL laden"},"last_changed":"2025-02-11T14:01:34.791064+00:00","last_reported":"2025-02-11T14:01:34.796082+00:00","last_updated":"2025-02-11T14:01:34.791064+00:00","context":{"id":"01JKTN1DA7WRAA84CQ4Y599FPG","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"notify.qcom_btd_overlay_message","state":"unknown","attributes":{"friendly_name":"QCOM-BTD Overlay message","supported_features":0},"last_changed":"2025-02-11T14:01:34.792659+00:00","last_reported":"2025-02-11T14:01:34.796160+00:00","last_updated":"2025-02-11T14:01:34.792659+00:00","context":{"id":"01JKTN1DA8DEWECST93K0NZ7BS","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"notify.qcom_btd_tekst_naar_spraak","state":"unknown","attributes":{"friendly_name":"QCOM-BTD Tekst naar spraak","supported_features":0},"last_changed":"2025-02-11T14:01:34.792777+00:00","last_reported":"2025-02-11T14:01:34.796168+00:00","last_updated":"2025-02-11T14:01:34.792777+00:00","context":{"id":"01JKTN1DA8N87A1F3SDHWA3Z02","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.altherma_refresh","state":"unknown","attributes":{"icon":"mdi:refresh","friendly_name":"Altherma Refresh"},"last_changed":"2025-02-11T14:01:34.814738+00:00","last_reported":"2025-02-11T14:01:34.814738+00:00","last_updated":"2025-02-11T14:01:34.814738+00:00","context":{"id":"01JKTN1DAYBTCBYY80PKN8DPAY","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"binary_sensor.none_battery_critical","state":"off","attributes":{"device_class":"battery","friendly_name":"Garage deur Battery critical"},"last_changed":"2025-02-11T14:01:35.955360+00:00","last_reported":"2025-02-11T14:01:35.955360+00:00","last_updated":"2025-02-11T14:01:35.955360+00:00","context":{"id":"01JKTN1EEKTZ3RAXGC0ZRGB567","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"binary_sensor.none_battery_charging","state":"off","attributes":{"device_class":"battery_charging","friendly_name":"Garage deur Battery charging"},"last_changed":"2025-02-11T14:01:35.957915+00:00","last_reported":"2025-02-11T14:01:35.957915+00:00","last_updated":"2025-02-11T14:01:35.957915+00:00","context":{"id":"01JKTN1EENK5N6QQNR3DQMXHGX","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.none_unlatch","state":"unknown","attributes":{"friendly_name":"Garage deur Unlatch"},"last_changed":"2025-02-11T14:01:35.954824+00:00","last_reported":"2025-02-11T14:01:35.954824+00:00","last_updated":"2025-02-11T14:01:35.954824+00:00","context":{"id":"01JKTN1EEJGV2PQWP9R5AJHM05","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.none_lock_n_go","state":"unknown","attributes":{"friendly_name":"Garage deur Lock 'n' Go"},"last_changed":"2025-02-11T14:01:35.954599+00:00","last_reported":"2025-02-11T14:01:35.954599+00:00","last_updated":"2025-02-11T14:01:35.954599+00:00","context":{"id":"01JKTN1EEJBRHFHRXH4PJAFBZC","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.none_lock_n_go_with_unlatch","state":"unknown","attributes":{"friendly_name":"Garage deur Lock 'n' Go with unlatch"},"last_changed":"2025-02-11T14:01:35.954302+00:00","last_reported":"2025-02-11T14:01:35.954302+00:00","last_updated":"2025-02-11T14:01:35.954302+00:00","context":{"id":"01JKTN1EEJ6J3HQV9D74V0KZDC","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
-      "state": {"entity_id":"sensor.althermasensors","state":"unknown","attributes":{"INV compressor Qty":1,"STD compressor Qty":0,"Operation Mode":"Heating","Thermostat ON/OFF":"ON","Defrost Operation":"OFF","Low noise control":"OFF","Comp. INV Current Drop":"OFF","Comp. INV Current Protection Retry Qty":"Conv 311 not avail.","Outdoor air temp.(R1T)":1.5,"Discharge pipe temp.":48,"Suction pipe temp.":0,"Heat exchanger mid-temp.":"-2","Pressure sensor":0,"INV primary current (A)":3.5,"INV secondary current (A)":6.7,"Voltage (N-phase) (V)":40,"INV frequency (rps)":28,"INV frequency 2 (rps)":71,"STD Compressor 1":"OFF","STD Compressor 2":"OFF","Fan 1 (10 rpm)":28,"Fan 2 (step)":71,"I/U operation mode":"Heating","Freeze Protection":"OFF","Silent Mode":"OFF","DHW setpoint":53,"LW setpoint (main)":30.8,"Water flow switch":"OFF","Thermal protector (Q1L) BUH":"ON","Thermal protector BSH":"ON","BUH Step1":"OFF","BUH Step2":"OFF","BPH":"OFF","Water pump operation":"ON","Leaving water temp. before BUH (R1T)":30.8,"Leaving water temp. after BUH (R2T)":30.9,"Refrig. Temp. liquid side (R3T)":29.6,"Inlet water temp.(R4T)":25.8,"DHW tank temp. (R5T)":51.8,"Indoor ambient temp. (R1T)":20.8,"Ext. indoor ambient sensor (R6T)":0,"Data Enable/Disable":"ON","Indoor Unit Address":0,"Reheat ON/OFF":"OFF","Storage eco ON/OFF":"OFF","RT setpoint":20.5,"Add. Ext. RT Input Cool.":"OFF","Add. Ext. RT Input Heat.":"OFF","Main RT Cooling":"OFF","Circulation pump operation":"OFF","Flow sensor (l/min)":9.5,"Water pressure":1.7,"Water pump signal (0:max-100:stop)":57,"Target delta T heating":5,"Target delta T cooling":5,"M5VIN":"4.61V","M5AmpIn":"102.5mA","M5BatV":"4.11V","M5BatCur":"0mA","M5BatPwr":"0mW","WifiRSSI":"-71dBm","friendly_name":"AlthermaSensors"},"last_changed":"2025-02-11T15:01:37.151583+00:00","last_reported":"2025-02-11T15:01:37.151583+00:00","last_updated":"2025-02-11T15:01:37.151583+00:00","context":{"id":"01JKTRFB7ZKPBC8JAFKFSVYW5Y","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"sensor.althermasensors","state":"unknown","attributes":{"INV compressor Qty":1,"STD compressor Qty":0,"Operation Mode":"Heating","Thermostat ON/OFF":"ON","Defrost Operation":"OFF","Low noise control":"OFF","Comp. INV Current Drop":"OFF","Comp. INV Current Protection Retry Qty":"Conv 311 not avail.","Outdoor air temp.(R1T)":1.5,"Discharge pipe temp.":48,"Suction pipe temp.":0,"Heat exchanger mid-temp.":"-2.5","Pressure sensor":0,"INV primary current (A)":4,"INV secondary current (A)":6.8,"Voltage (N-phase) (V)":40,"INV frequency (rps)":28,"INV frequency 2 (rps)":71,"STD Compressor 1":"OFF","STD Compressor 2":"OFF","Fan 1 (10 rpm)":28,"Fan 2 (step)":71,"I/U operation mode":"Heating","Freeze Protection":"OFF","Silent Mode":"OFF","DHW setpoint":53,"LW setpoint (main)":30.8,"Water flow switch":"OFF","Thermal protector (Q1L) BUH":"ON","Thermal protector BSH":"ON","BUH Step1":"OFF","BUH Step2":"OFF","BPH":"OFF","Water pump operation":"ON","Leaving water temp. before BUH (R1T)":31.1,"Leaving water temp. after BUH (R2T)":31.3,"Refrig. Temp. liquid side (R3T)":29.9,"Inlet water temp.(R4T)":25.9,"DHW tank temp. (R5T)":51.8,"Indoor ambient temp. (R1T)":20.7,"Ext. indoor ambient sensor (R6T)":0,"Data Enable/Disable":"ON","Indoor Unit Address":0,"Reheat ON/OFF":"OFF","Storage eco ON/OFF":"OFF","RT setpoint":20.5,"Add. Ext. RT Input Cool.":"OFF","Add. Ext. RT Input Heat.":"OFF","Main RT Cooling":"OFF","Circulation pump operation":"OFF","Flow sensor (l/min)":8.9,"Water pressure":1.7,"Water pump signal (0:max-100:stop)":59,"Target delta T heating":5,"Target delta T cooling":5,"M5VIN":"4.41V","M5AmpIn":"104.375mA","M5BatV":"4.11V","M5BatCur":"0mA","M5BatPwr":"0mW","WifiRSSI":"-71dBm","friendly_name":"AlthermaSensors"},"last_changed":"2025-02-11T15:16:37.208319+00:00","last_reported":"2025-02-11T15:16:37.208319+00:00","last_updated":"2025-02-11T15:16:37.208319+00:00","context":{"id":"01JKTSAT6RQX89M8V1ZQAN2JP8","parent_id":null,"user_id":null}},
       "extra_data": {
         "native_value": null,
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.garage_deur_battery","state":"61","attributes":{"state_class":"measurement","unit_of_measurement":"%","device_class":"battery","friendly_name":"Garage deur Battery"},"last_changed":"2025-02-11T14:01:35.961541+00:00","last_reported":"2025-02-11T14:01:35.961541+00:00","last_updated":"2025-02-11T14:01:35.961541+00:00","context":{"id":"01JKTN1EESPX6RHWS7T84RRH0P","parent_id":null,"user_id":null}},
@@ -605,42 +605,42 @@
         "native_value": "61",
         "native_unit_of_measurement": "%"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"switch.altherma","state":"unknown","attributes":{"friendly_name":"Altherma"},"last_changed":"2025-02-11T14:01:35.245012+00:00","last_reported":"2025-02-11T14:01:35.245012+00:00","last_updated":"2025-02-11T14:01:35.245012+00:00","context":{"id":"01JKTN1DRD3PCK1ANKF5X6T7ZT","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
-      "state": {"entity_id":"binary_sensor.espresense_keuken_espresense_keuken","state":"on","attributes":{"ip":"192.168.0.220","uptime":740768,"firm":"esp32","rssi":-61,"ver":"v3.2.4","adverts":80372760,"seen":80272200,"reported":4352797,"teleFails":104,"freeHeap":84260,"maxAllocHeap":28660,"memFrag":65.98623309,"scanHighWater":900,"device_class":"connectivity","friendly_name":"ESPresense Keuken ESPresense Keuken"},"last_changed":"2025-02-11T14:01:35.963379+00:00","last_reported":"2025-02-11T15:01:28.091483+00:00","last_updated":"2025-02-11T15:01:28.091483+00:00","context":{"id":"01JKTRF2CVP7G4KAYE2X47364D","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"binary_sensor.espresense_keuken_espresense_keuken","state":"on","attributes":{"ip":"192.168.0.220","uptime":741668,"firm":"esp32","rssi":-61,"ver":"v3.2.4","adverts":80482577,"seen":80381953,"reported":4357261,"teleFails":104,"freeHeap":83492,"maxAllocHeap":28660,"memFrag":65.67335793,"scanHighWater":900,"device_class":"connectivity","friendly_name":"ESPresense Keuken ESPresense Keuken"},"last_changed":"2025-02-11T14:01:35.963379+00:00","last_reported":"2025-02-11T15:16:28.163929+00:00","last_updated":"2025-02-11T15:16:28.163929+00:00","context":{"id":"01JKTSAHC34Q7WRNFBEE80WE8R","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"binary_sensor.zigbee2mqtt_bridge_connection_state","state":"unknown","attributes":{"device_class":"connectivity","friendly_name":"Zigbee2MQTT Bridge Connection state"},"last_changed":"2025-02-11T14:01:35.258032+00:00","last_reported":"2025-02-11T14:01:35.258032+00:00","last_updated":"2025-02-11T14:01:35.258032+00:00","context":{"id":"01JKTN1DRT1JDMGQ6HQSAB67XR","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.espresense_keuken_espresense_keuken_restart","state":"unknown","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Restart"},"last_changed":"2025-02-11T14:01:35.962892+00:00","last_reported":"2025-02-11T14:01:35.962892+00:00","last_updated":"2025-02-11T14:01:35.962892+00:00","context":{"id":"01JKTN1EET66J4NMAPW8MWJ18Z","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.espresense_keuken_espresense_keuken_update","state":"unknown","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Update"},"last_changed":"2025-02-11T14:01:35.963234+00:00","last_reported":"2025-02-11T14:01:35.963234+00:00","last_updated":"2025-02-11T14:01:35.963234+00:00","context":{"id":"01JKTN1EEV68XZ720E43WVQBPF","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.espresense_keuken_espresense_keuken_enroll","state":"unknown","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Enroll"},"last_changed":"2025-02-11T14:01:35.963088+00:00","last_reported":"2025-02-11T14:01:35.963088+00:00","last_updated":"2025-02-11T14:01:35.963088+00:00","context":{"id":"01JKTN1EEVWRZM601JBTM7M7AH","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"button.zigbee2mqtt_bridge_restart","state":"unavailable","attributes":{"device_class":"restart","friendly_name":"Zigbee2MQTT Bridge Restart"},"last_changed":"2025-02-11T14:01:35.271766+00:00","last_reported":"2025-02-11T14:01:35.271766+00:00","last_updated":"2025-02-11T14:01:35.271766+00:00","context":{"id":"01JKTN1DS7AZAQGFSAS03WCJZT","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"number.espresense_keuken_espresense_keuken_max_distance","state":"16.0","attributes":{"min":0.0,"max":100.0,"step":0.1,"mode":"auto","friendly_name":"ESPresense Keuken ESPresense Keuken Max Distance"},"last_changed":"2025-02-11T14:01:35.966961+00:00","last_reported":"2025-02-11T14:01:35.966961+00:00","last_updated":"2025-02-11T14:01:35.966961+00:00","context":{"id":"01JKTN1EEYE8BQ21VX5S1X3X49","parent_id":null,"user_id":null}},
@@ -651,7 +651,7 @@
         "native_unit_of_measurement": null,
         "native_value": 16.0
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"number.espresense_keuken_espresense_keuken_absorption","state":"3.5","attributes":{"min":0.0,"max":100.0,"step":0.1,"mode":"auto","friendly_name":"ESPresense Keuken ESPresense Keuken Absorption"},"last_changed":"2025-02-11T14:01:35.967442+00:00","last_reported":"2025-02-11T14:01:35.967442+00:00","last_updated":"2025-02-11T14:01:35.967442+00:00","context":{"id":"01JKTN1EEZ6EBH6SF8PANSP8T4","parent_id":null,"user_id":null}},
@@ -662,28 +662,28 @@
         "native_unit_of_measurement": null,
         "native_value": 3.5
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"select.zigbee2mqtt_bridge_log_level","state":"unavailable","attributes":{"options":["error","warning","info","debug"],"friendly_name":"Zigbee2MQTT Bridge Log level"},"last_changed":"2025-02-11T14:01:35.330108+00:00","last_reported":"2025-02-11T14:01:35.330108+00:00","last_updated":"2025-02-11T14:01:35.330108+00:00","context":{"id":"01JKTN1DV2CTCNPN0VRD9X3DED","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
-      "state": {"entity_id":"sensor.espresense_keuken_espresense_keuken_uptime","state":"740768","attributes":{"unit_of_measurement":"s","friendly_name":"ESPresense Keuken ESPresense Keuken Uptime"},"last_changed":"2025-02-11T15:01:28.091680+00:00","last_reported":"2025-02-11T15:01:28.091680+00:00","last_updated":"2025-02-11T15:01:28.091680+00:00","context":{"id":"01JKTRF2CVV6TK6HDJSEJX233H","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"sensor.espresense_keuken_espresense_keuken_uptime","state":"741668","attributes":{"unit_of_measurement":"s","friendly_name":"ESPresense Keuken ESPresense Keuken Uptime"},"last_changed":"2025-02-11T15:16:28.164119+00:00","last_reported":"2025-02-11T15:16:28.164119+00:00","last_updated":"2025-02-11T15:16:28.164119+00:00","context":{"id":"01JKTSAHC45T6837YS40Q27YME","parent_id":null,"user_id":null}},
       "extra_data": {
-        "native_value": "740768",
+        "native_value": "741668",
         "native_unit_of_measurement": "s"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
-      "state": {"entity_id":"sensor.espresense_keuken_espresense_keuken_free_mem","state":"84260","attributes":{"unit_of_measurement":"bytes","friendly_name":"ESPresense Keuken ESPresense Keuken Free Mem"},"last_changed":"2025-02-11T15:01:28.091612+00:00","last_reported":"2025-02-11T15:01:28.091612+00:00","last_updated":"2025-02-11T15:01:28.091612+00:00","context":{"id":"01JKTRF2CVD2SZBJBQDV0F84KS","parent_id":null,"user_id":null}},
+      "state": {"entity_id":"sensor.espresense_keuken_espresense_keuken_free_mem","state":"83492","attributes":{"unit_of_measurement":"bytes","friendly_name":"ESPresense Keuken ESPresense Keuken Free Mem"},"last_changed":"2025-02-11T15:16:28.164065+00:00","last_reported":"2025-02-11T15:16:28.164065+00:00","last_updated":"2025-02-11T15:16:28.164065+00:00","context":{"id":"01JKTSAHC435EBVDR708HQGX4G","parent_id":null,"user_id":null}},
       "extra_data": {
-        "native_value": "84260",
+        "native_value": "83492",
         "native_unit_of_measurement": "bytes"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.zigbee2mqtt_bridge_version","state":"unavailable","attributes":{"icon":"mdi:zigbee","friendly_name":"Zigbee2MQTT Bridge Version"},"last_changed":"2025-02-11T14:01:35.336385+00:00","last_reported":"2025-02-11T14:01:35.336385+00:00","last_updated":"2025-02-11T14:01:35.336385+00:00","context":{"id":"01JKTN1DV8QTVXAEG92SE3XD9W","parent_id":null,"user_id":null}},
@@ -691,7 +691,7 @@
         "native_value": null,
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.zigbee2mqtt_bridge_permit_join_timeout","state":"unavailable","attributes":{"unit_of_measurement":"s","device_class":"duration","friendly_name":"Zigbee2MQTT Bridge Permit join timeout"},"last_changed":"2025-02-11T14:01:35.344442+00:00","last_reported":"2025-02-11T14:01:35.344442+00:00","last_updated":"2025-02-11T14:01:35.344442+00:00","context":{"id":"01JKTN1DVG1D41DGYK7WZV4VM0","parent_id":null,"user_id":null}},
@@ -699,32 +699,32 @@
         "native_value": null,
         "native_unit_of_measurement": "s"
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"switch.espresense_keuken_espresense_keuken_auto_update","state":"off","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Auto Update"},"last_changed":"2025-02-11T14:01:35.967983+00:00","last_reported":"2025-02-11T14:01:35.967983+00:00","last_updated":"2025-02-11T14:01:35.967983+00:00","context":{"id":"01JKTN1EEZ7WAMTQANQW6KRW1S","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"switch.espresense_keuken_espresense_keuken_arduino_ota","state":"off","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Arduino OTA"},"last_changed":"2025-02-11T14:01:35.968345+00:00","last_reported":"2025-02-11T14:01:35.968345+00:00","last_updated":"2025-02-11T14:01:35.968345+00:00","context":{"id":"01JKTN1EF0VXYQA7VVA8NHBE5Z","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"switch.espresense_keuken_espresense_keuken_prerelease","state":"off","attributes":{"friendly_name":"ESPresense Keuken ESPresense Keuken Prerelease"},"last_changed":"2025-02-11T14:01:35.969615+00:00","last_reported":"2025-02-11T14:01:35.969615+00:00","last_updated":"2025-02-11T14:01:35.969615+00:00","context":{"id":"01JKTN1EF1CRT92RBWEZQAQZ7R","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"switch.zigbee2mqtt_bridge_permit_join","state":"unavailable","attributes":{"icon":"mdi:human-greeting-proximity","friendly_name":"Zigbee2MQTT Bridge Permit join"},"last_changed":"2025-02-11T14:01:35.349816+00:00","last_reported":"2025-02-11T14:01:35.349816+00:00","last_updated":"2025-02-11T14:01:35.349816+00:00","context":{"id":"01JKTN1DVN4E1TZB6EBB2G18H6","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"binary_sensor.schoolvakantie","state":"off","attributes":{"regio":"Noord","nu":"Geen vakantie","vakanties":[{"name":"Zomervakantie","start":"2024-07-20","end":"2024-09-01"},{"name":"Herfstvakantie","start":"2024-10-26","end":"2024-11-03"},{"name":"Kerstvakantie","start":"2024-12-21","end":"2025-01-05"},{"name":"Voorjaarsvakantie","start":"2025-02-15","end":"2025-02-23"},{"name":"Meivakantie","start":"2025-04-26","end":"2025-05-04"},{"name":"Zomervakantie","start":"2025-07-12","end":"2025-08-24"}],"friendly_name":"Schoolvakantie"},"last_changed":"2025-02-11T14:05:57.627918+00:00","last_reported":"2025-02-11T14:05:57.679990+00:00","last_updated":"2025-02-11T14:05:57.679990+00:00","context":{"id":"01JKTN9E1D06KAJE04MA5WAVC0","parent_id":null,"user_id":null}},
       "extra_data": null,
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.i_o_mode","state":"Heating","attributes":{"icon":"mdi:radiator","friendly_name":"I/O Mode"},"last_changed":"2025-02-11T14:06:07.163285+00:00","last_reported":"2025-02-11T14:16:37.253939+00:00","last_updated":"2025-02-11T14:06:07.163285+00:00","context":{"id":"01JKTN9Q8V14KQV05KNCXDSBV8","parent_id":null,"user_id":null}},
@@ -732,7 +732,7 @@
         "native_value": "Heating",
         "native_unit_of_measurement": null
       },
-      "last_seen": "2025-02-11T15:01:38.905246+00:00"
+      "last_seen": "2025-02-11T15:16:38.906357+00:00"
     },
     {
       "state": {"entity_id":"sensor.none_althermasensors","state":"unknown","attributes":{"INV compressor Qty":1,"STD compressor Qty":0,"Operation Mode":"Heating","Thermostat ON/OFF":"ON","Defrost Operation":"OFF","Low noise control":"OFF","Comp. INV Current Drop":"OFF","Comp. INV Current Protection Retry Qty":"Conv 311 not avail.","Outdoor air temp.(R1T)":1.5,"Discharge pipe temp.":42,"Suction pipe temp.":0,"Heat exchanger mid-temp.":"-1.5","Pressure sensor":0,"INV primary current (A)":2.3,"INV secondary current (A)":6.4,"Voltage (N-phase) (V)":40,"INV frequency (rps)":20,"INV frequency 2 (rps)":72,"STD Compressor 1":"OFF","STD Compressor 2":"OFF","Fan 1 (10 rpm)":20,"Fan 2 (step)":72,"I/U operation mode":"Heating","Freeze Protection":"OFF","Silent Mode":"OFF","DHW setpoint":53,"LW setpoint (main)":30.8,"Water flow switch":"OFF","Thermal protector (Q1L) BUH":"ON","Thermal protector BSH":"ON","BUH Step1":"OFF","BUH Step2":"OFF","BPH":"OFF","Water pump operation":"ON","Leaving water temp. before BUH (R1T)":30.1,"Leaving water temp. after BUH (R2T)":30.3,"Refrig. Temp. liquid side (R3T)":29.2,"Inlet water temp.(R4T)":25.6,"DHW tank temp. (R5T)":52.1,"Indoor ambient temp. (R1T)":20.7,"Ext. indoor ambient sensor (R6T)":0,"Data Enable/Disable":"ON","Indoor Unit Address":0,"Reheat ON/OFF":"OFF","Storage eco ON/OFF":"OFF","RT setpoint":20.5,"Add. Ext. RT Input Cool.":"OFF","Add. Ext. RT Input Heat.":"OFF","Main RT Cooling":"OFF","Circulation pump operation":"OFF","Flow sensor (l/min)":7.7,"Water pressure":1.7,"Water pump signal (0:max-100:stop)":65,"Target delta T heating":5,"Target delta T cooling":5,"M5VIN":"4.6V","M5AmpIn":"102.5mA","M5BatV":"4.11V","M5BatCur":"0mA","M5BatPwr":"0mW","WifiRSSI":"-70dBm","friendly_name":"AlthermaSensors"},"last_changed":"2025-02-11T13:50:07.173225+00:00","last_reported":"2025-02-11T13:50:07.173225+00:00","last_updated":"2025-02-11T13:50:07.173225+00:00","context":{"id":"01JKTMCDT50V7YGMPGHECVYXQV","parent_id":null,"user_id":null}},

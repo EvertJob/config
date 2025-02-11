@@ -9,9 +9,9 @@
 
 # 
 custcom_components
-esphome
-www
-tts
+*esphome
+*www
+*tts
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 secrets.yaml
