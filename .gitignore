@@ -6,19 +6,10 @@
 !.gitignore
 !*.md
 !include
-!intergrations
+!integrations
 
 # Ignore folders.
-.storage
-.storage/
-.cloud
-.cloud/.storage
-.google.token
-.google.token/
-esphome
-esphome/
-custom_components
-custom_components/
+
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 secrets.yaml
