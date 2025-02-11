@@ -17,7 +17,7 @@
     path: Blackshome/appliance-notifications.yaml
     input:
       power_sensor: sensor.wasmachine_power
-      start_appliance_power: 1015
+      start_appliance_power: 15
       end_time_delay: 5
       end_notify_device:
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
