@@ -9,3 +9,17 @@
       - binary_sensor.athom_presence_sensor_v3_ae0cb4_mmwave_sensor
       light_switch:
         entity_id: light.badkamer
+- id: '1739297542705'
+  alias: Wasmachine programma
+  description: Monitoring van de wasmachine, informeren wanneer de wasmachine afgerond
+    is.
+  use_blueprint:
+    path: Blackshome/appliance-notifications.yaml
+    input:
+      power_sensor: sensor.wasmachine_power
+      start_appliance_power: 1015
+      end_time_delay: 5
+      end_notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      end_message_title: Wasmachine
+      end_message: Programma afgerond
