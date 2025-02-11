@@ -1,0 +1,10 @@
+- id: '1739296703233'
+  alias: Automatische verlichting badkamer
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.athom_presence_sensor_v3_ae0cb4_mmwave_sensor
+      light_switch:
+        entity_id: light.badkamer
