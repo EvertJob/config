@@ -1,5 +1,0 @@
-notify:
-  - name: Toppe
-    platform: group
-    services:
-      - service: !secret mobile_ej

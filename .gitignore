@@ -5,10 +5,7 @@
 !*.yaml
 !.gitignore
 !*.md
-!include/**
-!integrations
 
-# Ignore folders.
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
