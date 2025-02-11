@@ -5,8 +5,8 @@
 !*.yaml
 !.gitignore
 !*.md
-!include/binary_sensor/**
-
+!integrations
+!include
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
