@@ -5,6 +5,7 @@
 !*.yaml
 !.gitignore
 !*.md
+!include/binary_sensor/**
 
 
 
