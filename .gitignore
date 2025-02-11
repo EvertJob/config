@@ -5,7 +5,7 @@
 !*.yaml
 !.gitignore
 !*.md
-!include/
+!include/** */
 !integrations
 
 # Ignore folders.
