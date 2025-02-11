@@ -23,3 +23,15 @@
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       end_message_title: Wasmachine
       end_message: Programma afgerond
+- id: '1739298215405'
+  alias: Wasdroger programma
+  description: Monitoring van de wasdroger, informeren wanneer de wasdroger is afgerond
+  use_blueprint:
+    path: Blackshome/appliance-notifications.yaml
+    input:
+      power_sensor: sensor.wasdroger_power
+      include_end_notify: enable_end_notify_options
+      end_notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      end_message_title: Wasdroger
+      end_message: Programma is afgerond
