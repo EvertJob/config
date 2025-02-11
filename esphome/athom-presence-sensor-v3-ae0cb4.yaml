@@ -1,0 +1,18 @@
+substitutions:
+  name: athom-presence-sensor-v3-ae0cb4
+  friendly_name: Aanwezigheidsmelder badkamer
+  device_name: "Bewegingsmelder badkamer"
+packages:
+  Athom_Technology.Athom_PS01C3_Presence_Sensor: github://athom-tech/esp32-configs/athom-presence-sensor-v3.yaml
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}
+api:
+  encryption:
+    key: xTqUfIRcE975kHO8znQK5x0rTk6H+6jYd5+pdDl1xow=
+
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password

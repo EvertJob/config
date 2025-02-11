@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "ef2cfec48a3b43079cf53d9b1f55628c",
+        "url": "/hacsfiles/custom-brand-icons/custom-brand-icons.js?hacstag=366862031202520",
+        "type": "module"
+      }
+    ]
+  }
+}

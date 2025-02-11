@@ -1,0 +1,15 @@
+substitutions:
+  name: 3d-printer
+  friendly_name: 3D printer 
+  device_description: "Smartplug for 3D printer"
+packages:
+  athom.smart-plug-v2: github://athom-tech/athom-configs/athom-smart-plug-v2.yaml
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+

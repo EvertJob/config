@@ -1,0 +1,162 @@
+{
+  "version": 4,
+  "minor_version": 1,
+  "key": "smart_irrigation.storage",
+  "data": {
+    "config": {
+      "calctime": "23:00",
+      "units": "metric",
+      "use_weather_service": true,
+      "weather_service": "Open Weather Map",
+      "autocalcenabled": true,
+      "autoupdateenabled": true,
+      "autoupdateschedule": "hours",
+      "autoupdatedelay": "0",
+      "autoupdateinterval": "1",
+      "autoclearenabled": true,
+      "cleardatatime": "23:59",
+      "starteventfiredtoday": false,
+      "continuousupdates": false
+    },
+    "zones": [
+      {
+        "id": 0,
+        "name": "Voortuin",
+        "size": 15.0,
+        "throughput": 5.0,
+        "state": "automatic",
+        "bucket": 0,
+        "old_bucket": 0,
+        "delta": 0,
+        "duration": 0,
+        "module": null,
+        "multiplier": 1.0,
+        "explanation": null,
+        "mapping": null,
+        "lead_time": 0.0,
+        "maximum_duration": 3600,
+        "maximum_bucket": 50,
+        "last_calculated": null,
+        "last_updated": null,
+        "number_of_data_points": 0,
+        "drainage_rate": 50.8
+      }
+    ],
+    "modules": [
+      {
+        "id": 0,
+        "name": "PyETO",
+        "description": "Bereken duur op basis van de FAU56 formule en de PyETO library.",
+        "config": null,
+        "schema": [
+          {
+            "type": "boolean",
+            "name": "coastal",
+            "optional": true,
+            "default": false
+          },
+          {
+            "type": "select",
+            "options": [
+              [
+                "1",
+                "EstimateFromTemp"
+              ],
+              [
+                "2",
+                "EstimateFromSunHours"
+              ],
+              [
+                "3",
+                "DontEstimate"
+              ],
+              [
+                "4",
+                "EstimateFromSunHoursAndTemperature"
+              ]
+            ],
+            "name": "solrad_behavior",
+            "required": true,
+            "default": "1"
+          },
+          {
+            "type": "integer",
+            "name": "forecast_days",
+            "optional": true,
+            "default": 0
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Static",
+        "description": "Module met instelbare verandering.",
+        "config": null,
+        "schema": [
+          {
+            "type": "string",
+            "name": "delta",
+            "required": true,
+            "default": 0.0
+          }
+        ]
+      }
+    ],
+    "mappings": [
+      {
+        "id": 0,
+        "name": "Standaard sensorgroep",
+        "mappings": {
+          "Dewpoint": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Evapotranspiration": {
+            "source": "none",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Humidity": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Precipitation": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Current Precipitation": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Pressure": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Solar Radiation": {
+            "source": "none",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Temperature": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          },
+          "Windspeed": {
+            "source": "weather_service",
+            "sensorentity": "",
+            "unit": ""
+          }
+        },
+        "data": [],
+        "data_last_updated": null,
+        "data_last_entry": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+- platform: meteoalarm
+  country: "netherlands"
+  province: !secret province
+  language: "nl-NL"

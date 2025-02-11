@@ -1,0 +1,357 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JKP0YKMCGM0ZM4G1A1C5MHPX",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "vaatwasser",
+      "friendly_name": "Vaatwasser",
+      "mac_address": "E0:98:06:F1:82:A5",
+      "compilation_time": "Jan  2 2025, 11:56:59",
+      "model": "esp8285",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.12.2",
+      "project_name": "Athom Technology.Smart Plug V2",
+      "project_version": "v2.0.6",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "binary_sensor": [
+      {
+        "object_id": "status",
+        "key": 939730931,
+        "name": "Status",
+        "unique_id": "vaatwasserbinary_sensorstatus",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      },
+      {
+        "object_id": "power_button",
+        "key": 3339754163,
+        "name": "Power Button",
+        "unique_id": "vaatwasserbinary_sensorpower_button",
+        "disabled_by_default": true,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "is_status_binary_sensor": false
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "wifi_signal_db",
+        "key": 1535411390,
+        "name": "WiFi Signal dB",
+        "unique_id": "e09806f182a5-wifisignal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "wifi_signal_percent",
+        "key": 463138235,
+        "name": "WiFi Signal Percent",
+        "unique_id": "vaatwassersensorwifi_signal_percent",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "voltage",
+        "key": 2195749573,
+        "name": "Voltage",
+        "unique_id": "vaatwassersensorvoltage",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "voltage",
+        "unit_of_measurement": "V",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "current",
+        "key": 2037989808,
+        "name": "Current",
+        "unique_id": "vaatwassersensorcurrent",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "current",
+        "unit_of_measurement": "A",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "total_energy",
+        "key": 173145652,
+        "name": "Total Energy",
+        "unique_id": "vaatwassersensortotal_energy",
+        "disabled_by_default": false,
+        "icon": "mdi:lightning-bolt",
+        "entity_category": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "total_energy_since_boot",
+        "key": 2333986482,
+        "name": "Total Energy Since Boot",
+        "unique_id": "vaatwassersensortotal_energy_since_boot",
+        "disabled_by_default": false,
+        "icon": "mdi:hours-24",
+        "entity_category": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "power",
+        "key": 2391494160,
+        "name": "Power",
+        "unique_id": "vaatwassersensorpower",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "energy",
+        "key": 1345584937,
+        "name": "Energy",
+        "unique_id": "vaatwassersensorenergy",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "energy",
+        "unit_of_measurement": "kWh",
+        "accuracy_decimals": 3,
+        "force_update": false,
+        "state_class": 2,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "apparent_power",
+        "key": 3743728124,
+        "name": "Apparent Power",
+        "unique_id": "vaatwassersensorapparent_power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "apparent_power",
+        "unit_of_measurement": "VA",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "reactive_power",
+        "key": 1062091994,
+        "name": "Reactive Power",
+        "unique_id": "vaatwassersensorreactive_power",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "reactive_power",
+        "unit_of_measurement": "var",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "power_factor",
+        "key": 1214527994,
+        "name": "Power Factor",
+        "unique_id": "vaatwassersensorpower_factor",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "power_factor",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 2,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "connected_ssid",
+        "key": 1333571096,
+        "name": "Connected SSID",
+        "unique_id": "e09806f182a5-wifiinfo-ssid",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "mac_address",
+        "key": 4039452215,
+        "name": "Mac Address",
+        "unique_id": "e09806f182a5-wifiinfo-macadr",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "ip_address",
+        "key": 3849966195,
+        "name": "IP Address",
+        "unique_id": "e09806f182a5-wifiinfo-ip",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "last_restart",
+        "key": 4015774313,
+        "name": "Last Restart",
+        "unique_id": "vaatwassertext_sensorlast_restart",
+        "disabled_by_default": false,
+        "icon": "mdi:clock",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "uptime",
+        "key": 1324261225,
+        "name": "Uptime",
+        "unique_id": "vaatwassertext_sensoruptime",
+        "disabled_by_default": false,
+        "icon": "mdi:clock-start",
+        "entity_category": 2,
+        "device_class": ""
+      }
+    ],
+    "button": [
+      {
+        "object_id": "restart",
+        "key": 1203400786,
+        "name": "Restart",
+        "unique_id": "vaatwasserbuttonrestart",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "device_class": "restart"
+      },
+      {
+        "object_id": "factory_reset",
+        "key": 3740619177,
+        "name": "Factory Reset",
+        "unique_id": "vaatwasserbuttonfactory_reset",
+        "disabled_by_default": false,
+        "icon": "mdi:restart-alert",
+        "entity_category": 1,
+        "device_class": "restart"
+      },
+      {
+        "object_id": "safe_mode",
+        "key": 430407880,
+        "name": "Safe Mode",
+        "unique_id": "vaatwasserbuttonsafe_mode",
+        "disabled_by_default": false,
+        "icon": "mdi:restart-alert",
+        "entity_category": 1,
+        "device_class": "restart"
+      }
+    ],
+    "select": [
+      {
+        "object_id": "power_on_state",
+        "key": 46544162,
+        "name": "Power On State",
+        "unique_id": "vaatwasserselectpower_on_state",
+        "disabled_by_default": false,
+        "icon": "mdi:electric-switch",
+        "entity_category": 0,
+        "options": [
+          "Always Off",
+          "Always On",
+          "Restore Power Off State"
+        ]
+      }
+    ],
+    "light": [
+      {
+        "object_id": "status_led",
+        "key": 610457177,
+        "name": "Status LED",
+        "unique_id": "vaatwasserlightstatus_led",
+        "disabled_by_default": true,
+        "icon": "",
+        "entity_category": 0,
+        "supported_color_modes": [
+          1
+        ],
+        "min_mireds": 0.0,
+        "max_mireds": 0.0,
+        "effects": [],
+        "legacy_supports_brightness": false,
+        "legacy_supports_rgb": false,
+        "legacy_supports_white_value": false,
+        "legacy_supports_color_temperature": false
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "switch",
+        "key": 3202316517,
+        "name": "Switch",
+        "unique_id": "vaatwasserswitchswitch",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ]
+  }
+}

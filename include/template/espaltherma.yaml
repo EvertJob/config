@@ -1,0 +1,248 @@
+- sensor:
+    - name: "Dampleidingtemperatuur"
+      unique_id: "dampleidingtemperatuur"
+      state: "{{ state_attr('sensor.althermasensors','Discharge pipe temp.') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      availability: >
+        {{ state_attr('sensor.althermasensors','Discharge pipe temp.') | is_number }}
+
+    - name: "Operation mode"
+      state: "{{ state_attr('sensor.althermasensors','Operation Mode') }}"
+      unique_id: operationmode
+      icon: mdi:auto-mode
+
+    - name: "Current mode"
+      state: "{% if is_state('sensor.thermostat', 'ON') %} {{ state_attr('sensor.althermasensors','Operation Mode') }} {% else %} Uit {% endif %}"
+      unique_id: currentmode
+
+    - name: "Booster thermal protection"
+      state: "{{ state_attr('sensor.althermasensors','Thermal protector (Q1L) BUH') }}"
+      icon: mdi:shield-check
+      unique_id: backupthermalprotection
+
+    - name: "Back-up thermal protection"
+      state: "{{ state_attr('sensor.althermasensors','Thermal protector BSH') }}"
+      icon: mdi:shield-check
+      unique_id: boosterthermalprotection
+
+    - name: "Watertanktemperature"
+      state: "{{ state_attr('sensor.althermasensors','DHW tank temp. (R5T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      icon: mdi:temperature-celsius
+
+    - name: "Flowpump"
+      state: "{{ state_attr('sensor.althermasensors','Flow sensor (l/min)') }}"
+      unit_of_measurement: "l/min"
+      state_class: measurement
+      unique_id: flowpump
+      icon: mdi:pump
+
+    - name: "Water flow switch"
+      state: "{{ state_attr('sensor.althermasensors','Water flow switch') }}"
+      unique_id: waterflowswitch
+      icon: mdi:electric-switch
+
+    - name: "Water pump operation"
+      state: "{{ state_attr('sensor.althermasensors','Water pump operation') }}"
+
+    - name: "Water pump level (original)"
+      state: "{{ state_attr('sensor.althermasensors','Water pump signal (0:max-100:stop)') }}"
+      unit_of_measurement: "%"
+      state_class: measurement
+
+    - name: "Water pump level"
+      state: "{{ 100 - state_attr('sensor.althermasensors','Water pump signal (0:max-100:stop)') }}"
+      unit_of_measurement: "%"
+      state_class: measurement
+
+    - name: "Reheat"
+      state: "{{ state_attr('sensor.althermasensors','Reheat ON/OFF') }}"
+      unique_id: reheat
+      icon: mdi:repeat-variant
+
+    - name: "Circulation pump"
+      state: "{{ state_attr('sensor.althermasensors','Circulation pump operation') }}"
+      unique_id: circulationpump
+      icon: mdi:heat-pump
+
+    - name: "Delta T Heating"
+      state: "{{ state_attr('sensor.althermasensors','Target delta T heating') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: deltatheating
+      icon: mdi:delta
+
+    - name: "Delta T Cooling"
+      state: "{{ state_attr('sensor.althermasensors','Target delta T cooling') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: deltatcooling
+      icon: mdi:delta
+
+    - name: "Outdoor temperature"
+      state: "{{ state_attr('sensor.althermasensors','Outdoor air temp.(R1T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: outdoortemperature
+      icon: mdi:home-thermometer-outline
+
+    - name: "Thermostat"
+      state: "{{ state_attr('sensor.althermasensors','Thermostat ON/OFF') }}"
+      unique_id: altherma_thermostat
+      icon: mdi:thermostat
+
+    - name: "Defrost operation"
+      state: "{{ state_attr('sensor.althermasensors','Defrost Operation') }}"
+      unique_id: defrost
+      icon: mdi:snowflake-melt
+
+    - name: "Back-up heater"
+      state: "{{ state_attr('sensor.althermasensors','BUH Step1') }}"
+      unique_id: backupheater
+      icon: mdi:water-boiler-auto
+
+    - name: "Watertank setpoint"
+      state: "{{ state_attr('sensor.althermasensors','DHW setpoint') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      icon: phu:water-reservoir
+
+    - name: "Room temperature setpoint"
+      state: "{{ state_attr('sensor.althermasensors','RT setpoint') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: roomtemperaturesetpoint
+      icon: mdi:thermometer-check
+
+    - name: "Water leaving temperature"
+      state: "{{ state_attr('sensor.althermasensors','Leaving water temp. before BUH (R1T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: waterleavingtemp
+      icon: mdi:waves-arrow-right
+
+    - name: "Water inlet temperature"
+      state: "{{ state_attr('sensor.althermasensors','Inlet water temp.(R4T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: waterinlettemp
+      icon: mdi:waves-arrow-left
+
+    - name: "Heat exchanger temperature"
+      state: "{{ state_attr('sensor.althermasensors','Heat exchanger mid-temp.') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+
+    - name: "Refrigerator liquid temperature"
+      state: "{{ state_attr('sensor.althermasensors','Refrig. Temp. liquid side (R3T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+
+    - name: "Water pressure"
+      state: "{{ state_attr('sensor.althermasensors','Water pressure') }}"
+      unit_of_measurement: "bar"
+      state_class: measurement
+      unique_id: waterpressure
+      icon: mdi:gauge
+
+    - name: "Leaving water setpoint"
+      state: "{{ state_attr('sensor.althermasensors','LW setpoint (main)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: leavingwatersetpoint
+      icon: mdi:temperature-celsius
+
+    - name: "Roomtemperature"
+      state: "{{ state_attr('sensor.althermasensors','Indoor ambient temp. (R1T)') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+      unique_id: roomtemperature
+      icon: mdi:home-thermometer
+
+    - name: "Inverter current"
+      state: "{{ state_attr('sensor.althermasensors','INV primary current (A)') }}"
+      unit_of_measurement: "A"
+      state_class: measurement
+      unique_id: invertercurrent
+      icon: mdi:current-ac
+
+    - name: "Secondary inverter current"
+      state: "{{ state_attr('sensor.althermasensors','INV secondary current (A)') }}"
+      unit_of_measurement: "A"
+      state_class: measurement
+      unique_id: secondaryinvertercurrent
+      icon: mdi:current-ac
+
+    - name: "Inverter frequency"
+      state: "{{ state_attr('sensor.althermasensors','INV frequency (rps)') }}"
+      unit_of_measurement: "rps"
+      state_class: measurement
+      unique_id: inverterfrequency
+      icon: mdi:sine-wave
+
+    - name: "Secondary inverter frequency"
+      state: "{{ state_attr('sensor.althermasensors','INV frequency 2 (rps)') }}"
+      unit_of_measurement: "rps"
+      state_class: measurement
+      unique_id: secondaryinverterfrequency
+      icon: mdi:sine-wave
+
+    - name: "Voltage"
+      state: "{{ state_attr('sensor.althermasensors','Voltage (N-phase) (V)') }}"
+      unit_of_measurement: "V"
+      state_class: measurement
+      unique_id: voltage_heatpump
+      icon: mdi:flash-triangle
+
+    - name: "Inverter usage"
+      state: "{% if is_state_attr('sensor.althermasensors', 'Thermostat ON/OFF', 'ON') %} {{ (states('sensor.inverter_current')|float * states('sensor.voltage_phase_l1') | float) }} {% else %} 0 {% endif %}"
+      unit_of_measurement: "W"
+      state_class: measurement
+
+    - name: "Secondary inverter usage"
+      state: "{% if is_state_attr('sensor.althermasensors', 'Thermostat ON/OFF', 'ON') %} {{ (states('sensor.secondary_inverter_current')|float * states('sensor.voltage_phase_l1') | float) }} {% else %} 0 {% endif %}"
+      unit_of_measurement: "W"
+      state_class: measurement
+
+    - name: "Heat yield"
+      state: "{% if is_state_attr('sensor.althermasensors', 'Thermostat ON/OFF', 'ON') %} {{ (states('sensor.inverter_usage')|float * states('sensor.cop')| float)|round|int }} {% else %} 0 {% endif %}"
+      unit_of_measurement: "W"
+      state_class: measurement
+
+    - name: "Low noise control"
+      state: "{{ state_attr('sensor.althermasensors', 'Low noise control') }}"
+      state_class: measurement
+      unique_id: lownoisecontrol
+      icon: mdi:volume-mute
+
+    - name: "Suction pipe temperature"
+      state: "{{ state_attr('sensor.althermasensors', 'Suction pipe temp.') }}"
+      unit_of_measurement: "°C"
+      state_class: measurement
+
+    - name: "Druk sensor"
+      state: "{{ state_attr('sensor.althermasensors', 'Pressure sensor') }}"
+      state_class: measurement
+      unique_id: pressuresensor
+      icon: mdi:gauge
+
+    - name: "STD Compressor 1"
+      state: "{{ state_attr('sensor.althermasensors', 'STD Compressor 1') }}"
+      state_class: measurement
+
+    - name: "Vries beveiliging"
+      state: "{{ state_attr('sensor.althermasensors', 'Freeze Protection') }}"
+      state_class: measurement
+      unique_id: freezeprotection
+      icon: mdi:snowflake-alert
+
+    - name: "Stille modus"
+      state: "{{ state_attr('sensor.althermasensors', 'Silent Mode') }}"
+      state_class: measurement
+
+    - name: "ESPAltherma last update"
+      state: "{{ as_timestamp(states.sensor.althermasensors.last_updated) | timestamp_custom('%H:%M:%S',True) }}"
+      unique_id: heatpumplastupdate
+      icon: mdi:clock-fast

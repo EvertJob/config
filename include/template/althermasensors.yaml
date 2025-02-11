@@ -1,0 +1,19 @@
+- trigger:
+    - trigger: state
+      entity_id: sensor.althermasensors
+      attribute: I/U operation mode
+  condition:
+    - condition: template
+      value_template: "{{ state_attr('sensor.althermasensors','I/U operation mode') is not none }}"
+  sensor:
+    - name: "I/O Mode"
+      unique_id: iomode
+      state: "{{ state_attr('sensor.althermasensors','I/U operation mode') }}"
+      icon: >-
+        {% set i = {
+          'Heating': 'mdi:radiator',
+          'Heating + DHW': 'mdi:radiator',
+          'Cooling': 'mdi:sun-snowflake', 
+          'Off': 'mdi:thermometer-off'
+        } %}
+        {{ i[state_attr('sensor.althermasensors','I/U operation mode')] }}

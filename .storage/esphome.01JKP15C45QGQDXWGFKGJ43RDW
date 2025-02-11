@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JKP15C45QGQDXWGFKGJ43RDW",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "lichtsensor-buiten",
+      "friendly_name": "",
+      "mac_address": "E8:9F:6D:88:C1:89",
+      "compilation_time": "Feb  9 2025, 20:58:24",
+      "model": "esp01_1m",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.12.4",
+      "project_name": "Toppe.lichtsensor",
+      "project_version": "1.0",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "button": [
+      {
+        "object_id": "herstart_lichtsensor-buiten",
+        "key": 190601567,
+        "name": "Herstart lichtsensor-buiten",
+        "unique_id": "lichtsensor-buitenbuttonherstart_lichtsensor-buiten",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "device_class": "restart"
+      }
+    ],
+    "binary_sensor": [
+      {
+        "object_id": "lichtsensor_buiten_status",
+        "key": 3221347906,
+        "name": "Lichtsensor buiten Status",
+        "unique_id": "lichtsensor-buitenbinary_sensorlichtsensor_buiten_status",
+        "disabled_by_default": true,
+        "icon": "mdi:wifi-check",
+        "entity_category": 2,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "uptime_sensor__raw_",
+        "key": 2551178801,
+        "name": "Uptime Sensor (raw)",
+        "unique_id": "e89f6d88c189-uptime",
+        "disabled_by_default": true,
+        "icon": "mdi:timer-outline",
+        "entity_category": 2,
+        "device_class": "duration",
+        "unit_of_measurement": "s",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 2,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "wifi_signal_sensor",
+        "key": 2281838442,
+        "name": "WiFi Signal Sensor",
+        "unique_id": "e89f6d88c189-wifisignal",
+        "disabled_by_default": true,
+        "icon": "mdi:wifi-arrow-up-down",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "bh1750_illuminance",
+        "key": 1315184542,
+        "name": "BH1750 Illuminance",
+        "unique_id": "lichtsensor-buitensensorbh1750_illuminance",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "illuminance",
+        "unit_of_measurement": "lx",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "verbonden_netwerk",
+        "key": 1483774939,
+        "name": "Verbonden netwerk",
+        "unique_id": "e89f6d88c189-wifiinfo-ssid",
+        "disabled_by_default": true,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "ipv4_adres",
+        "key": 3642073046,
+        "name": "IPv4 adres",
+        "unique_id": "e89f6d88c189-wifiinfo-ip",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "uptime",
+        "key": 1324261225,
+        "name": "Uptime",
+        "unique_id": "lichtsensor-buitentext_sensoruptime",
+        "disabled_by_default": false,
+        "icon": "mdi:clock-start",
+        "entity_category": 2,
+        "device_class": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JKKNCQYCEVWFJEEWPXVKM158",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "air-conditioner-493535",
+      "friendly_name": "Air Conditioner 493535",
+      "mac_address": "24:4C:AB:49:35:35",
+      "compilation_time": "May 15 2024, 14:14:40",
+      "model": "esp12e",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.4.2",
+      "project_name": "SMLIGHT.SLWF-01Pro",
+      "project_version": "2.1",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [
+      {
+        "name": "follow_me",
+        "key": 1664936315,
+        "args": [
+          {
+            "name": "temperature",
+            "type": 2
+          }
+        ]
+      }
+    ],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "sensor": [
+      {
+        "object_id": "air_conditioner_wi-fi_signal",
+        "key": 772313802,
+        "name": "Air Conditioner Wi-Fi Signal",
+        "unique_id": "244cab493535-wifisignal",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": "signal_strength",
+        "unit_of_measurement": "dBm",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "air_conditioner_uptime_days",
+        "key": 357239407,
+        "name": "Air Conditioner Uptime Days",
+        "unique_id": "air-conditioner-493535sensorair_conditioner_uptime_days",
+        "disabled_by_default": false,
+        "icon": "mdi:clock-start",
+        "entity_category": 0,
+        "device_class": "",
+        "unit_of_measurement": "days",
+        "accuracy_decimals": 1,
+        "force_update": false,
+        "state_class": 0,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "air_conditioner_outdoor_temperature",
+        "key": 3877880146,
+        "name": "Air Conditioner Outdoor Temperature",
+        "unique_id": "air-conditioner-493535sensorair_conditioner_outdoor_temperature",
+        "disabled_by_default": false,
+        "icon": "mdi:thermometer",
+        "entity_category": 0,
+        "device_class": "temperature",
+        "unit_of_measurement": "°C",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "air_conditioner_power_usage",
+        "key": 554706210,
+        "name": "Air Conditioner Power Usage",
+        "unique_id": "air-conditioner-493535sensorair_conditioner_power_usage",
+        "disabled_by_default": false,
+        "icon": "mdi:power",
+        "entity_category": 0,
+        "device_class": "power",
+        "unit_of_measurement": "W",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "air_conditioner_indoor_humidity",
+        "key": 2854408378,
+        "name": "Air Conditioner Indoor Humidity",
+        "unique_id": "air-conditioner-493535sensorair_conditioner_indoor_humidity",
+        "disabled_by_default": false,
+        "icon": "mdi:water-percent",
+        "entity_category": 0,
+        "device_class": "humidity",
+        "unit_of_measurement": "%",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 1,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [],
+    "climate": [
+      {
+        "object_id": "air_conditioner",
+        "key": 892790892,
+        "name": "Air Conditioner",
+        "unique_id": "air-conditioner-493535climateair_conditioner",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "supports_current_temperature": true,
+        "supports_two_point_target_temperature": false,
+        "supported_modes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "visual_min_temperature": 17.0,
+        "visual_max_temperature": 30.0,
+        "visual_target_temperature_step": 0.5,
+        "visual_current_temperature_step": 0.5,
+        "legacy_supports_away": false,
+        "supports_action": false,
+        "supported_fan_modes": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "supported_swing_modes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "supported_custom_fan_modes": [
+          "silent",
+          "turbo"
+        ],
+        "supported_presets": [
+          0,
+          3,
+          5,
+          6
+        ],
+        "supported_custom_presets": [
+          "freeze protection"
+        ],
+        "supports_current_humidity": false,
+        "supports_target_humidity": false,
+        "visual_min_humidity": 30.0,
+        "visual_max_humidity": 99.0
+      }
+    ],
+    "switch": [
+      {
+        "object_id": "air_conditioner_beeper",
+        "key": 2737466358,
+        "name": "Air Conditioner Beeper",
+        "unique_id": "air-conditioner-493535switchair_conditioner_beeper",
+        "disabled_by_default": false,
+        "icon": "mdi:volume-source",
+        "entity_category": 0,
+        "assumed_state": false,
+        "device_class": ""
+      }
+    ],
+    "button": [
+      {
+        "object_id": "factory_reset",
+        "key": 3740619177,
+        "name": "Factory reset",
+        "unique_id": "air-conditioner-493535buttonfactory_reset",
+        "disabled_by_default": false,
+        "icon": "mdi:restart-alert",
+        "entity_category": 1,
+        "device_class": "restart"
+      },
+      {
+        "object_id": "air_conditioner_display_toggle",
+        "key": 3324932398,
+        "name": "Air Conditioner Display Toggle",
+        "unique_id": "air-conditioner-493535buttonair_conditioner_display_toggle",
+        "disabled_by_default": false,
+        "icon": "mdi:theme-light-dark",
+        "entity_category": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "air_conditioner_swing_step",
+        "key": 2249391380,
+        "name": "Air Conditioner Swing Step",
+        "unique_id": "air-conditioner-493535buttonair_conditioner_swing_step",
+        "disabled_by_default": false,
+        "icon": "mdi:tailwind",
+        "entity_category": 0,
+        "device_class": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+substitutions:
+  device_name: "aed"
+  friendly_name: "AED"
+  project_name: "Toppe.AED"
+  project_version: "1.0"
+  device_description: "Monitoring for AED"
+
+esphome:
+  name: "${device_name}"
+  project:
+    name: "${project_name}"
+    version: "${project_version}"
+
+esp8266:
+  board: esp01_1m
+
+# Enable logging
+logger:
+  level: DEBUG
+
+# Enable Home Assistant API
+api:
+
+i2c:
+  sda: GPIO5
+  scl: GPIO4
+  scan: true
+  id: bus_a
+
+ota:
+  - platform: esphome
+
+web_server:
+  port: 80
+  
+  
+one_wire:
+  - platform: gpio
+    pin: GPIO0
+
+
+wifi:
+  ssid: tenDoeschate IoT
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esphome-Web-Cb2F2B"
+    password: "jMJgtOwhMl5y"
+
+captive_portal:
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IPv4 adres
+    ssid:
+      name: Verbonden netwerk
+      disabled_by_default: true
+  - platform: template
+    name: Uptime
+    id: uptime_human
+    icon: mdi:clock-start
+    entity_category: diagnostic
+
+binary_sensor:
+  - platform: status
+    name: "${friendly_name} Status"
+    icon: "mdi:wifi-check"
+    disabled_by_default: true
+    
+sensor:
+  - platform: uptime
+    name: Uptime Sensor (raw)
+    disabled_by_default: true
+    id: uptime_sensor
+    update_interval: 30s
+    on_raw_value:
+      then:
+        - text_sensor.template.publish:
+            id: uptime_human
+            state: !lambda |-
+              int seconds = round(id(uptime_sensor).raw_state);
+              int days = seconds / (24 * 3600);
+              seconds = seconds % (24 * 3600);
+              int hours = seconds / 3600;
+              seconds = seconds % 3600;
+              int minutes = seconds /  60;
+              seconds = seconds % 60;
+              return (
+                (days ? to_string(days) + "d " : "") +
+                (hours ? to_string(hours) + "h " : "") +
+                (minutes ? to_string(minutes) + "m " : "") +
+                (to_string(seconds) + "s")
+              ).c_str();
+
+  - platform: wifi_signal
+    name: "WiFi Signal Sensor"
+    disabled_by_default: true
+    update_interval: 60s
+    icon: "mdi:wifi-arrow-up-down"
+
+  - platform: dallas_temp
+    address: 0x3504166172ecff28
+    name: "In AED kast"
+  - platform: dallas_temp
+    address: 0x210416618536ff28
+    name: "Buiten AED kast"
+    
+  - platform: bh1750
+    name: "BH1750 Illuminance"
+    address: 0x23
+    update_interval: 60s
+
+button:
+  - platform: restart
+    id: restart_button
+    name: "Herstart ${device_name}"

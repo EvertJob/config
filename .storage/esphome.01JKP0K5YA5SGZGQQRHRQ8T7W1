@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "esphome.01JKP0K5YA5SGZGQQRHRQ8T7W1",
+  "data": {
+    "device_info": {
+      "uses_password": false,
+      "name": "aanwezigheidsmelder-garage",
+      "friendly_name": "",
+      "mac_address": "48:55:19:0C:08:0B",
+      "compilation_time": "Feb  9 2025, 13:47:58",
+      "model": "esp01_1m",
+      "manufacturer": "Espressif",
+      "has_deep_sleep": false,
+      "esphome_version": "2024.12.4",
+      "project_name": "Toppe.Aanwezigheidsmelder",
+      "project_version": "1.0",
+      "webserver_port": 80,
+      "legacy_voice_assistant_version": 0,
+      "voice_assistant_feature_flags": 0,
+      "legacy_bluetooth_proxy_version": 0,
+      "bluetooth_proxy_feature_flags": 0,
+      "suggested_area": ""
+    },
+    "services": [
+      {
+        "name": "send_command",
+        "key": 1705457825,
+        "args": [
+          {
+            "name": "cmd",
+            "type": 3
+          }
+        ]
+      }
+    ],
+    "api_version": {
+      "major": 1,
+      "minor": 10
+    },
+    "update": [],
+    "binary_sensor": [
+      {
+        "object_id": "aanwezigbeidsmelder_garage_presence",
+        "key": 1843836337,
+        "name": "Aanwezigbeidsmelder garage Presence",
+        "unique_id": "aanwezigheidsmelder-garagebinary_sensoraanwezigbeidsmelder_garage_presence",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "motion",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "aanwezigbeidsmelder_garage_moving",
+        "key": 3014853412,
+        "name": "Aanwezigbeidsmelder garage Moving",
+        "unique_id": "aanwezigheidsmelder-garagebinary_sensoraanwezigbeidsmelder_garage_moving",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "moving",
+        "is_status_binary_sensor": false
+      },
+      {
+        "object_id": "home_assistant_verbonden_",
+        "key": 2866439596,
+        "name": "Home Assistant Verbonden?",
+        "unique_id": "aanwezigheidsmelder-garagebinary_sensorhome_assistant_verbonden_",
+        "disabled_by_default": true,
+        "icon": "mdi:wifi-check",
+        "entity_category": 2,
+        "device_class": "connectivity",
+        "is_status_binary_sensor": true
+      }
+    ],
+    "sensor": [
+      {
+        "object_id": "aanwezigbeidsmelder_garage_action",
+        "key": 856896284,
+        "name": "Aanwezigbeidsmelder garage Action",
+        "unique_id": "aanwezigheidsmelder-garagesensoraanwezigbeidsmelder_garage_action",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 0,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "aanwezigbeidsmelder_garage_movement",
+        "key": 2427984085,
+        "name": "Aanwezigbeidsmelder garage Movement",
+        "unique_id": "aanwezigheidsmelder-garagesensoraanwezigbeidsmelder_garage_movement",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": "",
+        "unit_of_measurement": "",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 0,
+        "last_reset_type": 0
+      },
+      {
+        "object_id": "uptime_sensor__raw_",
+        "key": 2551178801,
+        "name": "Uptime Sensor (raw)",
+        "unique_id": "4855190c080b-uptime",
+        "disabled_by_default": true,
+        "icon": "mdi:timer-outline",
+        "entity_category": 2,
+        "device_class": "duration",
+        "unit_of_measurement": "s",
+        "accuracy_decimals": 0,
+        "force_update": false,
+        "state_class": 2,
+        "last_reset_type": 0
+      }
+    ],
+    "text_sensor": [
+      {
+        "object_id": "aanwezigbeidsmelder_garage_action_description",
+        "key": 1115825143,
+        "name": "Aanwezigbeidsmelder garage Action Description",
+        "unique_id": "aanwezigheidsmelder-garagetext_sensoraanwezigbeidsmelder_garage_action_description",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "aanwezigbeidsmelder_garage_movement_description",
+        "key": 2565115998,
+        "name": "Aanwezigbeidsmelder garage Movement Description",
+        "unique_id": "aanwezigheidsmelder-garagetext_sensoraanwezigbeidsmelder_garage_movement_description",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 0,
+        "device_class": ""
+      },
+      {
+        "object_id": "wifi_netwerk",
+        "key": 1805278535,
+        "name": "WiFi Netwerk",
+        "unique_id": "4855190c080b-wifiinfo-ssid",
+        "disabled_by_default": true,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "ipv4_adres",
+        "key": 3642073046,
+        "name": "IPv4 adres",
+        "unique_id": "4855190c080b-wifiinfo-ip",
+        "disabled_by_default": false,
+        "icon": "",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "uptime",
+        "key": 1324261225,
+        "name": "Uptime",
+        "unique_id": "aanwezigheidsmelder-garagetext_sensoruptime",
+        "disabled_by_default": false,
+        "icon": "mdi:clock-start",
+        "entity_category": 2,
+        "device_class": ""
+      },
+      {
+        "object_id": "esphome_versie",
+        "key": 775288513,
+        "name": "ESPHome versie",
+        "unique_id": "4855190c080b-version",
+        "disabled_by_default": false,
+        "icon": "mdi:new-box",
+        "entity_category": 2,
+        "device_class": ""
+      }
+    ],
+    "button": [
+      {
+        "object_id": "herstart_sensor",
+        "key": 4105822743,
+        "name": "Herstart sensor",
+        "unique_id": "aanwezigheidsmelder-garagebuttonherstart_sensor",
+        "disabled_by_default": false,
+        "icon": "mdi:restart",
+        "entity_category": 1,
+        "device_class": "restart"
+      }
+    ]
+  }
+}
