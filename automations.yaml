@@ -1,6 +1,7 @@
 - id: '1739296703233'
   alias: Automatische verlichting badkamer
-  description: ''
+  description: Verlichting in de badkamer automatisch in- en uitschakelen op basis
+    van de aanwezigheid van mensen
   use_blueprint:
     path: Blackshome/sensor-light.yaml
     input:
