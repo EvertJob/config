@@ -8,7 +8,7 @@
 !include
 
 # 
-custcom_components
+*custcom_components
 *esphome
 *www
 *tts
