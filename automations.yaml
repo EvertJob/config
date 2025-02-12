@@ -35,3 +35,14 @@
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       end_message_title: Wasdroger
       end_message: Programma is afgerond
+- id: '1739385566617'
+  alias: Automatische verlichting garage
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.aanwezigbeidsmelder_garage_presence
+      light_switch:
+        entity_id: light.garage
+      time_delay: 1
