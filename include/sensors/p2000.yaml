@@ -1,18 +1,7 @@
 - platform: p2000
-  scan_interval: 20
-  icon: mdi:fire-truck
-
-- platform: p2000
   name: Post Hoogezand
   regios: 1
   scan_interval: 20
-  capcodes: 0400490,0400491,0400493,0400500,0400501,0400502,0400503,0400504,0400505,0400506,0400507,0400508,0400509,0400510,0400511,0400512,0400513,0400514,0400515,0400516,0400517,0400518,0400519,0400520,0400521,0400522,0400523,0400524,0400525,0400526,0400527,0400528,0400529
+  capcodes: 0400521,0400522,0400523,0400524,0400525,0400504
   icon: mdi:fire-truck
   nolocation: true
-
-- platform: p2000
-  name: P2000 Groningen
-  regios: 1
-  scan_interval: 10
-  latitude: !secret latitude
-  longitude: !secret longitude
