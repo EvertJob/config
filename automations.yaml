@@ -46,3 +46,131 @@
       light_switch:
         entity_id: light.garage
       time_delay: 1
+- id: '1739394267767'
+  alias: 'Spiegel uitzetten als lamp uitgaat '
+  description: Schakel de spiegel uit als deze aanstaat en de lamp in de badkamer
+    uit is
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.badkamer
+    to: 'off'
+  conditions:
+  - condition: state
+    entity_id: switch.shelly1pmminig3_84fce639ee60_switch_0
+    state: 'on'
+  actions:
+  - action: switch.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.shelly1pmminig3_84fce639ee60_switch_0
+  mode: single
+- id: '1739444034520'
+  alias: Automatische verlichting op gang en overloop
+  description: Verlichting op de gang en overloop inschakelen als deze op dit moment
+    uit is tussen 06:00 en 08:00.
+  triggers:
+  - trigger: state
+    entity_id:
+    - binary_sensor.athom_presence_sensor_v3_ae0cb4_mmwave_sensor
+    to: 'on'
+  conditions:
+  - condition: time
+    after: 06:00:00
+    before: 08:00:00
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: light.overloop
+      state: 'off'
+    - condition: state
+      entity_id: light.gang
+      state: 'off'
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - light.overloop
+      - light.gang
+  mode: single
+- id: '1739445875347'
+  alias: Felijne wakker worden
+  description: Schakel de lampen in zodra de tijd dit toestaat en wijzig de kleuren
+    zodat bekend is of ze uit bed mag of niet.
+  triggers:
+  - trigger: time
+    at: 06:10:00
+    variables:
+      color: orange
+      brightness_pct: 2
+      check: "{{\n  is_state('binary_sensor.werkdag', 'on') \n  and is_state('binary_sensor.schoolvakantie',
+        'off')\n}}\n"
+  - trigger: time
+    at: 06:30:00
+    variables:
+      color: orange
+      brightness_pct: 2
+      check: "{{\n  is_state('binary_sensor.werkdag', 'off') \n  or is_state('binary_sensor.schoolvakantie',
+        'on')\n}}\n"
+  - trigger: time
+    at: input_datetime.felijne_wakker_worden
+    variables:
+      color: green
+      brightness_pct: 10
+      check: "{{\n  is_state('binary_sensor.werkdag', 'on') \n  and is_state('binary_sensor.schoolvakantie',
+        'off')\n}}\n"
+  - trigger: time
+    at:
+      entity_id: input_datetime.felijne_wakker_worden
+      offset: 00:15:00
+    variables:
+      color: green
+      brightness_pct: 10
+      check: "{{\n  is_state('binary_sensor.werkdag', 'off') \n  or is_state('binary_sensor.schoolvakantie',
+        'on')\n}}\n"
+  conditions:
+  - condition: template
+    value_template: '{{ check }}'
+  actions:
+  - alias: Zet lamp aan op juiste instellingen
+    action: light.turn_on
+    data:
+      brightness_pct: '{{ brightness_pct }}'
+      color_name: '{{ color }}'
+    target:
+      entity_id: light.plafond_strip
+  mode: single
+- id: '1739448008868'
+  alias: Container meldingen
+  description: Verstuur notificatie zodra er morgen een container aan straat moet
+  triggers:
+  - trigger: time
+    at: '19:30:00'
+  conditions:
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: sensor.afvalinfo_home_trash_type_tomorrow
+      state: geen
+  actions:
+  - action: notify.toppe
+    data:
+      title: Container
+      message: Morgen moet {{ states('sensor.afvalinfo_home_trash_type_tomorrow')
+        }} aan straat!
+  mode: single
+- id: '1739473380621'
+  alias: 'Mechanische ventilatie '
+  description: Sturing van mechanische ventilatie op basis van luchtvochtigheid in
+    de badkamer
+  use_blueprint:
+    path: Blackshome/bathroom-humidity-exhaust-fan.yaml
+    input:
+      trigger: sensor.afgeleide_luchtvochtigheid_badkamer
+      fan_switch:
+        entity_id: script.ventilatie_hoog
+      fan_speed_off:
+      - script.ventilatie_automatisch

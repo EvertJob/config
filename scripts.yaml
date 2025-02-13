@@ -1,0 +1,20 @@
+ventilatie_hoog:
+  sequence:
+  - action: fan.set_preset_mode
+    metadata: {}
+    data:
+      preset_mode: Hoog
+    target:
+      entity_id: fan.mechanische_ventilatie
+  alias: Ventilatie hoog
+  description: ''
+ventilatie_automatisch:
+  sequence:
+  - action: fan.set_preset_mode
+    metadata: {}
+    data:
+      preset_mode: Auto
+    target:
+      entity_id: fan.mechanische_ventilatie
+  alias: Ventilatie automatisch
+  description: ''

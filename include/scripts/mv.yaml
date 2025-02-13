@@ -1,0 +1,11 @@
+script:
+  mv_hoog:
+    sequence:
+      - action: fan.set_preset_mode
+        metadata: {}
+        data:
+          preset_mode: Hoog
+        target:
+          entity_id: fan.mechanische_ventilatie
+    alias: MV Hoog
+    description: "Schakel de mechanische ventilatie naar de hoogste stand"
