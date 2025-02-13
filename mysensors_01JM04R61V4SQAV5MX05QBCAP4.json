@@ -48,7 +48,7 @@
                 "type": 7,
                 "description": "Outdoor humidity (%)",
                 "values": {
-                    "1": "30"
+                    "1": "31"
                 }
             },
             "7": {
@@ -56,7 +56,7 @@
                 "type": 6,
                 "description": "Exhaust temperature (\u00baC)",
                 "values": {
-                    "0": "5.0"
+                    "0": "4.9"
                 }
             },
             "8": {
@@ -64,7 +64,7 @@
                 "type": 6,
                 "description": "Supply temperature (\u00baC)",
                 "values": {
-                    "0": "17.6"
+                    "0": "17.5"
                 }
             },
             "9": {
@@ -118,7 +118,7 @@
                 "type": 6,
                 "description": "Outdoor temperature (\u00baC)",
                 "values": {
-                    "0": "2.3"
+                    "0": "2.4"
                 }
             }
         },
