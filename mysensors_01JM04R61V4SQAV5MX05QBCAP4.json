@@ -40,7 +40,7 @@
                 "type": 7,
                 "description": "Indoor humidity (%)",
                 "values": {
-                    "1": "45"
+                    "1": "46"
                 }
             },
             "6": {
@@ -56,7 +56,7 @@
                 "type": 6,
                 "description": "Exhaust temperature (\u00baC)",
                 "values": {
-                    "0": "4.9"
+                    "0": "5.0"
                 }
             },
             "8": {
@@ -110,7 +110,7 @@
                 "type": 6,
                 "description": "Indoor temperature (\u00baC)",
                 "values": {
-                    "0": "18.7"
+                    "0": "18.6"
                 }
             },
             "15": {
@@ -118,7 +118,7 @@
                 "type": 6,
                 "description": "Outdoor temperature (\u00baC)",
                 "values": {
-                    "0": "2.2"
+                    "0": "2.3"
                 }
             }
         },
