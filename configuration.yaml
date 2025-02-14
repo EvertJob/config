@@ -16,8 +16,15 @@ homeassistant:
       radius: 30
   allowlist_external_dirs:
     - /config
-
+  external_url: !secret external_url
+  internal_url: "http://192.168.0.119:8123"
   packages: !include_dir_named include/integrations
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.33.0/24
+    - 192.168.0.0/24
 
 # Load frontend themes from the themes folder
 frontend:
