@@ -1,11 +1,3 @@
-# Example .gitignore file for your config dir.
-# An * ensures that everything will be ignored.
-# You can whitelist files/folders with !, these will not be ignored.
-!*.yaml
-!.gitignore
-!*.md
-!integrations
-!include
 
 
 # Ignore Folders
@@ -19,12 +11,24 @@ esphome
 www 
 tts
 
-!custom_components/**/manifest.json
+
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
-secrets.yaml
+
 home-assistant*
 zigbee*
 *.sh
 *.json
+
+# Example .gitignore file for your config dir.
+# An * ensures that everything will be ignored.
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+!integrations
+!include
+!custom_components/**/manifest.json
+
+secrets.yaml
