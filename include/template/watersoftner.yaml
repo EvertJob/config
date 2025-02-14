@@ -1,0 +1,13 @@
+- trigger:
+    - trigger: numeric_state
+      entity_id:
+        - sensor.waterontharder_energy_power
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 30
+      above: 3
+  sensor:
+    - name: "Laatste regeneratie"
+      unique_id: regeneratie
+      state: "{{ as_timestamp(now()) | timestamp_custom('%d-%m-%Y %H:%M') }}"

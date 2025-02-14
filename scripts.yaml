@@ -18,12 +18,3 @@ ventilatie_automatisch:
       entity_id: fan.mechanische_ventilatie
   alias: Ventilatie automatisch
   description: ''
-schakel_alle_lampen_uit:
-  sequence:
-  - action: light.turn_off
-    data: {}
-    target:
-      entity_id: all
-  alias: Schakel alle lampen uit
-  description: Schakelt alle lamen uit, ongeacht wat er verder ook gebeurt.
-  icon: mdi:alarm-light-off

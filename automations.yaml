@@ -167,9 +167,8 @@
         }} aan straat!
   mode: single
 - id: '1739473380621'
-  alias: 'Mechanische ventilatie '
-  description: Sturing van mechanische ventilatie op basis van luchtvochtigheid in
-    de badkamer
+  alias: Mechanische Ventilatie
+  description: ''
   use_blueprint:
     path: Blackshome/bathroom-humidity-exhaust-fan.yaml
     input:
@@ -177,8 +176,14 @@
       fan_switch:
         entity_id:
         - script.ventilatie_hoog
-        - input_boolean.ventilatie_automatisch
+        - input_boolean.ventilatie_hoog
       fan_speed_off:
-      - script.ventilatie_automatisch
       - input_boolean.ventilatie_automatisch
-      include_fan_speed: fan_speed_disabled
+      - script.ventilatie_automatisch
+      bathroom_humidity_sensor: sensor.klimaatsensor_badkamer_luchtvochtigheid
+      manual_trigger: []
+      include_manual_trigger: disable_manual_trigger
+      manual_trigger_default_time_delay: 15
+      include_fan_speed: fan_speed_off_enabled
+      include_manual_fan_switch: disable_manual_fan_switch
+      manual_fan_switch: []
