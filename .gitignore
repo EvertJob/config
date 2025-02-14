@@ -29,6 +29,5 @@ zigbee*
 !*.md
 !integrations
 !include
-!custom_components/**/manifest.json
-
+custom_components/*/*
 secrets.yaml
