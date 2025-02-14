@@ -87,6 +87,7 @@
     - condition: state
       entity_id: light.gang
       state: 'off'
+    enabled: false
   actions:
   - action: light.turn_on
     metadata: {}
@@ -102,7 +103,7 @@
     zodat bekend is of ze uit bed mag of niet.
   triggers:
   - trigger: time
-    at: 06:10:00
+    at: 06:00:00
     variables:
       color: orange
       brightness_pct: 2
@@ -134,6 +135,9 @@
   conditions:
   - condition: template
     value_template: '{{ check }}'
+  - condition: state
+    entity_id: input_boolean.vakantie_mode
+    state: 'off'
   actions:
   - alias: Zet lamp aan op juiste instellingen
     action: light.turn_on
@@ -171,6 +175,10 @@
     input:
       trigger: sensor.afgeleide_luchtvochtigheid_badkamer
       fan_switch:
-        entity_id: script.ventilatie_hoog
+        entity_id:
+        - script.ventilatie_hoog
+        - input_boolean.ventilatie_automatisch
       fan_speed_off:
       - script.ventilatie_automatisch
+      - input_boolean.ventilatie_automatisch
+      include_fan_speed: fan_speed_disabled
