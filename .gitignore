@@ -6,7 +6,7 @@
 !*.md
 !integrations
 !include
-!custom_components/*/manifest.json
+!custom_components/**/manifest.json
 
 # Ignore Folders
 .vscode
