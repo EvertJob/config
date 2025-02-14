@@ -16,6 +16,13 @@ homeassistant:
       radius: 30
   allowlist_external_dirs:
     - /config
+
+  customize_glob:
+    "binary_sensor.*raam*":
+      device_class: window
+    -"biary_sensor.*deur*":
+      device_class: door
+
   external_url: !secret external_url
   internal_url: "http://192.168.0.119:8123"
   packages: !include_dir_named include/integrations
