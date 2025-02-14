@@ -6,7 +6,7 @@
 !*.md
 !integrations
 !include
-!custom_components/**/manifest.json
+
 
 # Ignore Folders
 .vscode
@@ -19,7 +19,7 @@ esphome
 www 
 tts
 
-
+!custom_components/**/manifest.json
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
