@@ -1,0 +1,210 @@
+- id: '1739526698250'
+  name: Ik ben thuis
+  entities:
+    light.keuken:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 63
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      is_hue_group: true
+      hue_scenes:
+      - Bright
+      - Dimmed
+      hue_type: room
+      lights:
+      - Koffie rechts onder
+      - Keuken spot vaatwasser
+      - Keuken eiland midden
+      - Keuken spot links
+      - Koffie links boven
+      - Keuken spot rechts
+      - Keuken kookplaat
+      - Keuken spoelbak
+      - Koffie rechts boven
+      - Koffie links onder
+      entity_id:
+      - light.keuken_spot_links
+      - light.koffie_links_boven
+      - light.koffie_links_onder
+      - light.keuken_spoelbak
+      - light.keuken_spot_rechts
+      - light.keuken_eiland_midden
+      - light.keuken_spot_vaatwasser
+      - light.koffie_rechts_onder
+      - light.koffie_rechts_boven
+      - light.keuken_kookplaat
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Keuken
+      supported_features: 40
+      state: 'on'
+    light.servieskast:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - None
+      - candle
+      - fire
+      - prism
+      - sparkle
+      - opal
+      - glisten
+      - unknown
+      - unknown
+      - unknown
+      - unknown
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect: None
+      color_mode: color_temp
+      brightness: 90
+      color_temp_kelvin: 3125
+      color_temp: 320
+      hs_color:
+      - 27.631
+      - 53.602
+      rgb_color:
+      - 255
+      - 181
+      - 118
+      xy_color:
+      - 0.485
+      - 0.381
+      mode: normal
+      dynamics: none
+      friendly_name: Servieskast
+      supported_features: 44
+      state: 'on'
+    light.woonkamer:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 90
+      color_temp_kelvin: 3125
+      color_temp: 320
+      hs_color:
+      - 27.631
+      - 53.602
+      rgb_color:
+      - 255
+      - 181
+      - 118
+      xy_color:
+      - 0.485
+      - 0.381
+      is_hue_group: true
+      hue_scenes:
+      - New scene
+      hue_type: room
+      lights:
+      - Wand links boven
+      - Servieskast
+      - Wand rechts boven
+      - Wand voorgevel onder
+      - Wandlamp links onder
+      - Wand voorgevel boven
+      - Wand toilet boven
+      - Wand toilet onder
+      - Wand rechts onder
+      entity_id:
+      - light.wand_toilet_onder
+      - light.wand_rechts_boven
+      - light.servieskast
+      - light.wand_links_boven
+      - light.wand_voorgevel_boven
+      - light.wandlamp_links_onder
+      - light.wand_voorgevel_onder
+      - light.wand_rechts_onder
+      - light.wand_toilet_boven
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Woonkamer
+      supported_features: 40
+      state: 'on'
+    light.overloop:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 26
+      is_hue_group: true
+      hue_scenes: []
+      hue_type: room
+      lights:
+      - Overloop badkamer
+      - Overloop zijgevel
+      entity_id:
+      - light.overloop_badkamer
+      - light.overloop_zijgevel
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Overloop
+      supported_features: 40
+      state: 'on'
+    light.trap:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - glisten
+      - sparkle
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      entity_id:
+      - light.trap_links_boven
+      - light.trap_links_onder
+      - light.trap_rechts_boven
+      - light.trap_rechts_onder
+      icon: mdi:lightbulb-group
+      friendly_name: Trap
+      supported_features: 44
+      state: 'on'
+  icon: mdi:home-account
+  metadata:
+    light.trap:
+      entity_only: true
