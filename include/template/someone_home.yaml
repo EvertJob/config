@@ -1,0 +1,10 @@
+- binary_sensor:
+    - name: Iemand thuis
+      unique_id: someonehome
+      state: "{{ states('zone.home') | int > 0 }}"
+      icon: >-
+        {% if states('zone.home') | int > 0 -%}
+          mdi:home
+        {%- else -%}
+            mdi:home-off
+        {%- endif %}
