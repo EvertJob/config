@@ -10,6 +10,7 @@ homeassistant:
   language: nl
   country: NL
   unit_system: metric
+  currency: EUR
   elevation: -1
   customize:
     zone.home:

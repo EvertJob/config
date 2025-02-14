@@ -3,3 +3,7 @@ notify:
     platform: group
     services:
       - service: !secret mobile_ej
+  - name: Pascalle
+    platform: group
+    services:
+      - service: !secret mobile_p
