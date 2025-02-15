@@ -187,3 +187,17 @@
       include_fan_speed: fan_speed_off_enabled
       include_manual_fan_switch: disable_manual_fan_switch
       manual_fan_switch: []
+- id: '1739617947148'
+  alias: Nieuwe automatisering
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      include_ambient: ambient_enabled
+      ambient_light_sensor: sensor.bh1750_illuminance
+      light_switch:
+        entity_id: scene.ik_ben_thuis
+      motion_trigger:
+      - schedule.verlichting
+      end_scenes:
+      - scene.alle_lampen_uit

@@ -18,3 +18,38 @@ ventilatie_automatisch:
       entity_id: fan.mechanische_ventilatie
   alias: Ventilatie automatisch
   description: ''
+weltrusten:
+  sequence:
+  - action: lock.lock
+    metadata: {}
+    data: {}
+    target:
+      entity_id: lock.garage_deur
+  - action: alarm_control_panel.alarm_arm_night
+    metadata: {}
+    data: {}
+    target:
+      entity_id: alarm_control_panel.alarmo
+  - type: turn_on
+    device_id: eda8ea76721e576f0835b1bfa0fb2631
+    entity_id: d18b7b795c0296be6366ef560778614c
+    domain: light
+  - type: turn_on
+    device_id: 2d34a3775a2bd275ffd7de8988317f8d
+    entity_id: 7c0255b1acad1caa280d90e2f69f05fa
+    domain: light
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.weltrusten
+  alias: 'Weltrusten '
+  description: Schakel script in waarmee de slaapkamer wordt ingeschakeld, het de
+    garage op slot gaat, alarm wordt in geschakeld en na 10 minuten gaan de lampen
+    verder uit.
+  icon: mdi:power-sleep
