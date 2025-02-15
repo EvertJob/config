@@ -25,11 +25,13 @@ weltrusten:
     data: {}
     target:
       entity_id: lock.garage_deur
-  - action: alarm_control_panel.alarm_arm_night
+  - action: alarmo.arm
     metadata: {}
-    data: {}
-    target:
+    data:
+      mode: night
+      force: false
       entity_id: alarm_control_panel.alarmo
+      skip_delay: false
   - type: turn_on
     device_id: eda8ea76721e576f0835b1bfa0fb2631
     entity_id: d18b7b795c0296be6366ef560778614c
@@ -64,7 +66,7 @@ van_huis:
     metadata: {}
     data:
       mode: away
-      skip_delay: true
+      skip_delay: false
       force: false
       entity_id: alarm_control_panel.alarmo
   alias: Van huis

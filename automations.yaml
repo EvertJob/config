@@ -245,6 +245,82 @@
       - ambient_high
       ambient_light_sensor: sensor.bh1750_illuminance
       light_switch:
-        entity_id: scene.ik_ben_thuis
+        entity_id: scene.buiten_verlichting_inschakelen
       end_scenes:
-      - scene.ik_ben_thuis_uitchakelen
+      - scene.buiten_verlichting_uitschakelen
+- id: '1739622361906'
+  alias: Stofzuigen
+  description: ''
+  triggers:
+  - trigger: time
+    at: 00:02:00
+  conditions:
+  - condition: state
+    entity_id: input_boolean.dagelijks_stofzuigen
+    state: 'on'
+  actions:
+  - action: vacuum.start
+    metadata: {}
+    data: {}
+    target:
+      entity_id: vacuum.dreamebot_l10s_ultra
+  mode: single
+- id: '1739645487144'
+  alias: Weltrusten
+  description: Weltrusten!
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_boolean.weltrusten
+    to: 'on'
+  conditions: []
+  actions:
+  - action: script.weltrusten
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1739645952309'
+  alias: Schoonmaak deur/alarm
+  description: Alarm in- of uitschakelen zodra de schoonmaak op donderdag tussen 08:00
+    en 13:00 de deur ontgrendeld of vergrendeld
+  triggers:
+  - trigger: state
+    entity_id:
+    - lock.garage_deur
+    to: unlocked
+    id: ontgrendeld
+  - trigger: state
+    entity_id:
+    - lock.garage_deur
+    to: locked
+    id: vergrendeld
+  conditions:
+  - condition: time
+    weekday:
+    - thu
+    after: 08:00:00
+    before: '13:00:00'
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - ontgrendeld
+      sequence:
+      - action: alarmo.disarm
+        metadata: {}
+        data:
+          entity_id: alarm_control_panel.alarmo
+    - conditions:
+      - condition: trigger
+        id:
+        - vergrendeld
+      sequence:
+      - action: alarmo.arm
+        metadata: {}
+        data:
+          mode: away
+          skip_delay: false
+          force: false
+          entity_id: alarm_control_panel.alarmo
+  mode: single
