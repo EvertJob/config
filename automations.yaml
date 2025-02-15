@@ -187,17 +187,64 @@
       include_fan_speed: fan_speed_off_enabled
       include_manual_fan_switch: disable_manual_fan_switch
       manual_fan_switch: []
-- id: '1739617947148'
-  alias: Nieuwe automatisering
+- id: '1739619663653'
+  alias: Komen thuis
+  description: Uitvoeren zodra ieand thuis komt.
+  triggers:
+  - trigger: state
+    entity_id:
+    - zone.home
+  conditions:
+  - condition: template
+    value_template: "{% if states('zone.home') | int > 0  or is_state('input_boolean.gast_thuis',
+      'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
+    enabled: false
+  actions:
+  - action: script.kom_thuis
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1739619783822'
+  alias: Automatische verlichting binnen
   description: ''
   use_blueprint:
-    path: Blackshome/sensor-light.yaml
+    path: Blackshome/smart-light.yaml
     input:
-      include_ambient: ambient_enabled
+      include_ambient:
+      - ambient_low
+      - ambient_high
       ambient_light_sensor: sensor.bh1750_illuminance
       light_switch:
         entity_id: scene.ik_ben_thuis
-      motion_trigger:
-      - schedule.verlichting
       end_scenes:
       - scene.alle_lampen_uit
+- id: '1739620173296'
+  alias: Van huis
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - zone.home
+  conditions:
+  - condition: template
+    value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
+      'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
+  actions:
+  - action: script.van_huis
+    metadata: {}
+    data: {}
+  mode: single
+- id: '1739621038843'
+  alias: Automatische verlichting buiten
+  description: ''
+  use_blueprint:
+    path: Blackshome/smart-light.yaml
+    input:
+      include_ambient:
+      - ambient_low
+      - ambient_high
+      ambient_light_sensor: sensor.bh1750_illuminance
+      light_switch:
+        entity_id: scene.ik_ben_thuis
+      end_scenes:
+      - scene.ik_ben_thuis_uitchakelen

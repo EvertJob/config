@@ -53,3 +53,32 @@ weltrusten:
     garage op slot gaat, alarm wordt in geschakeld en na 10 minuten gaan de lampen
     verder uit.
   icon: mdi:power-sleep
+van_huis:
+  sequence:
+  - action: lock.lock
+    metadata: {}
+    data: {}
+    target:
+      entity_id: lock.garage_deur
+  - action: alarmo.arm
+    metadata: {}
+    data:
+      mode: away
+      skip_delay: true
+      force: false
+      entity_id: alarm_control_panel.alarmo
+  alias: Van huis
+  description: Script voor als we van huis zijn
+kom_thuis:
+  sequence:
+  - action: lock.unlock
+    metadata: {}
+    data: {}
+    target:
+      entity_id: lock.garage_deur
+  - action: alarmo.disarm
+    metadata: {}
+    data:
+      entity_id: alarm_control_panel.alarmo
+  alias: Kom thuis
+  description: Uitvoeren zodra iemand thuis komt
