@@ -273,11 +273,31 @@
     entity_id:
     - input_boolean.weltrusten
     to: 'on'
+    id: weltrusten-schakelaar
+  - trigger: time
+    at: '23:00:00'
+    id: weltrusten-tijd
   conditions: []
   actions:
-  - action: script.weltrusten
-    metadata: {}
-    data: {}
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - weltrusten-schakelaar
+      sequence:
+      - action: script.weltrusten
+        metadata: {}
+        data: {}
+    - conditions:
+      - condition: trigger
+        id:
+        - weltrusten-tijd
+      sequence:
+      - action: scene.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: scene.alle_lampen_uit
   mode: single
 - id: '1739645952309'
   alias: Schoonmaak deur/alarm
