@@ -79,15 +79,11 @@
   - condition: time
     after: 06:00:00
     before: 08:00:00
-  - condition: and
-    conditions:
-    - condition: state
-      entity_id: light.overloop
-      state: 'off'
-    - condition: state
-      entity_id: light.gang
-      state: 'off'
-    enabled: false
+  - type: is_on
+    condition: device
+    device_id: ef841681ef88a1cab8491afccc62ee88
+    entity_id: 456c970f840276c8fcfb9e2e10cd0875
+    domain: binary_sensor
   actions:
   - action: light.turn_on
     metadata: {}
@@ -292,6 +288,9 @@
       - condition: trigger
         id:
         - weltrusten-tijd
+      - condition: state
+        entity_id: input_boolean.weltrusten
+        state: 'off'
       sequence:
       - action: scene.turn_on
         metadata: {}
@@ -343,4 +342,49 @@
           skip_delay: false
           force: false
           entity_id: alarm_control_panel.alarmo
+  mode: single
+- id: '1739699667610'
+  alias: Goedemorgen bij openen tussendeur
+  description: ''
+  triggers:
+  - type: opened
+    device_id: 4d661e7fad8f607da715791ab11d8dea
+    entity_id: 99f3cadc232532705c904d9088d4bf0b
+    domain: binary_sensor
+    trigger: device
+  conditions:
+  - condition: state
+    entity_id: input_boolean.goedemorgen
+    state: 'off'
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.ochtend_verlichting
+  - action: alarmo.disarm
+    metadata: {}
+    data:
+      entity_id: alarm_control_panel.alarmo
+  - action: input_boolean.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: input_boolean.goedemorgen
+  mode: single
+- id: '1739699880879'
+  alias: Schakelaars 's nachts uitzetten
+  description: ''
+  triggers:
+  - trigger: time
+    at: 02:00:00
+  conditions: []
+  actions:
+  - action: input_boolean.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - input_boolean.goedemorgen
+      - input_boolean.weltrusten
   mode: single

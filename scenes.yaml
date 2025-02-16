@@ -516,6 +516,159 @@
       friendly_name: Overloop
       supported_features: 40
       state: 'off'
+    light.zolder:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 13
+      is_hue_group: true
+      hue_scenes: []
+      hue_type: room
+      lights:
+      - Plafond overloop
+      entity_id:
+      - light.plafond_overloop
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Zolder
+      supported_features: 40
+      state: 'on'
+    light.carport_links_achter:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 3003
+      color_temp: 333
+      hs_color:
+      - 27.82
+      - 56.814
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Carport links achter
+      supported_features: 44
+      state: 'on'
+    light.carport_links_voor:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 3003
+      color_temp: 333
+      hs_color:
+      - 27.82
+      - 56.814
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Carport links voor
+      supported_features: 44
+      state: 'on'
+    light.carport_rechts_achter:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 3003
+      color_temp: 333
+      hs_color:
+      - 27.82
+      - 56.814
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Carport rechts achter
+      supported_features: 44
+      state: 'on'
+    light.carport_rechts_voor:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 26
+      color_temp_kelvin: 3003
+      color_temp: 333
+      hs_color:
+      - 27.82
+      - 56.814
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Carport rechts voor
+      supported_features: 44
+      state: 'on'
   metadata:
     light.trap:
       entity_only: true
@@ -1836,3 +1989,149 @@
   metadata:
     light.trap:
       entity_only: true
+- id: '1739699560892'
+  name: Ochtend verlichting
+  entities:
+    light.eetkamer:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4504
+      min_mireds: 222
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 128
+      color_temp_kelvin: 3521
+      color_temp: 284
+      hs_color:
+      - 27.152
+      - 44.32
+      rgb_color:
+      - 255
+      - 193
+      - 142
+      xy_color:
+      - 0.452
+      - 0.373
+      is_hue_group: true
+      hue_scenes: []
+      hue_type: room
+      lights:
+      - Eettafel rechts
+      - Eetkamer plafond
+      - Eettafel links
+      entity_id:
+      - light.eetkamer_plafond
+      - light.eettafel_rechts
+      - light.eettafel_links
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Eetkamer
+      supported_features: 40
+      state: 'on'
+    light.keuken:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 102
+      color_temp_kelvin: 2732
+      color_temp: 366
+      hs_color:
+      - 28.327
+      - 64.71
+      rgb_color:
+      - 255
+      - 168
+      - 90
+      xy_color:
+      - 0.522
+      - 0.387
+      is_hue_group: true
+      hue_scenes:
+      - Bright
+      - Dimmed
+      hue_type: room
+      lights:
+      - Koffie links onder
+      - Keuken spoelbak
+      - Koffie links boven
+      - Koffie rechts boven
+      - Koffie rechts onder
+      - Keuken spot vaatwasser
+      - Keuken spot rechts
+      - Keuken eiland midden
+      - Keuken spot links
+      - Keuken kookplaat
+      entity_id:
+      - light.koffie_rechts_boven
+      - light.koffie_links_onder
+      - light.keuken_spot_vaatwasser
+      - light.keuken_spot_rechts
+      - light.keuken_eiland_midden
+      - light.keuken_kookplaat
+      - light.keuken_spot_links
+      - light.keuken_spoelbak
+      - light.koffie_rechts_onder
+      - light.koffie_links_boven
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Keuken
+      supported_features: 40
+      state: 'on'
+    light.woonkamer:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      - xy
+      color_mode: color_temp
+      brightness: 38
+      color_temp_kelvin: 3125
+      color_temp: 320
+      hs_color:
+      - 27.631
+      - 53.602
+      rgb_color:
+      - 255
+      - 181
+      - 118
+      xy_color:
+      - 0.485
+      - 0.381
+      is_hue_group: true
+      hue_scenes:
+      - New scene
+      hue_type: room
+      lights:
+      - Servieskast
+      - Wand rechts onder
+      - Wand links boven
+      - Wand toilet onder
+      - Wand rechts boven
+      - Wand voorgevel onder
+      - Wand toilet boven
+      - Wand voorgevel boven
+      - Wandlamp links onder
+      entity_id:
+      - light.wandlamp_links_onder
+      - light.wand_rechts_onder
+      - light.wand_links_boven
+      - light.servieskast
+      - light.wand_voorgevel_boven
+      - light.wand_voorgevel_onder
+      - light.wand_toilet_boven
+      - light.wand_rechts_boven
+      - light.wand_toilet_onder
+      dynamics: false
+      icon: mdi:lightbulb-group
+      friendly_name: Woonkamer
+      supported_features: 40
+      state: 'on'
+  icon: mdi:weather-sunset
+  metadata: {}
