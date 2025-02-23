@@ -25,13 +25,6 @@ weltrusten:
     data: {}
     target:
       entity_id: lock.garage_deur
-  - action: alarmo.arm
-    metadata: {}
-    data:
-      mode: night
-      force: false
-      entity_id: alarm_control_panel.alarmo
-      skip_delay: false
   - type: turn_on
     device_id: eda8ea76721e576f0835b1bfa0fb2631
     entity_id: d18b7b795c0296be6366ef560778614c
@@ -45,6 +38,13 @@ weltrusten:
       minutes: 10
       seconds: 0
       milliseconds: 0
+  - action: alarmo.arm
+    metadata: {}
+    data:
+      mode: night
+      force: false
+      entity_id: alarm_control_panel.alarmo
+      skip_delay: false
   - action: scene.turn_on
     metadata: {}
     data: {}
@@ -57,18 +57,23 @@ weltrusten:
   icon: mdi:power-sleep
 van_huis:
   sequence:
-  - action: lock.lock
-    metadata: {}
-    data: {}
-    target:
-      entity_id: lock.garage_deur
-  - action: alarmo.arm
-    metadata: {}
-    data:
-      mode: away
-      skip_delay: false
-      force: false
-      entity_id: alarm_control_panel.alarmo
+  - if:
+    - condition: template
+      value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
+        'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
+    then:
+    - action: lock.lock
+      metadata: {}
+      data: {}
+      target:
+        entity_id: lock.garage_deur
+    - action: alarmo.arm
+      metadata: {}
+      data:
+        mode: away
+        skip_delay: false
+        force: false
+        entity_id: alarm_control_panel.alarmo
   alias: Van huis
   description: Script voor als we van huis zijn
 kom_thuis:
@@ -82,5 +87,24 @@ kom_thuis:
     metadata: {}
     data:
       entity_id: alarm_control_panel.alarmo
+  - if:
+    - condition: state
+      entity_id: input_boolean.gast_thuis
+      state: 'on'
+    then:
+    - action: input_boolean.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: input_boolean.gast_thuis
   alias: Kom thuis
   description: Uitvoeren zodra iemand thuis komt
+clear_ios_notification:
+  alias: Clear iOS Notification
+  use_blueprint:
+    path: helmerzNL/clear_ios_notification.yaml
+    input:
+      notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      notify_tag: wasmachine
+  description: ''

@@ -1,0 +1,9 @@
+- platform: filter
+  name: "Lux sensor"
+  unique_id: average_lux
+  entity_id: sensor.bh1750_illuminance
+  filters:
+    - filter: time_simple_moving_average
+      window_size: "00:03"
+    - filter: time_throttle
+      window_size: "00:03"

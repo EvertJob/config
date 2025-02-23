@@ -78,7 +78,7 @@
       - xy
       effect: None
       color_mode: color_temp
-      brightness: 90
+      brightness: 85
       color_temp_kelvin: 3125
       color_temp: 320
       hs_color:
@@ -145,25 +145,6 @@
       dynamics: false
       icon: mdi:lightbulb-group
       friendly_name: Woonkamer
-      supported_features: 40
-      state: 'on'
-    light.overloop:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 26
-      is_hue_group: true
-      hue_scenes: []
-      hue_type: room
-      lights:
-      - Overloop zijgevel
-      - Overloop badkamer
-      entity_id:
-      - light.overloop_badkamer
-      - light.overloop_zijgevel
-      dynamics: false
-      icon: mdi:lightbulb-group
-      friendly_name: Overloop
       supported_features: 40
       state: 'on'
     light.trap:
@@ -1035,8 +1016,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg achter beneden
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 66
@@ -1054,6 +1033,8 @@
       - 0.383
       mode: normal
       dynamics: none
+      friendly_name: Steeg achter beneden
+      supported_features: 44
       state: 'on'
     light.steeg_achter_boven:
       min_color_temp_kelvin: 2202
@@ -1069,8 +1050,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg achter boven
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 66
@@ -1088,6 +1067,8 @@
       - 0.383
       mode: normal
       dynamics: none
+      friendly_name: Steeg achter boven
+      supported_features: 44
       state: 'on'
     light.steeg_voor_beneden:
       min_color_temp_kelvin: 2202
@@ -1103,8 +1084,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg voor beneden
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 66
@@ -1122,6 +1101,8 @@
       - 0.383
       mode: normal
       dynamics: none
+      friendly_name: Steeg voor beneden
+      supported_features: 44
       state: 'on'
     light.steeg_voor_boven:
       min_color_temp_kelvin: 2202
@@ -1137,8 +1118,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg voor boven
-      supported_features: 44
       effect: None
       color_mode: color_temp
       brightness: 66
@@ -1156,6 +1135,8 @@
       - 0.383
       mode: normal
       dynamics: none
+      friendly_name: Steeg voor boven
+      supported_features: 44
       state: 'on'
     light.garage_deur:
       effect_list:
@@ -1163,13 +1144,13 @@
       - candle
       supported_color_modes:
       - brightness
-      friendly_name: Garage deur
-      supported_features: 44
       effect: None
       color_mode: brightness
       brightness: 128
       mode: normal
       dynamics: none
+      friendly_name: Garage deur
+      supported_features: 44
       state: 'on'
     light.tuindeuren:
       effect_list:
@@ -1177,13 +1158,13 @@
       - candle
       supported_color_modes:
       - brightness
-      friendly_name: Tuindeuren
-      supported_features: 44
       effect: None
       color_mode: brightness
       brightness: 128
       mode: normal
       dynamics: none
+      friendly_name: Tuindeuren
+      supported_features: 44
       state: 'on'
     light.overstek_links:
       min_color_temp_kelvin: 2202
@@ -1423,7 +1404,13 @@
       friendly_name: Carport rechts voor
       supported_features: 44
       state: 'on'
-  metadata: {}
+    switch.athom_smart_plug_v3_50e238_switch:
+      icon: mdi:power-socket-us
+      friendly_name: Overkapping Switch
+      state: 'on'
+  metadata:
+    switch.athom_smart_plug_v3_50e238_switch:
+      entity_only: true
 - id: '1739620812235'
   name: Buiten verlichting uitschakelen
   entities:
@@ -1495,8 +1482,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg achter beneden
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -1507,6 +1492,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Steeg achter beneden
+      supported_features: 44
       state: 'off'
     light.steeg_achter_boven:
       min_color_temp_kelvin: 2202
@@ -1522,8 +1509,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg achter boven
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -1534,6 +1519,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Steeg achter boven
+      supported_features: 44
       state: 'off'
     light.steeg_voor_beneden:
       min_color_temp_kelvin: 2202
@@ -1549,8 +1536,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg voor beneden
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -1561,6 +1546,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Steeg voor beneden
+      supported_features: 44
       state: 'off'
     light.steeg_voor_boven:
       min_color_temp_kelvin: 2202
@@ -1576,8 +1563,6 @@
       - sunset
       supported_color_modes:
       - color_temp
-      friendly_name: Steeg voor boven
-      supported_features: 44
       effect:
       color_mode:
       brightness:
@@ -1588,6 +1573,8 @@
       xy_color:
       mode: normal
       dynamics: none
+      friendly_name: Steeg voor boven
+      supported_features: 44
       state: 'off'
     light.garage_deur:
       effect_list:
@@ -1595,13 +1582,13 @@
       - candle
       supported_color_modes:
       - brightness
-      friendly_name: Garage deur
-      supported_features: 44
       effect:
       color_mode:
       brightness:
       mode: normal
       dynamics: none
+      friendly_name: Garage deur
+      supported_features: 44
       state: 'off'
     light.tuindeuren:
       effect_list:
@@ -1609,13 +1596,13 @@
       - candle
       supported_color_modes:
       - brightness
-      friendly_name: Tuindeuren
-      supported_features: 44
       effect:
       color_mode:
       brightness:
       mode: normal
       dynamics: none
+      friendly_name: Tuindeuren
+      supported_features: 44
       state: 'off'
     light.overstek_links:
       min_color_temp_kelvin: 2202
@@ -1806,7 +1793,13 @@
       friendly_name: Carport rechts voor
       supported_features: 44
       state: 'off'
-  metadata: {}
+    switch.athom_smart_plug_v3_50e238_switch:
+      icon: mdi:power-socket-us
+      friendly_name: Overkapping Switch
+      state: 'off'
+  metadata:
+    switch.athom_smart_plug_v3_50e238_switch:
+      entity_only: true
 - id: '1739620948171'
   name: Ik ben thuis uitchakelen
   entities:

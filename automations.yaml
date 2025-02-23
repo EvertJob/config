@@ -45,7 +45,7 @@
       - binary_sensor.aanwezigbeidsmelder_garage_presence
       light_switch:
         entity_id: light.garage
-      time_delay: 1
+      time_delay: 0
 - id: '1739394267767'
   alias: 'Spiegel uitzetten als lamp uitgaat '
   description: Schakel de spiegel uit als deze aanstaat en de lamp in de badkamer
@@ -209,11 +209,13 @@
       include_ambient:
       - ambient_low
       - ambient_high
-      ambient_light_sensor: sensor.bh1750_illuminance
+      ambient_light_sensor: sensor.lux_sensor
       light_switch:
         entity_id: scene.ik_ben_thuis
       end_scenes:
       - scene.alle_lampen_uit
+      ambient_light_value: 199
+      ambient_light_value_off: 200
 - id: '1739620173296'
   alias: Van huis
   description: ''
@@ -221,10 +223,7 @@
   - trigger: state
     entity_id:
     - zone.home
-  conditions:
-  - condition: template
-    value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
-      'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
+  conditions: []
   actions:
   - action: script.van_huis
     metadata: {}
@@ -387,4 +386,46 @@
       entity_id:
       - input_boolean.goedemorgen
       - input_boolean.weltrusten
+  mode: single
+- id: '1739831435590'
+  alias: Alarm vakantie
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - lock.garage_deur
+    id: Ontgrendeld
+    to: unlocked
+  - trigger: state
+    entity_id:
+    - lock.garage_deur
+    to: locked
+    id: Vergrendeld
+  conditions:
+  - condition: state
+    entity_id: input_boolean.vakantie_mode
+    state: 'on'
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - Ontgrendeld
+      sequence:
+      - action: alarmo.disarm
+        metadata: {}
+        data:
+          entity_id: alarm_control_panel.alarmo
+    - conditions:
+      - condition: trigger
+        id:
+        - Vergrendeld
+      sequence:
+      - action: alarmo.arm
+        metadata: {}
+        data:
+          mode: away
+          skip_delay: false
+          force: false
+          entity_id: alarm_control_panel.alarmo
   mode: single
