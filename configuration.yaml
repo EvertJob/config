@@ -11,7 +11,7 @@ homeassistant:
   country: NL
   unit_system: metric
   currency: EUR
-  elevation: -1
+  elevation: 2
   customize:
     zone.home:
       radius: 30
