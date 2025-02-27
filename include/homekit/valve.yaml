@@ -1,3 +1,4 @@
+# Fix issue with unique_id before entering it into homekit: https://www.home-assistant.io/integrations/homekit/#accessory-id
 - filter:
     include_entities:
       - switch.sonoff_1001727aa3_1
