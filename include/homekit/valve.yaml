@@ -1,0 +1,7 @@
+- filter:
+    include_entities:
+      - switch.sonoff_1001727aa3_1
+  entity_config:
+    switch.sonoff_1001727aa3_1:
+      name: Achtertuin
+      type: sprinkler

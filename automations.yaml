@@ -78,7 +78,7 @@
   conditions:
   - condition: time
     after: 06:00:00
-    before: 08:00:00
+    before: 07:00:00
   - type: is_on
     condition: device
     device_id: ef841681ef88a1cab8491afccc62ee88
@@ -183,6 +183,7 @@
       include_fan_speed: fan_speed_off_enabled
       include_manual_fan_switch: disable_manual_fan_switch
       manual_fan_switch: []
+      include_lights: lights_disabled
 - id: '1739619663653'
   alias: Komen thuis
   description: Uitvoeren zodra ieand thuis komt.
@@ -190,11 +191,7 @@
   - trigger: state
     entity_id:
     - zone.home
-  conditions:
-  - condition: template
-    value_template: "{% if states('zone.home') | int > 0  or is_state('input_boolean.gast_thuis',
-      'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
-    enabled: false
+  conditions: []
   actions:
   - action: script.kom_thuis
     metadata: {}
@@ -225,7 +222,7 @@
     - zone.home
   conditions: []
   actions:
-  - action: script.van_huis
+  - action: script.thuis
     metadata: {}
     data: {}
   mode: single
@@ -356,11 +353,17 @@
     entity_id: input_boolean.goedemorgen
     state: 'off'
   actions:
-  - action: scene.turn_on
-    metadata: {}
-    data: {}
-    target:
-      entity_id: scene.ochtend_verlichting
+  - if:
+    - condition: numeric_state
+      entity_id: sensor.lux_sensor
+      below: 190
+    then:
+    - action: scene.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id: scene.ochtend_verlichting
+    alias: Licht inschakelen bij minder dan 190 lux
   - action: alarmo.disarm
     metadata: {}
     data:
@@ -428,4 +431,124 @@
           skip_delay: false
           force: false
           entity_id: alarm_control_panel.alarmo
+  mode: single
+- id: '1740342939410'
+  alias: Nieuwe automatisering
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - climate.air_conditioner_493535_air_conditioner
+    from: 'off'
+  - type: opened
+    device_id: 400ce30e8e123375c7faa01781658a45
+    entity_id: a641c7f364e552b196a2ef272ff5d989
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: numeric_state
+        entity_id: weather.forecast_home
+        attribute: temperature
+        below: 10
+      sequence:
+      - action: script.airco_notificatie_met_uitschakelen
+        metadata: {}
+        data:
+          message: Het is {{ state_attr('weather.forecast_home', 'temperature') }}
+            graden buiten en de airco staat aan.
+      alias: Buiten onder de 10 graden
+    - conditions:
+      - type: is_open
+        condition: device
+        device_id: 400ce30e8e123375c7faa01781658a45
+        entity_id: a641c7f364e552b196a2ef272ff5d989
+        domain: binary_sensor
+      sequence:
+      - action: script.airco_notificatie_met_uitschakelen
+        metadata: {}
+        data:
+          message: Raam is open...
+  mode: single
+- id: '1740418457430'
+  alias: Airco knop
+  description: ''
+  triggers:
+  - device_id: 6aa01485fc7997bc4cabe9501afe3401
+    domain: zha
+    type: remote_button_short_press
+    subtype: remote_button_short_press
+    trigger: device
+    alias: Knop ingedrukt
+  conditions:
+  - condition: not
+    conditions:
+    - condition: time
+      after: 08:00:00
+      before: '17:00:00'
+    alias: Het is niet tussen 08:00 en 17:00.
+  actions:
+  - if:
+    - condition: device
+      device_id: e347f109859b849973682a18eb9035b7
+      domain: climate
+      entity_id: fd3e977c81f83470d01430be45567c45
+      type: is_hvac_mode
+      hvac_mode: 'off'
+    then:
+    - device_id: e347f109859b849973682a18eb9035b7
+      domain: climate
+      entity_id: fd3e977c81f83470d01430be45567c45
+      type: set_hvac_mode
+      hvac_mode: cool
+    else:
+    - device_id: e347f109859b849973682a18eb9035b7
+      domain: climate
+      entity_id: fd3e977c81f83470d01430be45567c45
+      type: set_hvac_mode
+      hvac_mode: 'off'
+    alias: Controleer airco
+  mode: single
+- id: '1740424187632'
+  alias: Alarm aan/uit op personen in zone Home
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - zone.home
+    to:
+  conditions: []
+  actions:
+  - if:
+    - condition: state
+      entity_id: zone.home
+      state: '0'
+    - condition: state
+      entity_id: input_boolean.gast_thuis
+      state: 'off'
+    then:
+    - action: lock.lock
+      metadata: {}
+      data: {}
+      target:
+        entity_id: lock.garage_deur
+    - action: alarmo.arm
+      metadata: {}
+      data:
+        mode: away
+        skip_delay: false
+        force: false
+        entity_id: alarm_control_panel.alarmo
+    else:
+    - action: lock.unlock
+      metadata: {}
+      data: {}
+      target:
+        entity_id: lock.garage_deur
+    - action: alarmo.disarm
+      metadata: {}
+      data:
+        entity_id: alarm_control_panel.alarmo
   mode: single

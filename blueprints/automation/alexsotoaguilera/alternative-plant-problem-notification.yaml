@@ -1,0 +1,74 @@
+blueprint:
+  name: Alternative Plant problem notification
+  description:
+    "For each configured plant, checks its status and notifies if there
+    are any problems.\nThis blueprint works in conjunction with \"Alternative plants
+    component for Home Assistant\".\n * https://github.com/Olen/homeassistant-plant\n"
+  domain: automation
+  author: Alex Soto Aguilera
+  source_url: https://gist.github.com/alexsotoaguilera/462e40dcbc40a0fa0dd460755ef3defa
+  homeassistant:
+    min_version: 2022.4.0
+  input:
+    notification_time:
+      name: Tijd om planten te controleren
+      description:
+        The verification of the plant sensors takes place within the configured
+        time.
+      default: "10:00:00"
+      selector:
+        time: {}
+    exclude:
+      name: Excluded plants
+      description: Plants to exclude from report.
+      default:
+        entity_id: []
+      selector:
+        target:
+          entity:
+            - device_class:
+                - plant
+    devices_to_notify:
+      name: Devices to notify
+      description:
+        Device needs to run the official Home Assistant app to receive
+        notifications.
+      default: []
+      selector:
+        device:
+          filter:
+            - integration: mobile_app
+          multiple: true
+variables:
+  exclude_plant_entities: !input exclude
+  notify_plant_entities:
+    "{% set plant_entities = states.plant | map(attribute='entity_id')
+    | select('is_state', 'problem') | list %}\n{% set data = namespace(notify_entities=[])
+    %}\n{% for plant_entity in plant_entities %}\n  {% if plant_entity not in exclude_plant_entities
+    %}\n     {% set data.notify_entities = data.notify_entities + [plant_entity] %}\n
+    \ {% endif %}\n{% endfor %}\n{{ data.notify_entities }}\n"
+trigger:
+  - platform: time
+    at: !input notification_time
+action:
+  - repeat:
+      for_each: !input devices_to_notify
+      sequence:
+        - variables:
+            device_to_notify: "{{ repeat.item }}"
+        - repeat:
+            for_each: "{{ notify_plant_entities }}"
+            sequence:
+              - service:
+                  notify.mobile_app_{{ device_attr(device_to_notify, 'name') | slugify
+                  }}
+                data:
+                  title: "Plant WARNING: {{ state_attr(repeat.item, 'friendly_name') }}."
+                  message:
+                    "{% set plant_sensors = device_entities(device_id(repeat.item))
+                    | select('is_state_attr', 'state_class', 'measurement') | list -%}\n{%
+                    for sensor in plant_sensors -%}\n  {% if not is_state(sensor, 'unknown')
+                    -%}\n    - {{ state_attr(sensor, 'device_class') }} {{ states(sensor)
+                    }}{{ state_attr(sensor, 'unit_of_measurement') }}\n  {% endif -%}\n{%
+                    endfor -%}\n"
+mode: single

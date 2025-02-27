@@ -1,0 +1,21 @@
+- platform: filter
+  name: "Lux sensor"
+  unique_id: average_lux
+  entity_id: sensor.bh1750_illuminance
+  filters:
+    - filter: time_simple_moving_average
+      window_size: "00:03"
+    - filter: time_throttle
+      window_size: "00:03"
+
+- platform: filter
+  name: "Luchtvochtigheid badkamer (filter)"
+  unique_id: badkamer_filter_luchtvochtigheid
+  entity_id: sensor.klimaatsensor_badkamer_luchtvochtigheid
+  filters:
+    - filter: outlier
+      window_size: 4
+      radius: 4.0
+    - filter: lowpass
+      time_constant: 10
+      precision: 2

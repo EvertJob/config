@@ -97,6 +97,16 @@ kom_thuis:
       data: {}
       target:
         entity_id: input_boolean.gast_thuis
+  - if:
+    - condition: state
+      entity_id: input_boolean.vakantie_mode
+      state: 'on'
+    then:
+    - action: input_boolean.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: input_boolean.vakantie_mode
   alias: Kom thuis
   description: Uitvoeren zodra iemand thuis komt
 clear_ios_notification:
@@ -107,4 +117,62 @@ clear_ios_notification:
       notify_device:
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       notify_tag: wasmachine
+  description: ''
+thuis:
+  sequence:
+  - choose:
+    - conditions:
+      - condition: template
+        value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
+          'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
+        alias: Niemand thuis, gast niet ingeschakeld
+      sequence:
+      - action: lock.lock
+        metadata: {}
+        data: {}
+        target:
+          entity_id: lock.garage_deur
+      - action: alarmo.arm
+        metadata: {}
+        data:
+          mode: away
+          skip_delay: false
+          force: false
+          entity_id: alarm_control_panel.alarmo
+      alias: Van huis
+    - conditions:
+      - condition: template
+        value_template: "{% if states('zone.home') | int >= 0 -%}\n  true\n{%- else
+          -%}\n  false\n{%- endif %}"
+        alias: Iemand komt thuis
+      sequence:
+      - action: lock.unlock
+        metadata: {}
+        data: {}
+        target:
+          entity_id: lock.garage_deur
+      - action: alarmo.disarm
+        metadata: {}
+        data:
+          entity_id: alarm_control_panel.alarmo
+      alias: Komen thuis
+    alias: Gaat iemand weg of komt iemand thuis?
+  alias: Thuis
+  description: ''
+airco_notificatie_met_uitschakelen:
+  use_blueprint:
+    path: homeassistant/confirmable_notification.yaml
+    input:
+      notify_device: 91b326aa54d18ebc6b8e4a40d3c01a3b
+      title: Airco
+      message: '{{ message }}'
+      confirm_text: Uitschakelen
+      confirm_action:
+      - device_id: e347f109859b849973682a18eb9035b7
+        domain: climate
+        entity_id: fd3e977c81f83470d01430be45567c45
+        type: set_hvac_mode
+        hvac_mode: 'off'
+      dismiss_text: Negeer
+  alias: Airco notificatie met uitschakelen
   description: ''
