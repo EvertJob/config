@@ -55,6 +55,12 @@
     entity_id:
     - light.badkamer
     to: 'off'
+    id: uit
+  - trigger: state
+    entity_id:
+    - light.badkamer
+    to: 'on'
+    id: aan
   conditions:
   - condition: state
     entity_id: switch.shelly1pmminig3_84fce639ee60_switch_0
@@ -552,3 +558,69 @@
       data:
         entity_id: alarm_control_panel.alarmo
   mode: single
+- id: '1740750844579'
+  alias: Tag Actualiseer ventilatie filter is gescand
+  description: ''
+  triggers:
+  - trigger: tag
+    tag_id: 5c4b86f6-fce5-4942-bbbe-03f02a983a64
+  conditions: []
+  actions:
+  - action: input_datetime.set_datetime
+    metadata: {}
+    data:
+      date: '{{ as_timestamp(now()) | timestamp_custom(''%d-%m-%Y'') }}'
+    target:
+      entity_id: input_datetime.ventilatie_filter_vervangen
+  mode: single
+- id: '1740750991356'
+  alias: Tag Actualiseer airco filter is gescand
+  description: ''
+  triggers:
+  - trigger: tag
+    tag_id: a8193173-4651-4d0f-83e2-acda39e22dd6
+  conditions: []
+  actions:
+  - action: input_datetime.set_datetime
+    metadata: {}
+    data:
+      date: '{{ as_timestamp(now()) | timestamp_custom(''%d-%m-%Y'') }}'
+    target:
+      entity_id: input_datetime.airco_filter_gereinigd
+  mode: single
+- id: '1740766262207'
+  alias: Airco filter
+  description: ''
+  use_blueprint:
+    path: tag-update-date.yaml
+    input:
+      scanned_tag: tag.actualiseer_airco_filter
+      target_ent:
+        entity_id: input_datetime.airco_filter_gereinigd
+- id: '1740766447961'
+  alias: Ventilatie filter
+  description: ''
+  use_blueprint:
+    path: tag-update-date.yaml
+    input:
+      scanned_tag: tag.actualiseer_ventilatie_filter
+      target_ent:
+        entity_id: input_datetime.ventilatie_filter_vervangen
+- id: '1740766672821'
+  alias: Warmtepomp bijgevuld
+  description: ''
+  use_blueprint:
+    path: tag-update-date.yaml
+    input:
+      scanned_tag: tag.warmtepomp_bijgevuld
+      target_ent:
+        entity_id: input_datetime.bijvullen_warmtepomp
+- id: '1740766754216'
+  alias: Zout bijgevuld
+  description: ''
+  use_blueprint:
+    path: tag-update-date.yaml
+    input:
+      scanned_tag: tag.zout_bijgevuld
+      target_ent:
+        entity_id: input_datetime.zout_bijgevuld

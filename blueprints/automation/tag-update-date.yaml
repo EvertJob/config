@@ -1,0 +1,29 @@
+blueprint:
+  name: Scan tag to update date
+  description: Change the day to today when a tag is scanned. Usefull for filters, salt e.d.
+  domain: automation
+  input:
+    scanned_tag:
+      name: Scanned tag
+      description: The tag that need's to be scanned. [Create tag](https://my.home-assistant.io/redirect/tags/)
+      selector:
+        entity:
+          filter:
+            - domain: tag
+    target_ent:
+      name: Target entity
+      description: The target entety that need's to be updated. [Create helper](https://my.home-assistant.io/redirect/helpers/)
+      selector:
+        target:
+          entity:
+            - domain: input_datetime
+
+triggers:
+  - trigger: state
+    entity_id: !input scanned_tag
+
+actions:
+  - action: input_datetime.set_datetime
+    data:
+      date: "{{ as_timestamp(now()) | timestamp_custom('%Y-%m-%d') }}"
+    target: !input target_ent
