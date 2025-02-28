@@ -55,60 +55,6 @@ weltrusten:
     garage op slot gaat, alarm wordt in geschakeld en na 10 minuten gaan de lampen
     verder uit.
   icon: mdi:power-sleep
-van_huis:
-  sequence:
-  - if:
-    - condition: template
-      value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
-        'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
-    then:
-    - action: lock.lock
-      metadata: {}
-      data: {}
-      target:
-        entity_id: lock.garage_deur
-    - action: alarmo.arm
-      metadata: {}
-      data:
-        mode: away
-        skip_delay: false
-        force: false
-        entity_id: alarm_control_panel.alarmo
-  alias: Van huis
-  description: Script voor als we van huis zijn
-kom_thuis:
-  sequence:
-  - action: lock.unlock
-    metadata: {}
-    data: {}
-    target:
-      entity_id: lock.garage_deur
-  - action: alarmo.disarm
-    metadata: {}
-    data:
-      entity_id: alarm_control_panel.alarmo
-  - if:
-    - condition: state
-      entity_id: input_boolean.gast_thuis
-      state: 'on'
-    then:
-    - action: input_boolean.turn_off
-      metadata: {}
-      data: {}
-      target:
-        entity_id: input_boolean.gast_thuis
-  - if:
-    - condition: state
-      entity_id: input_boolean.vakantie_mode
-      state: 'on'
-    then:
-    - action: input_boolean.turn_off
-      metadata: {}
-      data: {}
-      target:
-        entity_id: input_boolean.vakantie_mode
-  alias: Kom thuis
-  description: Uitvoeren zodra iemand thuis komt
 clear_ios_notification:
   alias: Clear iOS Notification
   use_blueprint:
@@ -117,47 +63,6 @@ clear_ios_notification:
       notify_device:
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       notify_tag: wasmachine
-  description: ''
-thuis:
-  sequence:
-  - choose:
-    - conditions:
-      - condition: template
-        value_template: "{% if states('zone.home') | int == 0  or is_state('input_boolean.gast_thuis',
-          'on') -%}\n  true\n{%- else -%}\n  false\n{%- endif %}"
-        alias: Niemand thuis, gast niet ingeschakeld
-      sequence:
-      - action: lock.lock
-        metadata: {}
-        data: {}
-        target:
-          entity_id: lock.garage_deur
-      - action: alarmo.arm
-        metadata: {}
-        data:
-          mode: away
-          skip_delay: false
-          force: false
-          entity_id: alarm_control_panel.alarmo
-      alias: Van huis
-    - conditions:
-      - condition: template
-        value_template: "{% if states('zone.home') | int >= 0 -%}\n  true\n{%- else
-          -%}\n  false\n{%- endif %}"
-        alias: Iemand komt thuis
-      sequence:
-      - action: lock.unlock
-        metadata: {}
-        data: {}
-        target:
-          entity_id: lock.garage_deur
-      - action: alarmo.disarm
-        metadata: {}
-        data:
-          entity_id: alarm_control_panel.alarmo
-      alias: Komen thuis
-    alias: Gaat iemand weg of komt iemand thuis?
-  alias: Thuis
   description: ''
 airco_notificatie_met_uitschakelen:
   use_blueprint:
