@@ -2,7 +2,11 @@
 - filter:
     include_entities:
       - switch.sonoff_1001727aa3_1
+      - switch.sproeier_voortuin
   entity_config:
     switch.sonoff_1001727aa3_1:
       name: Achtertuin
+      type: sprinkler
+    switch.sproeier_voortuin:
+      name: Voortuin
       type: sprinkler

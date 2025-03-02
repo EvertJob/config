@@ -442,6 +442,11 @@
         entity_id: weather.forecast_home
         attribute: temperature
         below: 10
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: climate.air_conditioner_493535_air_conditioner
+          state: 'off'
       sequence:
       - action: script.airco_notificatie_met_uitschakelen
         metadata: {}
