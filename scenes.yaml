@@ -282,25 +282,25 @@
       - New scene
       hue_type: room
       lights:
-      - Servieskast
-      - Wand voorgevel boven
-      - Wand rechts onder
-      - Wand voorgevel onder
       - Wand toilet onder
+      - Servieskast
       - Wand toilet boven
-      - Wand rechts boven
-      - Wandlamp links onder
       - Wand links boven
+      - Wand rechts onder
+      - Wand rechts boven
+      - Wand voorgevel onder
+      - Wandlamp links onder
+      - Wand voorgevel boven
       entity_id:
-      - light.wand_voorgevel_onder
-      - light.wand_rechts_onder
-      - light.wand_rechts_boven
       - light.wand_toilet_boven
-      - light.servieskast
+      - light.wand_rechts_onder
       - light.wand_links_boven
-      - light.wand_toilet_onder
-      - light.wand_voorgevel_boven
+      - light.wand_voorgevel_onder
+      - light.wand_rechts_boven
       - light.wandlamp_links_onder
+      - light.wand_voorgevel_boven
+      - light.servieskast
+      - light.wand_toilet_onder
       dynamics: false
       icon: mdi:lightbulb-group
       friendly_name: Woonkamer
@@ -326,27 +326,27 @@
       - Dimmed
       hue_type: room
       lights:
-      - Koffie rechts boven
+      - Keuken spot links
       - Keuken spoelbak
       - Koffie links boven
-      - Keuken spot vaatwasser
-      - Koffie links onder
-      - Keuken spot rechts
       - Koffie rechts onder
-      - Keuken kookplaat
+      - Keuken spot rechts
+      - Koffie links onder
       - Keuken eiland midden
-      - Keuken spot links
+      - Koffie rechts boven
+      - Keuken kookplaat
+      - Keuken spot vaatwasser
       entity_id:
-      - light.keuken_kookplaat
-      - light.keuken_spot_links
-      - light.keuken_eiland_midden
-      - light.koffie_rechts_onder
       - light.koffie_rechts_boven
-      - light.keuken_spot_vaatwasser
-      - light.keuken_spoelbak
+      - light.koffie_rechts_onder
       - light.koffie_links_onder
+      - light.keuken_kookplaat
       - light.koffie_links_boven
+      - light.keuken_eiland_midden
+      - light.keuken_spoelbak
       - light.keuken_spot_rechts
+      - light.keuken_spot_links
+      - light.keuken_spot_vaatwasser
       dynamics: false
       icon: mdi:lightbulb-group
       friendly_name: Keuken
@@ -371,47 +371,16 @@
       hue_type: room
       lights:
       - Eetkamer plafond
-      - Eettafel links
       - Eettafel rechts
+      - Eettafel links
       entity_id:
-      - light.eettafel_links
       - light.eettafel_rechts
+      - light.eettafel_links
       - light.eetkamer_plafond
       dynamics: false
       icon: mdi:lightbulb-group
       friendly_name: Eetkamer
       supported_features: 40
-      state: 'off'
-    light.trap:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - glisten
-      - sparkle
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect:
-      color_mode:
-      brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      entity_id:
-      - light.trap_links_boven
-      - light.trap_links_onder
-      - light.trap_rechts_boven
-      - light.trap_rechts_onder
-      icon: mdi:lightbulb-group
-      friendly_name: Trap
-      supported_features: 44
       state: 'off'
     light.overloop:
       supported_color_modes:
@@ -578,39 +547,57 @@
       friendly_name: PILSKOTT Licht
       supported_features: 40
       state: 'off'
-    light.gang:
+    light.trap:
       min_color_temp_kelvin: 2202
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
+      effect_list:
+      - None
+      - candle
+      - glisten
+      - sparkle
+      - sunrise
+      - sunset
       supported_color_modes:
       - color_temp
+      effect: None
+      color_mode: color_temp
+      brightness: 3
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      entity_id:
+      - light.trap_links_boven
+      - light.trap_links_onder
+      - light.trap_rechts_boven
+      - light.trap_rechts_onder
+      icon: mdi:lightbulb-group
+      friendly_name: Trap
+      supported_features: 44
+      state: 'on'
+    light.entree_2:
+      effect_list:
+      - None
+      - candle
+      supported_color_modes:
+      - brightness
+      effect:
       color_mode:
       brightness:
-      color_temp_kelvin:
-      color_temp:
-      hs_color:
-      rgb_color:
-      xy_color:
-      is_hue_group: true
-      hue_scenes: []
-      hue_type: room
-      lights:
-      - Trap links boven
-      - Trap rechts boven
-      - Trap links onder
-      - Trap rechts onder
-      - Entree
-      entity_id:
-      - light.entree_2
-      - light.trap_links_onder
-      - light.trap_links_boven
-      - light.trap_rechts_onder
-      - light.trap_rechts_boven
-      dynamics: false
-      icon: mdi:lightbulb-group
-      friendly_name: Gang
-      supported_features: 40
+      mode: normal
+      dynamics: none
+      friendly_name: Entree
+      supported_features: 44
       state: 'off'
   metadata:
     light.trap:

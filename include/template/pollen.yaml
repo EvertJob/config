@@ -1,0 +1,75 @@
+- sensor:
+    - name: "Boom pollen"
+      unique_id: "boompollen"
+      state: >-
+        {% set value = states('sensor.bomen') | int %}
+        {% if value <= 95 %}
+          Laag
+        {% elif value <= 207 %}
+          Gemiddeld
+        {% elif value <= 703 %}
+          Hoog
+        {% else %}
+          Zeer Hoog
+        {% endif %}
+      icon: >-
+        {% set value = states('sensor.bomen') | int %}
+        {% if value <= 95 %}
+          mdi:leaf
+        {% elif value <= 207 %}
+          mdi:tree
+        {% elif value <= 703 %}
+          mdi:tree-outline
+        {% else %}
+          mdi:forest
+        {% endif %}
+
+    - name: "Gras pollen"
+      unique_id: "graspollen"
+      state: >-
+        {% set value = states('sensor.gras') | int %}
+        {% if value <= 29 %}
+          Laag
+        {% elif value <= 60 %}
+          Gemiddeld
+        {% elif value <= 341 %}
+          Hoog
+        {% else %}
+          Zeer Hoog
+        {% endif %}
+      icon: >-
+        {% set value = states('sensor.gras') | int %}
+        {% if value <= 29 %}
+          mdi:leaf
+        {% elif value <= 60 %}
+          mdi:tree
+        {% elif value <= 341 %}
+          mdi:tree-outline
+        {% else %}
+          mdi:forest
+        {% endif %}
+
+    - name: "Onkruid pollen"
+      unique_id: "onkruidpollen"
+      state: >-
+        {% set value = states('sensor.onkruid') | int %}
+        {% if value <= 20 %}
+          Laag
+        {% elif value <= 77 %}
+          Gemiddeld
+        {% elif value <= 266 %}
+          Hoog
+        {% else %}
+          Zeer Hoog
+        {% endif %}
+      icon: >-
+        {% set value = states('sensor.onkruid') | int %}
+        {% if value <= 20 %}
+          mdi:leaf
+        {% elif value <= 77 %}
+          mdi:tree
+        {% elif value <= 266 %}
+          mdi:tree-outline
+        {% else %}
+          mdi:forest
+        {% endif %}

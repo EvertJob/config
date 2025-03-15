@@ -9,6 +9,18 @@
       - binary_sensor.athom_presence_sensor_v3_ae0cb4_mmwave_sensor
       light_switch:
         entity_id: light.badkamer
+      include_night_lights: night_lights_enabled
+      night_lights_conditions:
+      - time_enabled
+      night_lights_entity_state: []
+      include_night_light_control:
+      - use_brightness
+      night_light_brightness: 5
+      night_lights_after_time: '20:00:00'
+      night_lights_before_time: 05:00:00
+      night_lights:
+        entity_id: light.badkamer
+      night_time_delay: 2
 - id: '1739297542705'
   alias: Wasmachine programma
   description: Monitoring van de wasmachine, informeren wanneer de wasmachine afgerond
@@ -127,13 +139,15 @@
       brightness_pct: 2
       check: "{{\n  is_state('binary_sensor.werkdag', 'off') \n  or is_state('binary_sensor.schoolvakantie',
         'on')\n}}\n"
+      enabled: false
   - trigger: time
     at: input_datetime.felijne_wakker_worden
     variables:
       color: green
       brightness_pct: 10
-      check: "{{\n  is_state('binary_sensor.werkdag', 'on') \n  and is_state('binary_sensor.schoolvakantie',
+      check: "{{  \n  is_state('binary_sensor.werkdag', 'on')\n  and is_state('binary_sensor.schoolvakantie',
         'off')\n}}\n"
+      enabled: false
   - trigger: time
     at:
       entity_id: input_datetime.felijne_wakker_worden
@@ -141,8 +155,8 @@
     variables:
       color: green
       brightness_pct: 10
-      check: "{{\n  is_state('binary_sensor.werkdag', 'off') \n  or is_state('binary_sensor.schoolvakantie',
-        'on')\n}}\n"
+      check: "{{\n  is_state('binary_sensor.werkdag', 'on') \n  or is_state('binary_sensor.schoolvakantie',
+        'off')\n}}\n"
   conditions:
   - condition: template
     value_template: '{{ check }}'
@@ -587,3 +601,33 @@
       scanned_tag: tag.zout_bijgevuld
       target_ent:
         entity_id: input_datetime.zout_bijgevuld
+- id: '1741508003274'
+  alias: 'Batterij controle '
+  description: ''
+  use_blueprint:
+    path: Blackshome/low-battery-notifications-and-actions.yaml
+    input:
+      include_persistent_notification: disabled_persistent_notification
+      notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      include_easy_notify: disabled_easy_notify
+- id: '1741892722320'
+  alias: "\U0001F692 Brandweer meldingen"
+  description: ''
+  use_blueprint:
+    path: Blackshome/notifications-and-announcements.yaml
+    input:
+      global_conditions:
+      - condition: template
+        value_template: '{%- set message = states(''sensor.post_hoogezand'') | lower
+          %}
+
+          {{ ''doorloper'' in message or ''schoonrijder'' in message }}'
+      trigger_state_entity:
+      - sensor.post_hoogezand
+      include_notify: enable_mobile_app_notify
+      notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      notify_message: '{{ states(''sensor.post_hoogezand'') }}'
+      notify_title: "\U0001F692 Brandweer"
+      notify_interruption_level: critical
