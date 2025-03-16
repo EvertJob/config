@@ -229,6 +229,13 @@
       - scene.alle_lampen_uit
       ambient_light_value: 199
       ambient_light_value_off: 200
+      include_bypass:
+      - bypass_enabled_turn_on
+      - bypass_enabled_turn_off
+      bypass_lights_on:
+      - input_boolean.verlichting_handmatig_schakelen
+      bypass_lights_off:
+      - input_boolean.verlichting_handmatig_schakelen
 - id: '1739621038843'
   alias: Automatische verlichting buiten
   description: ''
