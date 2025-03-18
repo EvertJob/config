@@ -16,7 +16,7 @@
       include_night_light_control:
       - use_brightness
       night_light_brightness: 5
-      night_lights_after_time: '20:00:00'
+      night_lights_after_time: '22:00:00'
       night_lights_before_time: 05:00:00
       night_lights:
         entity_id: light.badkamer
@@ -58,6 +58,9 @@
       light_switch:
         entity_id: light.garage
       time_delay: 0
+      include_time: time_enabled
+      after_time: 05:00:00
+      before_time: '23:00:00'
 - id: '1739394267767'
   alias: Spiegelverwarming
   description: Schakel de spiegel uit als deze aanstaat en de lamp in de badkamer
@@ -362,6 +365,9 @@
   - condition: state
     entity_id: input_boolean.goedemorgen
     state: 'off'
+  - condition: numeric_state
+    entity_id: sensor.lux_sensor
+    below: 200
   actions:
   - if:
     - condition: numeric_state
@@ -399,6 +405,7 @@
       entity_id:
       - input_boolean.goedemorgen
       - input_boolean.weltrusten
+      - input_boolean.verlichting_handmatig_schakelen
   mode: single
 - id: '1739831435590'
   alias: Alarm vakantie
@@ -618,6 +625,7 @@
       notify_device:
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       include_easy_notify: disabled_easy_notify
+      include_time: time_enabled
 - id: '1741892722320'
   alias: "\U0001F692 Brandweer meldingen"
   description: ''
