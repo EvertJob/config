@@ -365,9 +365,6 @@
   - condition: state
     entity_id: input_boolean.goedemorgen
     state: 'off'
-  - condition: numeric_state
-    entity_id: sensor.lux_sensor
-    below: 200
   actions:
   - if:
     - condition: numeric_state
