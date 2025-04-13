@@ -734,11 +734,3 @@
     data:
       message: Post!
   mode: single
-- id: '1744564331073'
-  alias: Voortuin
-  description: ''
-  use_blueprint:
-    path: jeroenterheerdt/Standard Irrigation.yaml
-    input:
-      irrigation_switch: switch.sproeier_voortuin
-      irrigation_zone: sensor.smart_irrigation_voortuin

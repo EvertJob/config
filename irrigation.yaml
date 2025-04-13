@@ -1,5 +1,5 @@
 blueprint:
-  name: Smart Irrigation
+  name: Smart Irrigation V2
   description: Smart irrigation for a zone
   domain: automation
   input:
