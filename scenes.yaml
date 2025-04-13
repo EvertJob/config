@@ -59,24 +59,9 @@
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      - sparkle
-      - opal
-      - glisten
-      - underwater
-      - cosmos
-      - sunbeam
-      - enchant
-      - sunrise
-      - sunset
       supported_color_modes:
       - color_temp
       - xy
-      effect: None
       color_mode: color_temp
       brightness: 85
       color_temp_kelvin: 3125
@@ -152,16 +137,8 @@
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - glisten
-      - sparkle
-      - sunrise
-      - sunset
       supported_color_modes:
       - color_temp
-      effect: None
       color_mode: color_temp
       brightness: 76
       color_temp_kelvin: 2202
@@ -893,13 +870,13 @@
 - id: '1739620746878'
   name: Buiten verlichting inschakelen
   entities:
-    light.sloot_links:
+    light.overstek_midden:
       min_color_temp_kelvin: 2202
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -907,33 +884,33 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
-      brightness: 125
-      color_temp_kelvin: 2994
-      color_temp: 334
+      brightness: 83
+      color_temp_kelvin: 3021
+      color_temp: 331
       hs_color:
-      - 27.835
-      - 57.058
+      - 27.791
+      - 56.328
       rgb_color:
       - 255
-      - 177
-      - 110
+      - 178
+      - 111
       xy_color:
-      - 0.496
+      - 0.494
       - 0.383
       mode: normal
       dynamics: none
-      friendly_name: Sloot links
+      friendly_name: Overstek midden
       supported_features: 44
       state: 'on'
-    light.sloot_rechts:
+    light.overstek_rechts:
       min_color_temp_kelvin: 2202
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -941,188 +918,24 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
-      brightness: 125
-      color_temp_kelvin: 2994
-      color_temp: 334
+      brightness: 83
+      color_temp_kelvin: 3021
+      color_temp: 331
       hs_color:
-      - 27.835
-      - 57.058
+      - 27.791
+      - 56.328
       rgb_color:
       - 255
-      - 177
-      - 110
+      - 178
+      - 111
       xy_color:
-      - 0.496
+      - 0.494
       - 0.383
       mode: normal
       dynamics: none
-      friendly_name: Sloot rechts
-      supported_features: 44
-      state: 'on'
-    light.steeg_achter_beneden:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 66
-      color_temp_kelvin: 3048
-      color_temp: 328
-      hs_color:
-      - 27.748
-      - 55.607
-      rgb_color:
-      - 255
-      - 179
-      - 113
-      xy_color:
-      - 0.491
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Steeg achter beneden
-      supported_features: 44
-      state: 'on'
-    light.steeg_achter_boven:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 66
-      color_temp_kelvin: 3048
-      color_temp: 328
-      hs_color:
-      - 27.748
-      - 55.607
-      rgb_color:
-      - 255
-      - 179
-      - 113
-      xy_color:
-      - 0.491
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Steeg achter boven
-      supported_features: 44
-      state: 'on'
-    light.steeg_voor_beneden:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 66
-      color_temp_kelvin: 3048
-      color_temp: 328
-      hs_color:
-      - 27.748
-      - 55.607
-      rgb_color:
-      - 255
-      - 179
-      - 113
-      xy_color:
-      - 0.491
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Steeg voor beneden
-      supported_features: 44
-      state: 'on'
-    light.steeg_voor_boven:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 66
-      color_temp_kelvin: 3048
-      color_temp: 328
-      hs_color:
-      - 27.748
-      - 55.607
-      rgb_color:
-      - 255
-      - 179
-      - 113
-      xy_color:
-      - 0.491
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Steeg voor boven
-      supported_features: 44
-      state: 'on'
-    light.garage_deur:
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 128
-      mode: normal
-      dynamics: none
-      friendly_name: Garage deur
-      supported_features: 44
-      state: 'on'
-    light.tuindeuren:
-      effect_list:
-      - None
-      - candle
-      supported_color_modes:
-      - brightness
-      effect: None
-      color_mode: brightness
-      brightness: 128
-      mode: normal
-      dynamics: none
-      friendly_name: Tuindeuren
+      friendly_name: Overstek rechts
       supported_features: 44
       state: 'on'
     light.overstek_links:
@@ -1131,7 +944,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1139,9 +952,9 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
-      brightness: 128
+      brightness: 83
       color_temp_kelvin: 3003
       color_temp: 333
       hs_color:
@@ -1159,81 +972,13 @@
       friendly_name: Overstek links
       supported_features: 44
       state: 'on'
-    light.overstek_midden:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 3003
-      color_temp: 333
-      hs_color:
-      - 27.82
-      - 56.814
-      rgb_color:
-      - 255
-      - 177
-      - 110
-      xy_color:
-      - 0.496
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Overstek midden
-      supported_features: 44
-      state: 'on'
-    light.overstek_rechts:
-      min_color_temp_kelvin: 2202
-      max_color_temp_kelvin: 6535
-      min_mireds: 153
-      max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - sparkle
-      - glisten
-      - sunrise
-      - sunset
-      supported_color_modes:
-      - color_temp
-      effect: None
-      color_mode: color_temp
-      brightness: 128
-      color_temp_kelvin: 3003
-      color_temp: 333
-      hs_color:
-      - 27.82
-      - 56.814
-      rgb_color:
-      - 255
-      - 177
-      - 110
-      xy_color:
-      - 0.496
-      - 0.383
-      mode: normal
-      dynamics: none
-      friendly_name: Overstek rechts
-      supported_features: 44
-      state: 'on'
     light.carport_links_achter:
       min_color_temp_kelvin: 2202
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1241,7 +986,7 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
       brightness: 128
       color_temp_kelvin: 3003
@@ -1267,7 +1012,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1275,7 +1020,7 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
       brightness: 128
       color_temp_kelvin: 3003
@@ -1301,7 +1046,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1309,7 +1054,7 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
       brightness: 128
       color_temp_kelvin: 3003
@@ -1335,7 +1080,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1343,7 +1088,7 @@
       - sunset
       supported_color_modes:
       - color_temp
-      effect: None
+      effect: 'off'
       color_mode: color_temp
       brightness: 128
       color_temp_kelvin: 3003
@@ -1363,6 +1108,221 @@
       friendly_name: Carport rechts voor
       supported_features: 44
       state: 'on'
+    light.steeg_achter_beneden:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 66
+      color_temp_kelvin: 3048
+      color_temp: 328
+      hs_color:
+      - 27.748
+      - 55.607
+      rgb_color:
+      - 255
+      - 179
+      - 113
+      xy_color:
+      - 0.491
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Steeg achter beneden
+      supported_features: 44
+      state: 'on'
+    light.steeg_achter_boven:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 66
+      color_temp_kelvin: 3048
+      color_temp: 328
+      hs_color:
+      - 27.748
+      - 55.607
+      rgb_color:
+      - 255
+      - 179
+      - 113
+      xy_color:
+      - 0.491
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Steeg achter boven
+      supported_features: 44
+      state: 'on'
+    light.steeg_voor_beneden:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      friendly_name: Steeg voor beneden
+      supported_features: 44
+      state: unavailable
+    light.steeg_voor_boven:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 66
+      color_temp_kelvin: 3048
+      color_temp: 328
+      hs_color:
+      - 27.748
+      - 55.607
+      rgb_color:
+      - 255
+      - 179
+      - 113
+      xy_color:
+      - 0.491
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Steeg voor boven
+      supported_features: 44
+      state: 'on'
+    light.sloot_links:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 125
+      color_temp_kelvin: 2994
+      color_temp: 334
+      hs_color:
+      - 27.835
+      - 57.058
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Sloot links
+      supported_features: 44
+      state: 'on'
+    light.sloot_rechts:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 6535
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - 'off'
+      - candle
+      - sparkle
+      - glisten
+      - sunrise
+      - sunset
+      supported_color_modes:
+      - color_temp
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 125
+      color_temp_kelvin: 2994
+      color_temp: 334
+      hs_color:
+      - 27.835
+      - 57.058
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      mode: normal
+      dynamics: none
+      friendly_name: Sloot rechts
+      supported_features: 44
+      state: 'on'
+    light.garage_deur:
+      effect_list:
+      - 'off'
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: 'off'
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Garage deur
+      supported_features: 44
+      state: 'on'
+    light.tuindeuren:
+      effect_list:
+      - 'off'
+      - candle
+      supported_color_modes:
+      - brightness
+      effect: 'off'
+      color_mode: brightness
+      brightness: 128
+      mode: normal
+      dynamics: none
+      friendly_name: Tuindeuren
+      supported_features: 44
+      state: 'on'
     switch.athom_smart_plug_v3_50e238_switch:
       icon: mdi:power-socket-us
       friendly_name: Overkapping Switch
@@ -1379,7 +1339,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'Off'
       - candle
       - sparkle
       - glisten
@@ -1406,7 +1366,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1433,7 +1393,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1460,7 +1420,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1487,7 +1447,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1514,7 +1474,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1537,7 +1497,7 @@
       state: 'off'
     light.garage_deur:
       effect_list:
-      - None
+      - 'off'
       - candle
       supported_color_modes:
       - brightness
@@ -1551,7 +1511,7 @@
       state: 'off'
     light.tuindeuren:
       effect_list:
-      - None
+      - 'off'
       - candle
       supported_color_modes:
       - brightness
@@ -1569,7 +1529,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1596,7 +1556,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1623,7 +1583,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1650,7 +1610,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1677,7 +1637,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1704,7 +1664,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1731,7 +1691,7 @@
       min_mireds: 153
       max_mireds: 454
       effect_list:
-      - None
+      - 'off'
       - candle
       - sparkle
       - glisten
@@ -1813,16 +1773,6 @@
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 500
-      effect_list:
-      - None
-      - candle
-      - fire
-      - prism
-      - sparkle
-      - opal
-      - glisten
-      - sunrise
-      - sunset
       supported_color_modes:
       - color_temp
       - xy
@@ -1907,13 +1857,6 @@
       max_color_temp_kelvin: 6535
       min_mireds: 153
       max_mireds: 454
-      effect_list:
-      - None
-      - candle
-      - glisten
-      - sparkle
-      - sunrise
-      - sunset
       supported_color_modes:
       - color_temp
       effect:

@@ -143,6 +143,7 @@
       check: "{{\n  is_state('binary_sensor.werkdag', 'off') \n  or is_state('binary_sensor.schoolvakantie',
         'on')\n}}\n"
       enabled: false
+    enabled: false
   - trigger: time
     at: input_datetime.felijne_wakker_worden
     variables:
@@ -514,7 +515,8 @@
       before: '17:00:00'
     alias: Het is niet tussen 08:00 en 17:00.
   actions:
-  - if:
+  - alias: Controleer airco
+    if:
     - condition: device
       device_id: e347f109859b849973682a18eb9035b7
       domain: climate
@@ -527,13 +529,17 @@
       entity_id: fd3e977c81f83470d01430be45567c45
       type: set_hvac_mode
       hvac_mode: cool
+    - device_id: e347f109859b849973682a18eb9035b7
+      domain: climate
+      entity_id: fd3e977c81f83470d01430be45567c45
+      type: set_preset_mode
+      preset_mode: sleep
     else:
     - device_id: e347f109859b849973682a18eb9035b7
       domain: climate
       entity_id: fd3e977c81f83470d01430be45567c45
       type: set_hvac_mode
       hvac_mode: 'off'
-    alias: Controleer airco
   mode: single
 - id: '1740424187632'
   alias: Alarm aan/uit op personen in zone Home
@@ -643,3 +649,96 @@
       notify_message: '{{ states(''sensor.post_hoogezand'') }}'
       notify_title: "\U0001F692 Brandweer"
       notify_interruption_level: critical
+- id: '1742755170510'
+  alias: Gordijnen openen/sluiten
+  description: ''
+  triggers:
+  - device_id: acca8c63757e739856b8321083d69be2
+    domain: zha
+    type: remote_button_short_press
+    subtype: turn_on
+    trigger: device
+  conditions: []
+  actions:
+  - action: cover.toggle
+    metadata: {}
+    data: {}
+    target:
+      entity_id: cover.slide
+  mode: single
+- id: '1743788493985'
+  alias: Irrigatie achtertuin
+  description: ''
+  triggers:
+  - event_type: smart_irrigation_start_irrigation_all_zones
+    trigger: event
+  conditions:
+  - condition: numeric_state
+    entity_id: sensor.smart_irrigation_achtertuin
+    above: 0
+  - condition: state
+    entity_id: input_boolean.beregening
+    state: 'on'
+  actions:
+  - data: {}
+    target:
+      entity_id: switch.sonoff_1001727aa3_1
+    action: switch.turn_on
+  - delay: '{{ states(duration) }}'
+  - data: {}
+    target:
+      entity_id:
+      - switch.sonoff_1001727aa3_1
+    action: switch.turn_off
+  - data: {}
+    target:
+      entity_id: sensor.smart_irrigation_achtertuin
+    action: smart_irrigation.reset_bucket
+  variables:
+    duration: sensor.smart_irrigation_achtertuin
+  mode: single
+- id: '1744048789683'
+  alias: Nieuwe automatisering
+  description: ''
+  triggers:
+  - type: power
+    device_id: 609ddd2bfb190e321c88764b61e95f38
+    entity_id: 26b1a9112ae6b5e03267621f3e677bb5
+    domain: sensor
+    trigger: device
+    above: 3
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 15
+  conditions: []
+  actions:
+  - action: input_datetime.set_datetime
+    metadata: {}
+    data:
+      datetime: '{{ now() }}'
+    target:
+      entity_id: input_datetime.waterontharder
+  mode: single
+- id: '1744400329726'
+  alias: 'Brievenbus '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.open_close_sensor_door_open_times
+  conditions: []
+  actions:
+  - action: notify.toppe
+    metadata: {}
+    data:
+      message: Post!
+  mode: single
+- id: '1744564331073'
+  alias: Voortuin
+  description: ''
+  use_blueprint:
+    path: jeroenterheerdt/Standard Irrigation.yaml
+    input:
+      irrigation_switch: switch.sproeier_voortuin
+      irrigation_zone: sensor.smart_irrigation_voortuin
