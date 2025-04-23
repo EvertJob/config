@@ -568,7 +568,7 @@
       - candle
       supported_color_modes:
       - brightness
-      effect:
+      effect: 'Off'
       color_mode:
       brightness:
       mode: normal

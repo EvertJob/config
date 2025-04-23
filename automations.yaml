@@ -524,16 +524,24 @@
       type: is_hvac_mode
       hvac_mode: 'off'
     then:
-    - device_id: e347f109859b849973682a18eb9035b7
-      domain: climate
-      entity_id: fd3e977c81f83470d01430be45567c45
-      type: set_hvac_mode
-      hvac_mode: cool
-    - device_id: e347f109859b849973682a18eb9035b7
-      domain: climate
-      entity_id: fd3e977c81f83470d01430be45567c45
-      type: set_preset_mode
-      preset_mode: sleep
+    - action: climate.set_temperature
+      metadata: {}
+      data:
+        temperature: 17.5
+        hvac_mode: cool
+      target:
+        entity_id: climate.air_conditioner_493535_air_conditioner
+    - delay:
+        hours: 0
+        minutes: 0
+        seconds: 30
+        milliseconds: 0
+    - action: climate.set_fan_mode
+      metadata: {}
+      data:
+        fan_mode: silent
+      target:
+        entity_id: climate.air_conditioner_493535_air_conditioner
     else:
     - device_id: e347f109859b849973682a18eb9035b7
       domain: climate
@@ -624,13 +632,21 @@
   use_blueprint:
     path: Blackshome/low-battery-notifications-and-actions.yaml
     input:
-      include_persistent_notification: disabled_persistent_notification
+      include_persistent_notification: enable_persistent_notification
       notify_device:
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
-      include_easy_notify: disabled_easy_notify
+      include_easy_notify: enable_easy_notify
       include_time: time_enabled
+      notify_action_buttons: enable_to_do_list_button
+      to_do_list: todo.shopping_list
+      exclude_sensors:
+        entity_id:
+        - sensor.iphone_14_pro_max_evert_job_battery_level
+        - sensor.iphone_van_pascalle_watch_battery_level
+        - sensor.iphone_van_pascalle_battery_level
+        - sensor.none_0_battery
 - id: '1741892722320'
-  alias: "\U0001F692 Brandweer meldingen"
+  alias: "\U0001F692 Brandweer meldingen (wijk)"
   description: ''
   use_blueprint:
     path: Blackshome/notifications-and-announcements.yaml
@@ -649,23 +665,6 @@
       notify_message: '{{ states(''sensor.post_hoogezand'') }}'
       notify_title: "\U0001F692 Brandweer"
       notify_interruption_level: critical
-- id: '1742755170510'
-  alias: Gordijnen openen/sluiten
-  description: ''
-  triggers:
-  - device_id: acca8c63757e739856b8321083d69be2
-    domain: zha
-    type: remote_button_short_press
-    subtype: turn_on
-    trigger: device
-  conditions: []
-  actions:
-  - action: cover.toggle
-    metadata: {}
-    data: {}
-    target:
-      entity_id: cover.slide
-  mode: single
 - id: '1743788493985'
   alias: Irrigatie achtertuin
   description: ''
@@ -733,4 +732,50 @@
     metadata: {}
     data:
       message: Post!
+  mode: single
+- id: '1744564985577'
+  alias: Voortuin
+  description: ''
+  use_blueprint:
+    path: EvertJob/irrigation.yaml
+    input:
+      irrigation_switch: switch.sproeier_voortuin
+      pause_switch: input_boolean.beregening
+      irrigation_zone: sensor.smart_irrigation_voortuin
+- id: '1745086912223'
+  alias: "\U0001F692 Brandweer meldingen"
+  description: ''
+  use_blueprint:
+    path: Blackshome/notifications-and-announcements.yaml
+    input:
+      global_conditions:
+      - condition: template
+        value_template: '{%- set message = states(''sensor.post_hoogezand'') | lower
+          %}
+
+          {{ ''doorloper'' not in message and ''schoonrijder'' not in message }}'
+      trigger_state_entity:
+      - sensor.post_hoogezand
+      include_notify: enable_mobile_app_notify
+      notify_device:
+      - 91b326aa54d18ebc6b8e4a40d3c01a3b
+      notify_message: '{{ states(''sensor.post_hoogezand'') }}'
+      notify_title: "\U0001F692 Brandweer"
+- id: '1745429193828'
+  alias: Nieuwe automatisering
+  description: ''
+  triggers:
+  - trigger: time
+    at: '10:00:00'
+  conditions:
+  - condition: template
+    value_template: "condition: template\nvalue_template: >\n  {% set last_cleaned
+      = states('input_datetime.airco_filter_gereinigd') | as_datetime | as_local %}\n
+      \ {% set now = now() %}\n  {{ (now - last_cleaned).days > 180 }}"
+  actions:
+  - action: notify.persistent_notification
+    metadata: {}
+    data:
+      message: Filter is vies
+      title: Filter
   mode: single

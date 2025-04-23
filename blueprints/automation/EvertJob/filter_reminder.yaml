@@ -1,0 +1,33 @@
+blueprint:
+  name: Filter Reminder
+  description: Create an notification to clean the filter
+  domain: automation
+
+  input:
+    trigger_time:
+      name: Time
+      description: Set the time to run the automation.
+      selector:
+        time:
+    target_entity:
+      name: Entity
+      description: Entity thats need to be controlled.
+
+triggers:
+  - trigger: time
+    at: !input trigger_time
+conditions:
+  - condition: template
+    value_template: |-
+      condition: template
+      value_template: >
+        {% set last_cleaned = states('input_datetime.airco_filter_gereinigd') | as_datetime | as_local %}
+        {% set now = now() %}
+        {{ (now - last_cleaned).days > 180 }}
+actions:
+  - action: notify.persistent_notification
+    metadata: {}
+    data:
+      message: Filter is vies
+      title: Filter
+mode: single

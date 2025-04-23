@@ -1,5 +1,5 @@
 blueprint:
-  name: Smart Irrigation
+  name: Smart Irrigation V2
   description: Smart irrigation for a zone
   domain: automation
   input:
@@ -34,7 +34,7 @@ blueprint:
           - device_class:
             - duration
           multiple: false
-  source_url: https://raw.githubusercontent.com/EvertJob/config/refs/heads/master/irrigation.yaml
+  source_url: https://github.com/EvertJob/config/blob/master/irrigation.yaml
 variables:
   duration: !input irrigation_zone
 alias: Standard Irrigation

@@ -1,0 +1,8 @@
+yahoofinance:
+  symbols:
+    - symbol: F*GC.CMX
+      target_currency: EUR
+  scan_interval:
+    minutes: 20
+  show_trending_icon: true
+  decimal_places: 2
