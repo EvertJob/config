@@ -12,6 +12,11 @@ blueprint:
     target_entity:
       name: Entity
       description: Entity thats need to be controlled.
+      selector:
+        entity:
+          filter:
+            - domain: binary_sensor
+              device_class: motion
 
 triggers:
   - trigger: time
