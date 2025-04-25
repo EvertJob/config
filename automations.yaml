@@ -645,6 +645,8 @@
         - sensor.iphone_van_pascalle_watch_battery_level
         - sensor.iphone_van_pascalle_battery_level
         - sensor.none_0_battery
+      include_button: enable_button_trigger
+      button_entity: input_button.batterij_controle
 - id: '1741892722320'
   alias: "\U0001F692 Brandweer meldingen (wijk)"
   description: ''
@@ -761,21 +763,13 @@
       - 91b326aa54d18ebc6b8e4a40d3c01a3b
       notify_message: '{{ states(''sensor.post_hoogezand'') }}'
       notify_title: "\U0001F692 Brandweer"
-- id: '1745429193828'
-  alias: Nieuwe automatisering
+- id: '1745515229463'
+  alias: Filter Reminder
   description: ''
-  triggers:
-  - trigger: time
-    at: '10:00:00'
-  conditions:
-  - condition: template
-    value_template: "condition: template\nvalue_template: >\n  {% set last_cleaned
-      = states('input_datetime.airco_filter_gereinigd') | as_datetime | as_local %}\n
-      \ {% set now = now() %}\n  {{ (now - last_cleaned).days > 180 }}"
-  actions:
-  - action: notify.persistent_notification
-    metadata: {}
-    data:
-      message: Filter is vies
-      title: Filter
-  mode: single
+  use_blueprint:
+    path: EvertJob/filter_reminder.yaml
+    input:
+      trigger_time: 01:00:00
+      target_entity: input_datetime.airco_filter_gereinigd
+      days_between: 90
+      button_trigger: input_button.check_filters

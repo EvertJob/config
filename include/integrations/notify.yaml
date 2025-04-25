@@ -7,3 +7,9 @@ notify:
     platform: group
     services:
       - service: !secret mobile_p
+  - name: SendMail
+    platform: smtp
+    server: "smtp.t-mobilethuis.nl"
+    port: 2525
+    sender: "HomeAssistant@toppe.nl"
+    recipient: "toppe@toppe.nl"

@@ -15,24 +15,52 @@ blueprint:
       selector:
         entity:
           filter:
-            - domain: binary_sensor
-              device_class: motion
+            - domain: input_datetime
+    button_trigger:
+      name: Button
+      description: Button that manually can check the filters
+      selector:
+        entity:
+          filter:
+            - domain: input_button
+    days_between:
+      name: Days between
+      description: Days between cleaning notification.
+      selector:
+        number:
+          min: 0
+          max: 99999999999999
+          step: 1
+          unit_of_measurement: days
+          mode: box
+
+variables:
+  target_entity: !input target_entity
+  days_between: !input days_between
 
 triggers:
   - trigger: time
     at: !input trigger_time
+  - trigger: state
+    entity_id:
+      - !input button_trigger
+    to: null
+
 conditions:
   - condition: template
-    value_template: |-
-      condition: template
-      value_template: >
-        {% set last_cleaned = states('input_datetime.airco_filter_gereinigd') | as_datetime | as_local %}
-        {% set now = now() %}
-        {{ (now - last_cleaned).days > 180 }}
+    value_template: >-
+      {{ has_value(target_entity) and is_number(days_between) }}
+  - condition: template
+    value_template: >-
+      {% set last_cleaned = states(target_entity) | as_datetime | as_local %}
+      {% set nows = now() %}
+      {{ (nows - last_cleaned).days > days_between|int(0) }}
+
 actions:
   - action: notify.persistent_notification
     metadata: {}
     data:
-      message: Filter is vies
+      message: >
+        {{ state_attr(target_entity,  'friendly_name') }} is meer dan {{ days_between }} dagen geleden voor het laatst gereinigd!
       title: Filter
 mode: single
