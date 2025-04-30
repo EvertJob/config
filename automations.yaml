@@ -773,3 +773,79 @@
       target_entity: input_datetime.airco_filter_gereinigd
       days_between: 90
       button_trigger: input_button.check_filters
+- id: '1745775626426'
+  alias: Zwembadpomp
+  description: ''
+  triggers:
+  - entity_id: schedule.zwembadpomp
+    to: 'on'
+    trigger: state
+  - entity_id: schedule.zwembadpomp
+    to: 'off'
+    trigger: state
+  - entity_id: input_button.zwembadpomp
+    trigger: state
+  conditions:
+  - condition: state
+    entity_id: input_boolean.zwembad_verwarmen
+    state: 'off'
+  actions:
+  - target:
+      entity_id: switch.zwembadpomp_switch
+    action: '{{ ''switch.turn_on'' if trigger.to_state.state == ''on'' or trigger.entity_id
+      == ''input_button.zwembadpomp'' else ''switch.turn_off'' }}'
+  - delay:
+      seconds: '{{ 30 if trigger.entity_id == ''input_button.zwembadpomp'' else 0
+        }}'
+  - if:
+    - condition: template
+      value_template: '{{ trigger.entity_id == ''input_button.zwembadpomp'' }}'
+    then:
+    - target:
+        entity_id: switch.zwembadpomp_switch
+      action: switch.turn_off
+      data: {}
+  mode: single
+- id: '1745947338433'
+  alias: Badkamerdeur verlichting
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.badkamerdeur_openen
+      light_switch:
+        entity_id: light.badkamer
+      time_delay: 5
+      include_ambient: ambient_enabled
+      ambient_light_sensor: sensor.lux_sensor
+      include_time: time_enabled
+      after_time: 06:00:00
+      before_time: 08:00:00
+      weekday_options:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sun
+      - sat
+- id: '1746034876014'
+  alias: Zwembad
+  description: ''
+  triggers:
+  - trigger: numeric_state
+    entity_id:
+    - sensor.sun_solar_azimuth
+    above: 20
+    below: 195
+  conditions:
+  - condition: state
+    entity_id: input_boolean.zwembad_verwarmen
+    state: 'on'
+  actions:
+  - type: turn_on
+    device_id: a2b01df292faf5f58759a3e4070e029d
+    entity_id: 4d819e477571cd8713f4ece83bfa7d67
+    domain: switch
+  mode: single

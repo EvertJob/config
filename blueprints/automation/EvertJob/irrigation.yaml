@@ -1,6 +1,9 @@
 blueprint:
-  name: Smart Irrigation V2
-  description: Smart irrigation for a zone
+  name: Smart Irrigation
+  description: >
+    # Smart irrigation
+
+    Smart irrigation for a zone
   domain: automation
   input:
     irrigation_switch:
@@ -9,59 +12,61 @@ blueprint:
       selector:
         entity:
           filter:
-          - domain:
-            - switch
-          - domain:
-            - input_boolean
-          - domain:
-            - valve
-          multiple: false
+            - domain: switch
+            - domain: input_boolean
+            - domain: valve
+
     pause_switch:
       name: Pause Switch
       description: Switch, if off don't run automation
       selector:
         entity:
           filter:
-          - domain:
-            - input_boolean
-          multiple: false
+            - domain: input_boolean
+
     irrigation_zone:
       name: Irrigation Zone
       description: Zone to irrigate
       selector:
         entity:
           filter:
-          - device_class:
-            - duration
-          multiple: false
-  source_url: https://github.com/EvertJob/config/blob/master/irrigation.yaml
+            - device_class: duration
+
 variables:
   duration: !input irrigation_zone
+
 alias: Standard Irrigation
-description: Standard irrigation for a Zone
+description: "Standard irrigation for a Zone"
+
 triggers:
   trigger: event
   event_type: smart_irrigation_start_irrigation_all_zones
+
 conditions:
-- condition: numeric_state
-  entity_id: !input irrigation_zone
-  above: 0
-- condition: state
-  entity_id: !input pause_switch
-  state: 'on'
-actions:
-- action: homeassistant.turn_on
-  data: {}
-  target:
-    entity_id: !input irrigation_switch
-- delay: '{{ states(duration) }}'
-- action: homeassistant.turn_off
-  data: {}
-  target:
-    entity_id:
-    - !input irrigation_switch
-- action: smart_irrigation.reset_bucket
-  data: {}
-  target:
+  - condition: numeric_state
     entity_id: !input irrigation_zone
+    above: 0
+  - condition: state
+    entity_id: !input pause_switch
+    state: "on"
+
+actions:
+  - action: homeassistant.turn_on
+    data: {}
+    target:
+      entity_id: !input irrigation_switch
+
+  - delay: "{{ states(duration) }}"
+
+  - action: homeassistant.turn_off
+    data: {}
+    target:
+      entity_id:
+        - !input irrigation_switch
+
+  - action: smart_irrigation.reset_bucket
+    data: {}
+    target:
+      entity_id: !input irrigation_zone
+
 mode: single
